@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>285FF1E3-0908-4633-BB10-5C6C73D86378</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M9.49543489,0 C4.25012013,0 0,3.43296492 0,7.66938972 C0,10.632148 2.08169149,13.2023066 5.12662182,14.4805382 C4.88923594,15.6583373 4.1679481,16.6261413 3.59730899,17.2424315 C3.49231139,17.3565593 3.60643921,17.5391639 3.76165305,17.5300336 C4.28664104,17.4935127 5.2635752,17.3291687 6.08986064,16.9502643 C7.07135992,16.4983181 7.92960115,15.5761653 8.20350793,15.2657376 C8.62806343,15.3113888 9.06174916,15.3387794 9.50456511,15.3387794 C14.7498799,15.3387794 19,11.9058145 19,7.66938972 C18.9908698,3.43296492 14.7407496,0 9.49543489,0 Z" id="path-1"></path>
+    </defs>
+    <g id="00-Стиль-и-компоненты" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Иконки,-контролы" transform="translate(-383.000000, -66.000000)">
+            <g id="ico/comment" transform="translate(383.000000, 66.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="colors/pure-black" mask="url(#mask-2)">
+                    <g transform="translate(-3.000000, -3.000000)">
+                        <rect id="Background" fill="none" x="0" y="0" width="24" height="24"></rect>
+                        <rect id="Black-Color-Copy-9" fill="#000000" fill-rule="evenodd" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

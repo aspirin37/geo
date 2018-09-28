@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="17px" viewBox="0 0 20 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>BB136E5B-A8D1-4699-9FEA-CDFFD556F829</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M19.8229513,6.99902478 L12.4754289,0.1253681 C12.3869045,0.0420510491 12.3035874,-0.00481479194 12.1838192,0.000392523722 C11.9546973,0.0108071551 11.6630876,0.172233941 11.6630876,0.416977777 L11.6630876,3.86422075 C11.6630876,3.96836706 11.5797706,4.06209874 11.4756243,4.07772069 C4.16976037,5.19729356 1.09223682,10.664975 0.00390784144,16.3409491 C-0.0377506839,16.5648637 0.264273625,16.7731563 0.404871148,16.5961076 C3.07101677,13.2373889 6.31517443,11.0451091 11.4443804,11.0034505 C11.5589413,11.0034505 11.6630876,11.1388407 11.6630876,11.2534017 L11.6630876,14.6381569 C11.6630876,15.002669 12.147368,15.1640957 12.4181484,14.9141446 L19.817744,7.92071965 C19.9531342,7.79574408 19.9947927,7.64993924 20,7.48330514 C19.9947927,7.31667103 19.9531342,7.12400036 19.8229513,6.99902478 Z" id="path-1"></path>
+    </defs>
+    <g id="00-Стиль-и-компоненты" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Иконки,-контролы" transform="translate(-1024.000000, -67.000000)">
+            <g id="ico/share" transform="translate(1024.000000, 67.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="colors/pure-black" mask="url(#mask-2)">
+                    <g transform="translate(-2.000000, -4.000000)">
+                        <rect id="Background" fill="none" x="0" y="0" width="24" height="24"></rect>
+                        <rect id="Black-Color-Copy-9" fill="#000000" fill-rule="evenodd" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
