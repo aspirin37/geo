@@ -1,18 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Panel from '@/pages/Panel'
+import Main from '@/pages/Main'
 
 Vue.use(Router)
 
 export default new Router({
+    mode: 'history',
     routes: [{
         path: '/',
-        name: 'Panel',
-        component: Panel,
-        // children: [{
-        //     path: '',
-        //     name: 'Main',
-        //     component: Main
-        // }]
+        name: 'main-page',
+        component: Main
     }]
 })

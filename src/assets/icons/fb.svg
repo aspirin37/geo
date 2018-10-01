@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: sketchtool 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>6324A14C-9471-42FB-B666-1D50248E58F7</title>
+    <title>8064B79D-DBBA-4E1E-97CF-E2164792164E</title>
     <desc>Created with sketchtool.</desc>
     <defs>
-        <path d="M15.7499624,1.68749598 L15.7499624,14.0624665 C15.7499624,14.5312152 15.5859002,14.9296521 15.2577761,15.2577761 C14.9296521,15.5859002 14.5312152,15.7499624 14.0624665,15.7499624 L11.0741923,15.7499624 L11.0741923,9.52732104 L13.1835623,9.52732104 L13.4999678,7.13670173 L11.0741923,7.13670173 L11.0741923,5.62498659 C11.0741923,5.2499873 11.1445047,4.96873797 11.2851293,4.7812386 C11.4726287,4.5703016 11.7890342,4.4648331 12.2343458,4.4648331 L13.4999678,4.4648331 L13.4999678,2.35546313 C13.0077815,2.2851508 12.3984081,2.24999464 11.6718472,2.24999464 C10.7343492,2.24999464 9.99021074,2.52538443 9.43943062,3.07616454 C8.8886505,3.62694466 8.61326071,4.39452077 8.61326071,5.37889343 L8.61326071,7.13670173 L6.46873458,7.13670173 L6.46873458,9.52732104 L8.61326071,9.52732104 L8.61326071,15.7499624 L1.68749598,15.7499624 C1.21874727,15.7499624 0.820310365,15.5859002 0.492186327,15.2577761 C0.164062288,14.9296521 0,14.5312152 0,14.0624665 L0,1.68749598 C0,1.21874727 0.164062288,0.820310365 0.492186327,0.492186327 C0.820310365,0.164062288 1.21874727,0 1.68749598,0 L14.0624665,0 C14.5312152,0 14.9296521,0.164062288 15.2577761,0.492186327 C15.5859002,0.820310365 15.7499624,1.21874727 15.7499624,1.68749598 Z" id="path-1"></path>
+        <path d="M11.6536628,17.9331925 L8.32872779,17.9331925 L8.32872779,10.2170026 L6.66666667,10.2170026 L6.66666667,7.55689207 L8.32872779,7.55689207 L8.32872779,5.9606632 C8.32872779,3.79144993 9.2674469,2.5 11.9316212,2.5 L14.1504118,2.5 L14.1504118,5.16011053 L12.7646836,5.16011053 C11.725997,5.16011053 11.6577265,5.5323472 11.6577265,6.22643043 L11.6536628,7.55689207 L14.1666667,7.55689207 L13.8724534,10.2170026 L11.6536628,10.2170026 L11.6536628,17.9331925 L11.6536628,17.9331925 Z" id="path-1"></path>
     </defs>
-    <g id="00-Стиль-и-компоненты" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Иконки,-контролы" transform="translate(-114.000000, -134.000000)">
-            <g id="ico/fb" transform="translate(114.000000, 134.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <use id="" fill="#000000" xlink:href="#path-1"></use>
-                <g id="colors/pure-black" mask="url(#mask-2)">
-                    <g transform="translate(-4.000000, -4.000000)">
-                        <rect id="Background" fill="none" x="0" y="0" width="24" height="24"></rect>
-                        <rect id="Black-Color-Copy-9" fill="#000000" fill-rule="evenodd" x="0" y="0" width="24" height="24"></rect>
+    <g id="01-home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.01.-Главная" transform="translate(-1286.000000, -7703.000000)">
+            <g id="tying/footer-desktop" transform="translate(63.000000, 7653.000000)">
+                <g id="Group-9">
+                    <g id="logo">
+                        <g id="Group-4" transform="translate(1181.000000, 48.000000)">
+                            <g id="icons/24-ss_vk-b-copy" transform="translate(36.000000, 0.000000)">
+                                <rect id="Background" x="0" y="0" width="20" height="20"></rect>
+                                <rect id="bound" x="0" y="0" width="20" height="20"></rect>
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="Shape" fill="#141414" xlink:href="#path-1"></use>
+                                <g id="colors/black" mask="url(#mask-2)">
+                                    <rect id="Background" x="0" y="0" width="20" height="20"></rect>
+                                    <rect id="Black-Color-Copy-9" fill="#FFFFFF" x="0" y="0" width="20" height="20"></rect>
+                                </g>
+                            </g>
+                        </g>
                     </g>
                 </g>
             </g>
