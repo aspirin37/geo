@@ -6,7 +6,7 @@ html {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Geometria', sans-serif;
 }
 
 main {
@@ -18,8 +18,24 @@ main {
     box-sizing: border-box;
 }
 
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    background-color: #f2f2f2;
+}
+
 button {
     cursor: pointer;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .app-shadow {
