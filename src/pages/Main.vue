@@ -129,6 +129,7 @@ li {
         }
 
         & img {
+            display: inline-block;
             background-color: #f2f2f2;
         }
     }
