@@ -26,6 +26,8 @@ export default {
 <style lang="scss"
        scoped>
 .side-bar {
+    position: fixed;
+    left: 0;
     width: 64px;
     min-height: 100vh;
     background-color: black;

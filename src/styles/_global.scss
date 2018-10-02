@@ -1,0 +1,105 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    font-family: 'Geometria', sans-serif;
+}
+
+main {
+    flex-grow: 1;
+    background-color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    object-fit: cover;
+    background-color: #f2f2f2;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.app-shadow {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.app-container {
+    display: flex;
+    align-items: stretch;
+    max-width: 1440px;
+    padding-left: 64px;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    // max-width: 1376px;
+    min-height: 100vh;
+    padding: 68px;
+    padding-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section {
+
+    &__header {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        margin-right: auto;
+    }
+}
+
+.section__controls {
+    display: flex;
+}
+
+.control-btn {
+    display: block;
+    height: 40px;
+    min-width: 48px;
+    padding: 9px 16px;
+    -webkit-appearance: none;
+    border: 2px solid black;
+    opacity: 0.75;
+    border-radius: 2px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    &--prev {
+        margin-right: -2px;
+        background-image: url('./assets/icons/chevron-left.svg')
+    }
+
+    &--next {
+        margin-right: 16px;
+        background-image: url('./assets/icons/chevron-right.svg')
+    }
+
+    &--all {
+        padding-right: 56px;
+        background-image: url('./assets/icons/arrow-right.svg');
+        background-position: right 20px center;
+    }
+}

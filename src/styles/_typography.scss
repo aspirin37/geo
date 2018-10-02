@@ -84,7 +84,7 @@ h1 {
             content: '';
             position: absolute;
             z-index: -1;
-            bottom: 0;
+            bottom: 6px;
             left: 12px;
             display: block;
             width: 100%;
@@ -124,31 +124,6 @@ h4 {
     font-size: 18px;
     line-height: 24px;
 }
-
-// .text-xl {
-//     font-size: 20px;
-//     line-height: 28px;
-// }
-
-// .text-l {
-//     font-size: 18px;
-//     line-height: 26px;
-// }
-
-// .text-md {
-//     font-size: 16px;
-//     line-height: 24px;
-// }
-
-// .text-sm {
-//     font-size: 14px;
-//     line-height: 22px;
-// }
-
-// .text-xs {
-//     font-size: 12px;
-//     line-height: 18px;
-// }
 
 .italic {
     font-family: 'EB Garamond', serif;
