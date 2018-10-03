@@ -2,6 +2,8 @@
     <section class="section eyes">
         <div class="eyes__header">
             <h4>Глаза геометрии</h4>
+            <button class="eyes__control-btn eyes__control-btn--prev"></button>
+            <button class="eyes__control-btn eyes__control-btn--next"></button>
         </div>
         <ul class="eyes__list">
             <li class="eyes__item">
@@ -108,6 +110,26 @@ export default {
         font-size: 24px;
         line-height: 30px;
         color: white;
+    }
+
+    &__control-btn {
+        -webkit-appearance: none;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background-color: transparent;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+
+        &--prev {
+            margin-right: 16px;
+            background-image: url('../../assets/icons/chevron-left-white.svg');
+        }
+
+        &--next {
+            background-image: url('../../assets/icons/chevron-right-white.svg');
+        }
     }
 
     &__list {
