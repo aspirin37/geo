@@ -27,12 +27,4 @@ export default {
 </script>
 <style lang="scss"
        scoped>
-.main-slider {
-    height: 600px;
-    background-color: #363E48;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-image: url('../assets/geo-bg.jpg');
-    background-repeat: no-repeat;
-}
 </style>

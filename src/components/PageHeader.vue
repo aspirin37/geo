@@ -40,13 +40,12 @@ export default {
 <style lang="scss"
        scoped>
 .page-header {
-    position: absolute;
     display: flex;
     justify-content: space-between;
-    min-width: 1376px;
-    // left: calc(50% + 32px);
-    // transform: translateX(-704px);
-    padding: 24px;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid black;
 }
 
 .main-nav {
@@ -56,7 +55,6 @@ export default {
         margin-right: 32px;
         font-size: 18px;
         line-height: 24px;
-        color: white;
         text-decoration: none;
     }
 
@@ -66,7 +64,7 @@ export default {
         padding: 5px 8px;
         border: none;
         border-radius: 4px;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(0, 0, 0, 0.8);
         color: white;
 
         &:first-of-type {
@@ -105,6 +103,7 @@ export default {
 
         &--inst {
             background-image: url('../assets/icons/insta.svg');
+            background-size: 18px 18px;
         }
 
         &--ytb {

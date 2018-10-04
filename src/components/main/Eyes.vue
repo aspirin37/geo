@@ -94,6 +94,7 @@ export default {
        scoped>
 .eyes {
     padding: 24px;
+    padding-right: 8px;
     padding-bottom: 40px;
     margin-bottom: 40px;
     background-color: rgba(0, 0, 0, 0.8);

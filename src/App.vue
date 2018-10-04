@@ -1,8 +1,7 @@
 <template>
-    <div class="app-container"
-         id="app">
+    <div id="app">
         <sidebar />
-        <main class="app-shadow">
+        <main class="app-container">
             <page-header />
             <router-view></router-view>
         </main>

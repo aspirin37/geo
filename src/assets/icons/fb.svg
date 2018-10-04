@@ -21,7 +21,7 @@
                                 <use id="Shape" fill="#141414" xlink:href="#path-1"></use>
                                 <g id="colors/black" mask="url(#mask-2)">
                                     <rect id="Background" x="0" y="0" width="20" height="20"></rect>
-                                    <rect id="Black-Color-Copy-9" fill="#FFFFFF" x="0" y="0" width="20" height="20"></rect>
+                                    <rect id="Black-Color-Copy-9" fill="#000000" x="0" y="0" width="20" height="20"></rect>
                                 </g>
                             </g>
                         </g>
