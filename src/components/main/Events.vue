@@ -244,38 +244,4 @@ export default {
         margin-bottom: 12px;
     }
 }
-
-.labels-row {
-    display: flex;
-    margin-top: 12px;
-    margin-bottom: 8px;
-}
-
-.label {
-    display: block;
-    padding: 8px;
-    padding-top: 7px;
-    padding-bottom: 5px;
-    margin-right: 8px;
-    color: white;
-    font-size: 12px;
-    line-height: 15px;
-    border-radius: 2px;
-
-    &--red {
-        background-color: #C7382A;
-    }
-
-    &--blue {
-        background-color: #0095BF;
-    }
-}
-
-.side-banner {
-    display: none;
-
-    @media (min-width: 1440px) {
-        display: block;
-    }
-}
 </style>

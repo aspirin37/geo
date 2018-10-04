@@ -16,7 +16,7 @@ export default {
        scoped>
 .main-slider {
     width: 100%;
-    min-width: 1040px;
+    min-width: 1046px;
     max-width: 1360px;
     max-height: 600px;
     padding: 20px;
