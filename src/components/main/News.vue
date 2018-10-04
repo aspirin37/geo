@@ -51,7 +51,7 @@
                 </a>
                 <a href="#"
                    class="news__link">
-                    <img src="https://files2.geometria.ru/pics/original/069/864/69864351.jpg">
+                    <img src="https://files.geometria.ru/pics/original/067/344/67344710.jpg">
                     <div>
                         <h3>Профессия: Мастер индийского массажа</h3>
                         <p>«Все профессии нужны, все профессии важны!». Говорим с мастером индийского массажа из

@@ -12,7 +12,7 @@
                 <div class="events__item">
                     <a href="#"
                        class="events__image-link">
-                        <img src="https://files2.geometria.ru/pics/original/069/771/69771754.jpg"
+                        <img src="http://files.geometria.ru/pics/original/037/209/37209892.jpg"
                              width="445"
                              height="250">
                     </a>
@@ -36,7 +36,7 @@
                 <div class="events__item">
                     <a href="#"
                        class="events__image-link">
-                        <img src="https://files.geometria.ru/pics/original/069/223/69223855.jpg"
+                        <img src="https://files2.geometria.ru/pics/original/063/923/63923770.jpg"
                              width="445"
                              height="250">
                     </a>
