@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="events__bottom">
-                        <h4>XX Международный фестиваль современного танца OPEN LOOK</h4>
+                        <h4><a href="#">XX Международный фестиваль современного танца OPEN LOOK</a></h4>
                         <div class="actions">
                             <a href="#"
                                class="actions__link actions__link--reviews">39</a>
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="events__bottom">
-                        <h4>XX Международный фестиваль современного танца OPEN LOOK</h4>
+                        <h4><a href="#">XX Международный фестиваль современного танца OPEN LOOK</a></h4>
                         <div class="actions">
                             <a href="#"
                                class="actions__link actions__link--reviews">39</a>
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                     <div class="events__bottom">
-                        <h4>XX Международный фестиваль современного танца OPEN LOOK</h4>
+                        <h4><a href="#">XX Международный фестиваль современного танца OPEN LOOK</a></h4>
                         <div class="actions">
                             <a href="#"
                                class="actions__link actions__link--reviews">39</a>
@@ -122,7 +122,7 @@
                             <a class="label label--blue"
                                href="#">Купить билеты</a>
                         </div>
-                        <h4>XX Международный фестиваль современного танца OPEN LOOK</h4>
+                        <h4><a href="#">XX Международный фестиваль современного танца OPEN LOOK</a></h4>
                         <div class="actions">
                             <a href="#"
                                class="actions__link actions__link--reviews">39</a>
@@ -151,7 +151,7 @@
                         </div>
                     </div>
                     <div class="events__bottom">
-                        <h4>XX Международный фестиваль современного танца OPEN LOOK</h4>
+                        <h4><a href="#">XX Международный фестиваль современного танца OPEN LOOK</a></h4>
                         <div class="actions">
                             <a href="#"
                                class="actions__link actions__link--reviews">39</a>
@@ -210,6 +210,10 @@ export default {
         &:last-child {
             margin-bottom: 0;
         }
+
+        &:hover img {
+            transform: scale(1);
+        }
     }
 
     &__image-link {
@@ -225,10 +229,6 @@ export default {
         & img {
             transition: 1s;
             transform: scale(1.1);
-        }
-
-        &:hover img {
-            transform: scale(1);
         }
     }
 
