@@ -1,15 +1,19 @@
 <template>
     <div>
         <slider></slider>
-        <div class="page-container page-border">
-            <reports></reports>
-            <eyes></eyes>
-            <events></events>
+        <div class="page-border">
+            <div class="page-container">
+                <reports></reports>
+                <eyes></eyes>
+                <events></events>
+            </div>
         </div>
-        <div class="page-container page-border">
-            <news></news>
-            <banner></banner>
-            <people></people>
+        <div class="page-border">
+            <div class="page-container">
+                <news></news>
+                <banner></banner>
+                <people></people>
+            </div>
         </div>
         <div class="page-container">
             <masterpieces></masterpieces>
