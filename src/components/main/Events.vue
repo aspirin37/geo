@@ -9,7 +9,8 @@
         </div>
         <div class="events__list">
             <div class="events__column">
-                <div class="events__item">
+                <div class="events__item"
+                     v-scroll-reveal.reset>
                     <a href="#"
                        class="events__image-link">
                         <img src="http://files.geometria.ru/pics/original/037/209/37209892.jpg"
@@ -39,7 +40,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="events__item">
+                <div class="events__item"
+                     v-scroll-reveal.reset>
                     <a href="#"
                        class="events__image-link">
                         <img src="https://files2.geometria.ru/pics/original/063/923/63923770.jpg"
@@ -68,7 +70,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="events__item">
+                <div class="events__item"
+                     v-scroll-reveal.reset>
                     <a href="#"
                        class="events__image-link">
                         <img src="https://files.geometria.ru/pics/original/067/647/67647183.jpg"
@@ -99,7 +102,8 @@
                 </div>
             </div>
             <div class="events__column">
-                <div class="events__item events__item">
+                <div class="events__item"
+                     v-scroll-reveal.reset>
                     <a href="#"
                        class="events__image-link events__image-link--square">
                         <img src="https://files2.geometria.ru/pics/original/068/613/68613807.jpg"
@@ -133,7 +137,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="events__item">
+                <div class="events__item"
+                     v-scroll-reveal.reset>
                     <a href="#"
                        class="events__image-link">
                         <img src="https://files2.geometria.ru/pics/original/070/079/70079806.jpg"

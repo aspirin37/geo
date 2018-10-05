@@ -4,7 +4,7 @@
         <div class="page-border">
             <div class="page-container">
                 <reports></reports>
-                <eyes></eyes>
+                <eyes v-scroll-reveal.reset></eyes>
                 <events></events>
             </div>
         </div>
@@ -12,11 +12,12 @@
             <div class="page-container">
                 <news></news>
                 <banner></banner>
-                <people></people>
+                <people v-scroll-reveal.reset></people>
             </div>
         </div>
         <div class="page-container">
-            <masterpieces></masterpieces>
+            <masterpieces v-scroll-reveal.reset></masterpieces>
+            <places v-scroll-reveal.reset></places>
         </div>
     </div>
 </template>
@@ -29,6 +30,7 @@ import News from '@/components/main/News'
 import People from '@/components/main/People'
 import Banner from '@/components/main/Banner'
 import Masterpieces from '@/components/main/Masterpieces'
+import Places from '@/components/main/Places'
 export default {
     components: {
         Slider,
@@ -38,7 +40,8 @@ export default {
         News,
         People,
         Banner,
-        Masterpieces
+        Masterpieces,
+        Places
     },
     data() {
         return {}

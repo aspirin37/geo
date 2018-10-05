@@ -15,7 +15,8 @@
             </div>
             <div class="news__list">
                 <a href="#"
-                   class="news__link">
+                   class="news__link"
+                   v-scroll-reveal.reset>
                     <div class="news__img-wrapper">
                         <img src="https://files2.geometria.ru/pics/original/069/864/69864351.jpg">
                     </div>
@@ -35,7 +36,8 @@
                     </div>
                 </a>
                 <a href="#"
-                   class="news__link">
+                   class="news__link"
+                   v-scroll-reveal.reset>
                     <div class="news__img-wrapper">
                         <img src="https://files2.geometria.ru/pics/original/067/424/67424580.jpg">
                     </div>
@@ -54,7 +56,8 @@
                     </div>
                 </a>
                 <a href="#"
-                   class="news__link">
+                   class="news__link"
+                   v-scroll-reveal.reset>
                     <div class="news__img-wrapper">
                         <img src="https://files.geometria.ru/pics/original/068/132/68132918.jpg">
                     </div>
@@ -74,7 +77,8 @@
                     </div>
                 </a>
                 <a href="#"
-                   class="news__link">
+                   class="news__link"
+                   v-scroll-reveal.reset>
                     <div class="news__img-wrapper">
                         <img src="https://files.geometria.ru/pics/original/067/344/67344710.jpg">
                     </div>
@@ -94,7 +98,8 @@
                     </div>
                 </a>
                 <a href="#"
-                   class="news__link">
+                   class="news__link"
+                   v-scroll-reveal.reset>
                     <div class="news__img-wrapper">
                         <img src="https://files2.geometria.ru/pics/original/069/317/69317698.jpg">
                     </div>
