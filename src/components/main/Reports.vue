@@ -13,9 +13,7 @@
             <li class="reports__item">
                 <a href="#"
                    class="reports__image-link">
-                    <img src="https://files.geometria.ru/pics/post_avatar/069/740/69740549.jpg"
-                         height="191"
-                         width="286">
+                    <img src="https://files.geometria.ru/pics/post_avatar/069/740/69740549.jpg">
                     <div class="reports__date">9 сентября</div>
                 </a>
                 <a href="#"
@@ -142,6 +140,10 @@ export default {
             margin-bottom: 16px;
             border-bottom: 2px solid black;
         }
+
+        &:hover img {
+            transform: scale(1);
+        }
     }
 
     &__image-link {
@@ -149,6 +151,15 @@ export default {
         width: 286px;
         height: 191px;
         margin-bottom: 12px;
+        overflow: hidden;
+
+
+        & img {
+            transition: 3s;
+            transform: scale(1.1);
+            width: 286px;
+            height: 191px;
+        }
     }
 
     &__date {

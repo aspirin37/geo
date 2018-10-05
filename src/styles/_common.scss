@@ -22,6 +22,10 @@ img {
 
 button {
     cursor: pointer;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
 }
 
 ul,
@@ -47,7 +51,6 @@ li {
     flex-direction: column;
     min-width: 1046px;
     max-width: 1360px;
-    min-height: 100vh;
     padding: 60px;
     padding-top: 48px;
     // margin-left: auto;
@@ -253,5 +256,47 @@ li {
 
     &--soup {
         background-image: url('./assets/icons/soup.png');
+    }
+}
+
+.filter {
+    display: flex;
+    align-self: center;
+    margin-right: auto;
+
+    &__button {
+        position: relative;
+        z-index: 0;
+        margin-right: 32px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 24px;
+        opacity: 0.6;
+        transition: all 0.1s;
+        outline: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            left: 6px;
+            display: block;
+            width: 0%;
+            opacity: 0.2;
+            height: 8px;
+            background-color: #00e6de;
+            transition: all 0.3s;
+        }
+
+        &.active,
+        &:hover {
+            opacity: 1;
+        }
+
+        &.active::after,
+        &:hover::after {
+            width: 100%;
+        }
     }
 }

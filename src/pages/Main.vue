@@ -11,6 +11,9 @@
             <banner></banner>
             <people></people>
         </div>
+        <div class="page-container">
+            <masterpieces></masterpieces>
+        </div>
     </div>
 </template>
 <script>
@@ -21,6 +24,7 @@ import Events from '@/components/main/Events'
 import News from '@/components/main/News'
 import People from '@/components/main/People'
 import Banner from '@/components/main/Banner'
+import Masterpieces from '@/components/main/Masterpieces'
 export default {
     components: {
         Slider,
@@ -29,7 +33,8 @@ export default {
         Events,
         News,
         People,
-        Banner
+        Banner,
+        Masterpieces
     },
     data() {
         return {}

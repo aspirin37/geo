@@ -55,6 +55,7 @@ export default {
         margin-right: 32px;
         font-size: 18px;
         line-height: 24px;
+        font-weight: bold;
         text-decoration: none;
     }
 
