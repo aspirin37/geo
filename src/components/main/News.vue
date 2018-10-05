@@ -9,7 +9,7 @@
         </div>
         <div class="d-flex">
             <div class="side-banner">
-                <img src="https://files2.geometria.ru/banners/5baa4079dc086.jpg"
+                <img src="https://forum.bits.media/uploads/downloaded/banner300_600_eaf51d4eff6665633f59b838ae70e7de.png"
                      width="286"
                      height="572">
             </div>
@@ -21,8 +21,14 @@
                         <h3>Евгений Фёдоров</h3>
                         <p>Лидер коллективов Zorge, TequilaJazzz и Optimystica Orchestra, достойно прошедший через
                             советскую, постсоветскую и российскую музыкальные школы</p>
-                        <div class="d-flex">
+                        <div class="d-flex align-items-baseline">
                             <div class="label label--black">Интервью</div>
+                            <div class="actions ml-auto">
+                                <a href="#"
+                                   class="actions__link actions__link--reviews">39</a>
+                                <a href="#"
+                                   class="actions__link actions__link--comments">4</a>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -32,8 +38,14 @@
                     <div>
                         <h3>Gastreet International Restaurant Show 2018</h3>
                         <p>Главное событие ресторанной отрасли, для всех тех, кто связан с ресторанной сферой</p>
-                        <div class="d-flex">
+                        <div class="d-flex align-items-baseline">
                             <div class="label label--black">Статьи</div>
+                            <div class="actions ml-auto">
+                                <a href="#"
+                                   class="actions__link actions__link--reviews">39</a>
+                                <a href="#"
+                                   class="actions__link actions__link--comments">4</a>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -44,8 +56,14 @@
                         <h3>Morcheeba</h3>
                         <p>Британские пионеры трип-хопа вернулись с новым альбомом Blaze Away: релиз намечен на 1
                             июня</p>
-                        <div class="d-flex">
+                        <div class="d-flex align-items-baseline">
                             <div class="label label--black">Интервью</div>
+                            <div class="actions ml-auto">
+                                <a href="#"
+                                   class="actions__link actions__link--reviews">39</a>
+                                <a href="#"
+                                   class="actions__link actions__link--comments">4</a>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -56,8 +74,14 @@
                         <h3>Профессия: Мастер индийского массажа</h3>
                         <p>«Все профессии нужны, все профессии важны!». Говорим с мастером индийского массажа из
                             салона Royal Thai</p>
-                        <div class="d-flex">
+                        <div class="d-flex align-items-baseline">
                             <div class="label label--black">Интервью</div>
+                            <div class="actions ml-auto">
+                                <a href="#"
+                                   class="actions__link actions__link--reviews">39</a>
+                                <a href="#"
+                                   class="actions__link actions__link--comments">4</a>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -68,8 +92,14 @@
                         <h3>Bobina</h3>
                         <p>Август примечателен не только масштабным развертыванием «предвыборной» гонки рейтинга Dj
                             Mag, но и самыми разными ивентами</p>
-                        <div class="d-flex">
+                        <div class="d-flex align-items-baseline">
                             <div class="label label--black">Интервью</div>
+                            <div class="actions ml-auto">
+                                <a href="#"
+                                   class="actions__link actions__link--reviews">39</a>
+                                <a href="#"
+                                   class="actions__link actions__link--comments">4</a>
+                            </div>
                         </div>
                     </div>
                 </a>

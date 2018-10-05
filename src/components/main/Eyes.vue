@@ -9,7 +9,7 @@
             <li class="eyes__item">
                 <a href="#"
                    class="eyes__link">
-                    <img src="../../assets/mock-up/eyes1.jpg"
+                    <img src="https://files.geometria.ru/pics/original/038/530/38530343.jpg"
                          width="140"
                          height="140">
                     <div class="eyes__name">Michael Kuznetsov</div>
@@ -21,7 +21,7 @@
             <li class="eyes__item">
                 <a href="#"
                    class="eyes__link">
-                    <img src="../../assets/mock-up/eyes2.jpg"
+                    <img src="https://files2.geometria.ru/pics/original/037/270/37270907.jpg"
                          width="140"
                          height="140">
                     <div class="eyes__name">Андрей Ховрычев</div>
@@ -33,7 +33,7 @@
             <li class="eyes__item">
                 <a href="#"
                    class="eyes__link">
-                    <img src="../../assets/mock-up/eyes3.jpg"
+                    <img src="https://files.geometria.ru/pics/original/18523020.jpg"
                          width="140"
                          height="140">
                     <div class="eyes__name">Алена Яшина</div>
@@ -45,7 +45,7 @@
             <li class="eyes__item">
                 <a href="#"
                    class="eyes__link">
-                    <img src="../../assets/mock-up/eyes4.jpg"
+                    <img src="https://files.geometria.ru/pics/original/16784163.jpg"
                          width="140"
                          height="140">
                     <div class="eyes__name">Dmitriy Mnogolet</div>
@@ -57,7 +57,7 @@
             <li class="eyes__item">
                 <a href="#"
                    class="eyes__link">
-                    <img src="../../assets/mock-up/eyes5.jpg"
+                    <img src="https://files.geometria.ru/pics/original/25707164.jpg"
                          width="140"
                          height="140">
                     <div class="eyes__name">Anastasia Versa</div>
@@ -69,7 +69,7 @@
             <li class="eyes__item">
                 <a href="#"
                    class="eyes__link">
-                    <img src="../../assets/mock-up/eyes6.jpg"
+                    <img src="https://files2.geometria.ru/pics/original/054/886/54886501.jpg"
                          width="140"
                          height="140">
                     <div class="eyes__name">Tashe Che</div>

@@ -164,7 +164,7 @@
                 </div>
             </div>
             <div class="side-banner">
-                <img src="https://files.geometria.ru/banners/5a0c29cfaf7d2.jpg"
+                <img src="https://sporteluxe.com/wp-content/uploads/2015/02/NTC-tour-registrations-banner-300x600.jpg"
                      width="286"
                      height="572">
             </div>
@@ -186,72 +186,6 @@ export default {
     display: flex;
     margin-left: auto;
     margin-top: 8px;
-}
-
-.events-icon {
-    display: block;
-    width: 22px;
-    height: 22px;
-    margin-right: 24px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    &:last-child {
-        margin-right: 0;
-    }
-
-    &--drama {
-        background-image: url('../../assets/icons/drama.png');
-    }
-
-    &--note {
-        background-image: url('../../assets/icons/note.png');
-    }
-
-    &--forms {
-        background-image: url('../../assets/icons/forms.png');
-    }
-
-    &--book {
-        background-image: url('../../assets/icons/book.png');
-    }
-
-    &--glasses {
-        background-image: url('../../assets/icons/glasses.png');
-    }
-
-    &--car {
-        background-image: url('../../assets/icons/car.png');
-    }
-
-    &--tv {
-        background-image: url('../../assets/icons/tv.png');
-    }
-
-    &--pic {
-        background-image: url('../../assets/icons/pic.png');
-    }
-
-    &--sun {
-        background-image: url('../../assets/icons/sun.png');
-    }
-
-    &--weights {
-        background-image: url('../../assets/icons/weights.png');
-    }
-
-    &--cocktail {
-        background-image: url('../../assets/icons/cocktail.png');
-    }
-
-    &--bag {
-        background-image: url('../../assets/icons/bag.png');
-    }
-
-    &--soup {
-        background-image: url('../../assets/icons/soup.png');
-    }
 }
 
 .events {
