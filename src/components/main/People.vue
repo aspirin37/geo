@@ -10,41 +10,48 @@
             <div class="section__controls">
                 <button class="control-btn control-btn--prev"></button>
                 <button class="control-btn control-btn--next"></button>
-                <a href="#" class="control-btn control-btn--all">Все люди</a>
+                <a href="#"
+                   class="control-btn control-btn--all">Все люди</a>
             </div>
         </div>
         <div class="people__list">
-            <a href="#" class="people__item">
+            <a href="#"
+               class="people__item">
                 <img src="https://files2.geometria.ru/pics/original/037/270/37270907.jpg">
                 <div class="people__nickname">Monohrom</div>
                 <div class="people__name">Михаил Вильчук</div>
                 <div class="people__description">Чем знаменит, например топ-менеджер Газпрома</div>
             </a>
-            <a href="#" class="people__item">
+            <a href="#"
+               class="people__item">
                 <img src="https://files.geometria.ru/pics/original/038/530/38530343.jpg">
                 <div class="people__nickname">Mihashu </div>
                 <div class="people__name">Михаил Михашу</div>
                 <div class="people__description">Charmy Project Manager ☼ Globetrotter ✈️ Can't stop dancing</div>
             </a>
-            <a href="#" class="people__item">
+            <a href="#"
+               class="people__item">
                 <img src="https://files.geometria.ru/pics/original/16784163.jpg">
                 <div class="people__nickname">Саша Гео </div>
                 <div class="people__name">Михаил Михашу</div>
                 <div class="people__description">Шеф Геометрия.ру</div>
             </a>
-            <a href="#" class="people__item">
+            <a href="#"
+               class="people__item">
                 <img src="https://files.geometria.ru/pics/original/25707164.jpg">
                 <div class="people__nickname">Виктория Дука</div>
                 <div class="people__name">Виктория Дука</div>
                 <div class="people__description">Музыкант перкуссионист, продюсер</div>
             </a>
-            <a href="#" class="people__item">
+            <a href="#"
+               class="people__item">
                 <img src="https://files2.geometria.ru/pics/original/036/195/36195432.jpg">
                 <div class="people__nickname">Zolnikov</div>
                 <div class="people__name">Артем Зольников</div>
                 <div class="people__description">Live saxophone Performance</div>
             </a>
-            <a href="#" class="people__item">
+            <a href="#"
+               class="people__item">
                 <img src="https://files2.geometria.ru/pics/original/054/886/54886501.jpg">
                 <div class="people__nickname">garshone</div>
                 <div class="people__name">Арсений Горшенин</div>
@@ -55,95 +62,53 @@
 </template>
 <script>
 export default {
-  data() {
-    return {};
-  }
+    data() {
+        return {};
+    }
 };
 </script>
 <style lang="scss"
        scoped>
 .people {
-  &__list {
-    display: flex;
-  }
+    &__list {
+        display: flex;
+    }
 
-  &__item {
-    width: 180px;
-    margin-right: 32px;
-  }
+    &__item {
+        width: 180px;
+        margin-right: 32px;
+    }
 
-  & img {
-    width: 180px;
-    height: 180px;
-    margin-bottom: 8px;
-  }
+    & img {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 8px;
+    }
 
-  &__nickname {
-    margin-bottom: 4px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-  }
+    &__nickname {
+        margin-bottom: 4px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+    }
 
-  &__name {
-    padding-bottom: 15px;
-    margin-block-end: 9px;
-    border-bottom: 2px solid black;
-    font-size: 14px;
-    line-height: 18px;
-    color: rgba(0, 0, 0, 0.6);
-  }
+    &__name {
+        padding-bottom: 15px;
+        margin-block-end: 9px;
+        border-bottom: 2px solid black;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(0, 0, 0, 0.6);
+    }
 
-  &__description {
-    font-size: 14px;
-    line-height: 20px;
-    color: rgba(0, 0, 0, 0.6);
-  }
+    &__description {
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.6);
+    }
 }
 
 .section__title {
-  margin-right: 65px;
-}
-
-.filter {
-  display: flex;
-  align-self: center;
-  margin-right: auto;
-
-  &__button {
-    position: relative;
-    z-index: 0;
-    margin-right: 32px;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 24px;
-    opacity: 0.6;
-    transition: all 0.1s;
-    outline: none;
-
-    &::after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      bottom: 0;
-      left: 6px;
-      display: block;
-      width: 0%;
-      opacity: 0.2;
-      height: 8px;
-      background-color: #00e6de;
-      transition: all 0.3s;
-    }
-
-    &.active,
-    &:hover {
-      opacity: 1;
-    }
-
-    &.active::after,
-    &:hover::after {
-      width: 100%;
-    }
-  }
+    margin-right: 65px;
 }
 </style>
