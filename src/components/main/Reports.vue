@@ -155,7 +155,7 @@ export default {
 
 
         & img {
-            transition: 3s;
+            transition: 1s;
             transform: scale(1.1);
             width: 286px;
             height: 191px;
