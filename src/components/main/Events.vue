@@ -17,9 +17,15 @@
                              height="250">
                     </a>
                     <div class="events__info">
-                        <div class="events__date">15 июня – 31 октября</div>
-                        <a href="#"
-                           class="events__place italic-sm">Дом танца Каннон Данс</a>
+                        <div>
+                            <div class="events__date">15 июня – 31 октября</div>
+                            <a href="#"
+                               class="italic-sm">Дом танца Каннон Данс</a>
+                        </div>
+                        <div class="events-icons">
+                            <i class="events-icon events-icon--note"></i>
+                            <i class="events-icon events-icon--drama"></i>
+                        </div>
                     </div>
                     <div class="events__bottom">
                         <h4>XX Международный фестиваль современного танца OPEN LOOK</h4>
@@ -41,9 +47,14 @@
                              height="250">
                     </a>
                     <div class="events__info">
-                        <div class="events__date">15 июня – 31 октября</div>
-                        <a href="#"
-                           class="events__place italic-sm">Дом танца Каннон Данс</a>
+                        <div>
+                            <div class="events__date">15 июня – 31 октября</div>
+                            <a href="#"
+                               class="italic-sm">Дом танца Каннон Данс</a>
+                        </div>
+                        <div class="events-icons">
+                            <i class="events-icon events-icon--book"></i>
+                        </div>
                     </div>
                     <div class="events__bottom">
                         <h4>XX Международный фестиваль современного танца OPEN LOOK</h4>
@@ -65,9 +76,14 @@
                              height="250">
                     </a>
                     <div class="events__info">
-                        <div class="events__date">15 июня – 31 октября</div>
-                        <a href="#"
-                           class="events__place italic-sm">Дом танца Каннон Данс</a>
+                        <div>
+                            <div class="events__date">15 июня – 31 октября</div>
+                            <a href="#"
+                               class="italic-sm">Дом танца Каннон Данс</a>
+                        </div>
+                        <div class="events-icons">
+                            <i class="events-icon events-icon--book"></i>
+                        </div>
                     </div>
                     <div class="events__bottom">
                         <h4>XX Международный фестиваль современного танца OPEN LOOK</h4>
@@ -91,9 +107,14 @@
                              height="445">
                     </a>
                     <div class="events__info">
-                        <div class="events__date">15 июня – 31 октября</div>
-                        <a href="#"
-                           class="events__place italic-sm">Дом танца Каннон Данс</a>
+                        <div>
+                            <div class="events__date">15 июня – 31 октября</div>
+                            <a href="#"
+                               class="italic-sm">Дом танца Каннон Данс</a>
+                        </div>
+                        <div class="events-icons">
+                            <i class="events-icon events-icon--forms"></i>
+                        </div>
                     </div>
                     <div class="events__bottom">
                         <div class="labels-row">
@@ -120,9 +141,14 @@
                              height="250">
                     </a>
                     <div class="events__info">
-                        <div class="events__date">15 июня – 31 октября</div>
-                        <a href="#"
-                           class="events__place italic-sm">Дом танца Каннон Данс</a>
+                        <div>
+                            <div class="events__date">15 июня – 31 октября</div>
+                            <a href="#"
+                               class="italic-sm">Дом танца Каннон Данс</a>
+                        </div>
+                        <div class="events-icons">
+                            <i class="events-icon events-icon--note"></i>
+                        </div>
                     </div>
                     <div class="events__bottom">
                         <h4>XX Международный фестиваль современного танца OPEN LOOK</h4>
@@ -156,40 +182,75 @@ export default {
 </script>
 <style lang="scss"
        scoped>
-.actions {
+.events-icons {
     display: flex;
+    margin-left: auto;
+    margin-top: 8px;
+}
 
-    &__link {
-        position: relative;
-        margin-right: 40px;
-        padding-left: 24px;
-        font-size: 14px;
-        line-height: 18px;
-        opacity: 0.5;
+.events-icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin-right: 24px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 16px;
-            height: 16px;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
+    &:last-child {
+        margin-right: 0;
+    }
 
-        &--reviews::after {
-            background-image: url('../../assets/icons/eye.svg');
-        }
+    &--drama {
+        background-image: url('../../assets/icons/drama.png');
+    }
 
-        &--comments::after {
-            background-image: url('../../assets/icons/comment.svg');
-        }
+    &--note {
+        background-image: url('../../assets/icons/note.png');
+    }
 
-        &--subscribers::after {
-            background-image: url('../../assets/icons/go.svg');
-        }
+    &--forms {
+        background-image: url('../../assets/icons/forms.png');
+    }
+
+    &--book {
+        background-image: url('../../assets/icons/book.png');
+    }
+
+    &--glasses {
+        background-image: url('../../assets/icons/glasses.png');
+    }
+
+    &--car {
+        background-image: url('../../assets/icons/car.png');
+    }
+
+    &--tv {
+        background-image: url('../../assets/icons/tv.png');
+    }
+
+    &--pic {
+        background-image: url('../../assets/icons/pic.png');
+    }
+
+    &--sun {
+        background-image: url('../../assets/icons/sun.png');
+    }
+
+    &--weights {
+        background-image: url('../../assets/icons/weights.png');
+    }
+
+    &--cocktail {
+        background-image: url('../../assets/icons/cocktail.png');
+    }
+
+    &--bag {
+        background-image: url('../../assets/icons/bag.png');
+    }
+
+    &--soup {
+        background-image: url('../../assets/icons/soup.png');
     }
 }
 
@@ -220,6 +281,7 @@ export default {
     &__info {
         position: relative;
         z-index: 1;
+        display: flex;
         width: 413px;
         margin-left: 8px;
         margin-top: -24px;
