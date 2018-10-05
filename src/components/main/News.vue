@@ -16,7 +16,9 @@
             <div class="news__list">
                 <a href="#"
                    class="news__link">
-                    <img src="https://files2.geometria.ru/pics/original/069/864/69864351.jpg">
+                    <div class="news__img-wrapper">
+                        <img src="https://files2.geometria.ru/pics/original/069/864/69864351.jpg">
+                    </div>
                     <div>
                         <h3>Евгений Фёдоров</h3>
                         <p>Лидер коллективов Zorge, TequilaJazzz и Optimystica Orchestra, достойно прошедший через
@@ -34,7 +36,9 @@
                 </a>
                 <a href="#"
                    class="news__link">
-                    <img src="https://files2.geometria.ru/pics/original/067/424/67424580.jpg">
+                    <div class="news__img-wrapper">
+                        <img src="https://files2.geometria.ru/pics/original/067/424/67424580.jpg">
+                    </div>
                     <div>
                         <h3>Gastreet International Restaurant Show 2018</h3>
                         <p>Главное событие ресторанной отрасли, для всех тех, кто связан с ресторанной сферой</p>
@@ -51,7 +55,9 @@
                 </a>
                 <a href="#"
                    class="news__link">
-                    <img src="https://files.geometria.ru/pics/original/068/132/68132918.jpg">
+                    <div class="news__img-wrapper">
+                        <img src="https://files.geometria.ru/pics/original/068/132/68132918.jpg">
+                    </div>
                     <div>
                         <h3>Morcheeba</h3>
                         <p>Британские пионеры трип-хопа вернулись с новым альбомом Blaze Away: релиз намечен на 1
@@ -69,7 +75,9 @@
                 </a>
                 <a href="#"
                    class="news__link">
-                    <img src="https://files.geometria.ru/pics/original/067/344/67344710.jpg">
+                    <div class="news__img-wrapper">
+                        <img src="https://files.geometria.ru/pics/original/067/344/67344710.jpg">
+                    </div>
                     <div>
                         <h3>Профессия: Мастер индийского массажа</h3>
                         <p>«Все профессии нужны, все профессии важны!». Говорим с мастером индийского массажа из
@@ -87,7 +95,9 @@
                 </a>
                 <a href="#"
                    class="news__link">
-                    <img src="https://files2.geometria.ru/pics/original/069/317/69317698.jpg">
+                    <div class="news__img-wrapper">
+                        <img src="https://files2.geometria.ru/pics/original/069/317/69317698.jpg">
+                    </div>
                     <div>
                         <h3>Bobina</h3>
                         <p>Август примечателен не только масштабным развертыванием «предвыборной» гонки рейтинга Dj
@@ -123,6 +133,15 @@ export default {
         margin-left: 16px;
     }
 
+    &__img-wrapper {
+        position: absolute;
+        top: -16px;
+        left: -16px;
+        width: 392px;
+        height: 221px;
+        overflow: hidden;
+    }
+
     &__link {
         position: relative;
         display: block;
@@ -139,12 +158,16 @@ export default {
             margin-top: 16px;
         }
 
+        &:hover img {
+            transform: scale(1);
+
+        }
+
         & img {
-            position: absolute;
-            top: -16px;
-            left: -16px;
             width: 392px;
-            height: 221px;
+            height: 222px;
+            transition: 1s;
+            transform: scale(1.1);
         }
 
         h3 {

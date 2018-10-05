@@ -99,9 +99,9 @@
                 </div>
             </div>
             <div class="events__column">
-                <div class="events__item events__item--square">
+                <div class="events__item events__item">
                     <a href="#"
-                       class="events__image-link">
+                       class="events__image-link events__image-link--square">
                         <img src="https://files2.geometria.ru/pics/original/068/613/68613807.jpg"
                              width="445"
                              height="445">
@@ -209,6 +209,26 @@ export default {
 
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+
+    &__image-link {
+        display: block;
+        width: 445px;
+        height: 250px;
+        overflow: hidden;
+
+        &--square {
+            height: 445px;
+        }
+
+        & img {
+            transition: 1s;
+            transform: scale(1.1);
+        }
+
+        &:hover img {
+            transform: scale(1);
         }
     }
 
