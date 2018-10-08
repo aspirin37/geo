@@ -3,6 +3,8 @@
         <div class="section__header">
             <h1 class="section__title">Новости</h1>
             <div class="section__controls">
+                <button class="control-btn control-btn--prev"></button>
+                <button class="control-btn control-btn--next"></button>
                 <a href="#"
                    class="control-btn control-btn--all">Все новости</a>
             </div>
@@ -15,8 +17,7 @@
             </div>
             <div class="news__list">
                 <a href="#"
-                   class="news__link"
-                   v-scroll-reveal>
+                   class="news__link">
                     <div class="news__img-wrapper">
                         <img src="https://files2.geometria.ru/pics/original/069/864/69864351.jpg">
                     </div>
@@ -36,8 +37,7 @@
                     </div>
                 </a>
                 <a href="#"
-                   class="news__link"
-                   v-scroll-reveal>
+                   class="news__link">
                     <div class="news__img-wrapper">
                         <img src="https://files2.geometria.ru/pics/original/067/424/67424580.jpg">
                     </div>
@@ -56,8 +56,7 @@
                     </div>
                 </a>
                 <a href="#"
-                   class="news__link"
-                   v-scroll-reveal>
+                   class="news__link">
                     <div class="news__img-wrapper">
                         <img src="https://files.geometria.ru/pics/original/068/132/68132918.jpg">
                     </div>
@@ -77,8 +76,7 @@
                     </div>
                 </a>
                 <a href="#"
-                   class="news__link"
-                   v-scroll-reveal>
+                   class="news__link">
                     <div class="news__img-wrapper">
                         <img src="https://files.geometria.ru/pics/original/067/344/67344710.jpg">
                     </div>
@@ -98,8 +96,7 @@
                     </div>
                 </a>
                 <a href="#"
-                   class="news__link"
-                   v-scroll-reveal>
+                   class="news__link">
                     <div class="news__img-wrapper">
                         <img src="https://files2.geometria.ru/pics/original/069/317/69317698.jpg">
                     </div>
@@ -133,11 +130,17 @@ export default {
 </script>
 <style lang="scss"
        scoped>
+@import '@/styles/_variables.scss';
+
 .news {
     margin-bottom: 48px;
 
     &__list {
         margin-left: 16px;
+
+        @media (max-width: $desktop-width) {
+            padding-right: 20px;
+        }
     }
 
     &__img-wrapper {
@@ -179,6 +182,10 @@ export default {
             height: 222px;
             transition: 1s;
             transform: scale(1.1);
+
+            @media (max-width: $desktop-width) {
+                transform: scale(1);
+            }
         }
 
         h3 {
@@ -196,5 +203,14 @@ export default {
 
 .side-banner {
     margin-right: 45px;
+}
+
+.control-btn--prev,
+.control-btn--next {
+    display: none;
+
+    @media (max-width: $desktop-width) {
+        display: block;
+    }
 }
 </style>

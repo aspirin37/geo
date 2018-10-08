@@ -40,9 +40,6 @@ li {
 }
 
 .app-container {
-    // display: flex;
-    // align-items: stretch;
-    // max-width: 1424px;
     padding-left: 64px;
 
     @media (max-width: $desktop-width) {
@@ -57,7 +54,6 @@ li {
     max-width: 1360px;
     padding: 60px;
     padding-top: 48px;
-    // margin-left: auto;
     margin-right: auto;
 
     @media (max-width: $desktop-width) {
@@ -84,6 +80,10 @@ li {
         margin-bottom: 32px;
 
         @media (max-width: $desktop-width) {
+            padding-right: 20px;
+        }
+
+        @media (max-width: $tablet-width-sm) {
             flex-direction: column;
         }
     }
@@ -126,8 +126,6 @@ li {
     }
 
     &--next {
-        // position: relative;
-        // left: -2px;
         margin-right: 16px;
         background-image: url('./assets/icons/chevron-right.svg')
     }

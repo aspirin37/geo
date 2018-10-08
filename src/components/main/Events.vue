@@ -3,6 +3,8 @@
         <div class="section__header">
             <h1 class="section__title">Анонсы событий</h1>
             <div class="section__controls">
+                <button class="control-btn control-btn--prev"></button>
+                <button class="control-btn control-btn--next"></button>
                 <a href="#"
                    class="control-btn control-btn--all">Все анонсы</a>
             </div>
@@ -142,6 +144,15 @@ export default {
         display: flex;
         flex-direction: column;
         margin-right: 32px;
+    }
+}
+
+.control-btn--prev,
+.control-btn--next {
+    display: none;
+
+    @media (max-width: $desktop-width) {
+        display: block;
     }
 }
 </style>

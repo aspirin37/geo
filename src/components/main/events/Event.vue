@@ -1,6 +1,5 @@
 <template>
-    <div class="event"
-         v-scroll-reveal>
+    <div class="event">
         <a href="#"
            class="event__image-link"
            :class="{'event__image-link--square': event.isSquare &&  $mq == 'lg'}">
@@ -71,6 +70,10 @@ export default {
         display: flex;
         margin-left: auto;
         margin-top: 8px;
+
+        @media (max-width: $desktop-width) {
+            display: none;
+        }
     }
 
     &__image-link {
@@ -134,10 +137,6 @@ export default {
 
     h4 {
         margin-bottom: 12px;
-
-        @media (max-width: $desktop-width) {
-            margin-bottom: 8px;
-        }
     }
 }
 </style>

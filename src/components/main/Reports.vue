@@ -165,6 +165,10 @@ export default {
             transform: scale(1.1);
             width: 286px;
             height: 191px;
+
+            @media (max-width: $desktop-width) {
+                transform: scale(1);
+            }
         }
     }
 
