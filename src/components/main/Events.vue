@@ -125,7 +125,13 @@ export default {
 </script>
 <style lang="scss"
        scoped>
+@import '@/styles/_variables.scss';
+
 .events {
+    @media (max-width: $desktop-width) {
+        margin-bottom: 40px;
+    }
+
     &__list {
         display: flex;
         flex-direction: row;
