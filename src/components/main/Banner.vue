@@ -15,9 +15,15 @@ export default {
 </script>
 <style lang="scss"
        scoped>
+@import '@/styles/_variables.scss';
+
 .banner {
     cursor: pointer;
     margin-bottom: 48px;
+
+    @media (max-width: $mobile-width) {
+        display: none;
+    }
 
     & img {
         width: 100%;

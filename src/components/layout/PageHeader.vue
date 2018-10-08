@@ -39,6 +39,8 @@ export default {
 </script>
 <style lang="scss"
        scoped>
+@import '@/styles/_variables.scss';
+
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -46,17 +48,47 @@ export default {
     padding: 20px;
     padding-bottom: 18px;
     border-bottom: 2px solid black;
+
+    @media (max-width: $mobile-width) {
+        display: none;
+    }
 }
 
 .main-nav {
     display: flex;
 
     &__link {
+        position: relative;
+        z-index: 0;
         margin-right: 32px;
         font-size: 18px;
         line-height: 24px;
         font-weight: bold;
         text-decoration: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            left: 6px;
+            display: block;
+            width: 0%;
+            opacity: 0.2;
+            height: 8px;
+            background-color: #00e6de;
+            transition: all 0.3s;
+        }
+
+        &.active,
+        &:hover {
+            opacity: 1;
+        }
+
+        &.active::after,
+        &:hover::after {
+            width: 100%;
+        }
     }
 
     &__btn {
@@ -77,39 +109,5 @@ export default {
         }
     }
 
-}
-
-.social-nav {
-    display: flex;
-    align-items: center;
-
-    &__link {
-        width: 20px;
-        height: 20px;
-        margin-right: 16px;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &--vk {
-            background-image: url('../../assets/icons/vk.svg');
-        }
-
-        &--fb {
-            background-image: url('../../assets/icons/fb.svg');
-        }
-
-        &--inst {
-            background-image: url('../../assets/icons/insta.svg');
-            background-size: 18px 18px;
-        }
-
-        &--ytb {
-            background-image: url('../../assets/icons/youtube.svg');
-        }
-    }
 }
 </style>

@@ -52,12 +52,18 @@ export default {
 </script>
 <style lang="scss"
        scoped>
+@import '@/styles/_variables.scss';
+
 .page-footer {
     padding: 40px 68px;
     background-color: rgba(0, 0, 0, 0.8);
     background-image: url('../../assets/footer-logo.svg');
     background-position: 80% 50%;
     background-repeat: no-repeat;
+
+    @media (max-width: $mobile-width) {
+        display: none;
+    }
 
     &__top {
         display: flex;

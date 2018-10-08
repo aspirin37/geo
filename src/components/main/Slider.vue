@@ -14,6 +14,8 @@ export default {
 </script>
 <style lang="scss"
        scoped>
+@import '@/styles/_variables.scss';
+
 .main-slider {
     width: 100%;
     min-width: 1046px;
@@ -25,6 +27,11 @@ export default {
     & img {
         width: 100%;
         height: auto;
+    }
+
+    @media (max-width: $mobile-width) {
+        min-width: auto;
+        padding: 0;
     }
 }
 </style>
