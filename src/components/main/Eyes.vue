@@ -92,6 +92,8 @@ export default {
 </script>
 <style lang="scss"
        scoped>
+@import '@/styles/_variables.scss';
+
 .eyes {
     padding: 24px;
     padding-right: 8px;
@@ -99,6 +101,11 @@ export default {
     margin-bottom: 40px;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 2px;
+
+    @media (max-width: $desktop-width) {
+        margin-left: -20px;
+        border-radius: 0;
+    }
 
     &__header {
         display: flex;

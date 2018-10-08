@@ -21,7 +21,7 @@ export default {
     cursor: pointer;
     margin-bottom: 48px;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width) {
         display: none;
     }
 

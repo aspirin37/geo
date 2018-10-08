@@ -45,7 +45,7 @@ li {
     // max-width: 1424px;
     padding-left: 64px;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width) {
         padding-left: 0;
     }
 }
@@ -60,7 +60,7 @@ li {
     // margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width) {
         padding: 24px 20px;
         padding-right: 0;
         min-width: auto;
@@ -69,6 +69,10 @@ li {
 
 .page-border {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    @media (max-width: $desktop-width) {
+        border: none;
+    }
 }
 
 .section {
@@ -79,7 +83,7 @@ li {
         align-items: baseline;
         margin-bottom: 32px;
 
-        @media (max-width: $mobile-width) {
+        @media (max-width: $desktop-width) {
             flex-direction: column;
         }
     }
@@ -87,7 +91,7 @@ li {
     &__title {
         margin-right: auto;
 
-        @media (max-width: $mobile-width) {
+        @media (max-width: $desktop-width) {
             margin-bottom: 32px;
         }
     }
@@ -286,7 +290,7 @@ li {
     align-self: center;
     margin-right: auto;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width) {
         margin-bottom: 24px;
     }
 

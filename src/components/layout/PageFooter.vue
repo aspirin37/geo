@@ -61,7 +61,7 @@ export default {
     background-position: 80% 50%;
     background-repeat: no-repeat;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width) {
         display: none;
     }
 

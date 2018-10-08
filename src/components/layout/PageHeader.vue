@@ -49,7 +49,7 @@ export default {
     padding-bottom: 18px;
     border-bottom: 2px solid black;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width) {
         display: none;
     }
 }

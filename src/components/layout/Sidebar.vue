@@ -40,13 +40,13 @@ export default {
     background-color: black;
 
     .top {
-        @media (max-width: $mobile-width) {
+        @media (max-width: $desktop-width) {
             display: flex;
         }
     }
 
     nav {
-        @media (max-width: $mobile-width) {
+        @media (max-width: $desktop-width) {
             display: flex;
             margin-left: auto;
         }
@@ -63,7 +63,7 @@ export default {
             display: none;
             // background-image: url('../../assets/logo.svg');
 
-            @media (max-width: $mobile-width) {
+            @media (max-width: $desktop-width) {
                 display: block;
             }
         }
@@ -76,7 +76,7 @@ export default {
             background-size: contain;
             background-image: url('../../assets/profile.png');
 
-            @media (max-width: $mobile-width) {
+            @media (max-width: $desktop-width) {
                 display: none;
             }
         }
@@ -96,13 +96,13 @@ export default {
         &--help {
             background-image: url('../../assets/icons/help.svg');
 
-            @media (max-width: $mobile-width) {
+            @media (max-width: $desktop-width) {
                 display: none;
             }
         }
     }
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width) {
         position: relative;
         display: flex;
         width: 100%;

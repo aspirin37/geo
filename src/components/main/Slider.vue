@@ -23,16 +23,13 @@ export default {
     max-height: 600px;
     padding: 20px;
     padding-bottom: 0;
-    // background-image: url('../../assets/geo-bg.jpg');
-    // background-position: 50% 50%;
-    // background-repeat: no-repeat;
 
     & img {
         width: 100%;
         height: auto;
     }
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width) {
         min-width: auto;
         padding: 0;
     }

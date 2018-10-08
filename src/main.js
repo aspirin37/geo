@@ -4,8 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueScrollReveal from 'vue-scroll-reveal';
+import VueMq from 'vue-mq'
 
 Vue.use(VueScrollReveal)
+Vue.use(VueMq, {
+    breakpoints: {
+        sm: 1125,
+        lg: Infinity,
+    }
+})
 
 Vue.config.productionTip = false
 

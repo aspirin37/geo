@@ -7,166 +7,19 @@
                    class="control-btn control-btn--all">Все анонсы</a>
             </div>
         </div>
-        <div class="events__list">
+        <div class="events__list"
+             v-if="$mq == 'lg'">
             <div class="events__column">
-                <div class="events__item"
-                     v-scroll-reveal.reset>
-                    <a href="#"
-                       class="events__image-link">
-                        <img src="http://files.geometria.ru/pics/original/037/209/37209892.jpg"
-                             width="445"
-                             height="250">
-                    </a>
-                    <div class="events__info">
-                        <div>
-                            <div class="events__date">15 июня – 31 октября</div>
-                            <a href="#"
-                               class="italic-sm">Дом танца Каннон Данс</a>
-                        </div>
-                        <div class="events-icons">
-                            <i class="events-icon events-icon--note"></i>
-                            <i class="events-icon events-icon--drama"></i>
-                        </div>
-                    </div>
-                    <div class="events__bottom">
-                        <h4><a href="#">XX Международный фестиваль современного танца OPEN LOOK</a></h4>
-                        <div class="actions">
-                            <a href="#"
-                               class="actions__link actions__link--reviews">39</a>
-                            <a href="#"
-                               class="actions__link actions__link--comments">4</a>
-                            <a href="#"
-                               class="actions__link actions__link--subscribers">27</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="events__item"
-                     v-scroll-reveal.reset>
-                    <a href="#"
-                       class="events__image-link">
-                        <img src="https://files2.geometria.ru/pics/original/063/923/63923770.jpg"
-                             width="445"
-                             height="250">
-                    </a>
-                    <div class="events__info">
-                        <div>
-                            <div class="events__date">15 июня – 31 октября</div>
-                            <a href="#"
-                               class="italic-sm">Дом танца Каннон Данс</a>
-                        </div>
-                        <div class="events-icons">
-                            <i class="events-icon events-icon--book"></i>
-                        </div>
-                    </div>
-                    <div class="events__bottom">
-                        <h4><a href="#">XX Международный фестиваль современного танца OPEN LOOK</a></h4>
-                        <div class="actions">
-                            <a href="#"
-                               class="actions__link actions__link--reviews">39</a>
-                            <a href="#"
-                               class="actions__link actions__link--comments">4</a>
-                            <a href="#"
-                               class="actions__link actions__link--subscribers">27</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="events__item"
-                     v-scroll-reveal.reset>
-                    <a href="#"
-                       class="events__image-link">
-                        <img src="https://files.geometria.ru/pics/original/067/647/67647183.jpg"
-                             width="445"
-                             height="250">
-                    </a>
-                    <div class="events__info">
-                        <div>
-                            <div class="events__date">15 июня – 31 октября</div>
-                            <a href="#"
-                               class="italic-sm">Дом танца Каннон Данс</a>
-                        </div>
-                        <div class="events-icons">
-                            <i class="events-icon events-icon--book"></i>
-                        </div>
-                    </div>
-                    <div class="events__bottom">
-                        <h4><a href="#">XX Международный фестиваль современного танца OPEN LOOK</a></h4>
-                        <div class="actions">
-                            <a href="#"
-                               class="actions__link actions__link--reviews">39</a>
-                            <a href="#"
-                               class="actions__link actions__link--comments">4</a>
-                            <a href="#"
-                               class="actions__link actions__link--subscribers">27</a>
-                        </div>
-                    </div>
-                </div>
+                <event v-for="(it, i) in events"
+                       :event="it"
+                       v-if="i % 2 == 0"
+                       :key="i" />
             </div>
             <div class="events__column">
-                <div class="events__item"
-                     v-scroll-reveal.reset>
-                    <a href="#"
-                       class="events__image-link events__image-link--square">
-                        <img src="https://files2.geometria.ru/pics/original/068/613/68613807.jpg"
-                             width="445"
-                             height="445">
-                    </a>
-                    <div class="events__info">
-                        <div>
-                            <div class="events__date">15 июня – 31 октября</div>
-                            <a href="#"
-                               class="italic-sm">Дом танца Каннон Данс</a>
-                        </div>
-                        <div class="events-icons">
-                            <i class="events-icon events-icon--forms"></i>
-                        </div>
-                    </div>
-                    <div class="events__bottom">
-                        <div class="labels-row">
-                            <div class="label label--red">Геометрия рекомендует</div>
-                            <a class="label label--blue"
-                               href="#">Купить билеты</a>
-                        </div>
-                        <h4><a href="#">XX Международный фестиваль современного танца OPEN LOOK</a></h4>
-                        <div class="actions">
-                            <a href="#"
-                               class="actions__link actions__link--reviews">39</a>
-                            <a href="#"
-                               class="actions__link actions__link--comments">4</a>
-                            <a href="#"
-                               class="actions__link actions__link--subscribers">27</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="events__item"
-                     v-scroll-reveal.reset>
-                    <a href="#"
-                       class="events__image-link">
-                        <img src="https://files2.geometria.ru/pics/original/070/079/70079806.jpg"
-                             width="445"
-                             height="250">
-                    </a>
-                    <div class="events__info">
-                        <div>
-                            <div class="events__date">15 июня – 31 октября</div>
-                            <a href="#"
-                               class="italic-sm">Дом танца Каннон Данс</a>
-                        </div>
-                        <div class="events-icons">
-                            <i class="events-icon events-icon--note"></i>
-                        </div>
-                    </div>
-                    <div class="events__bottom">
-                        <h4><a href="#">XX Международный фестиваль современного танца OPEN LOOK</a></h4>
-                        <div class="actions">
-                            <a href="#"
-                               class="actions__link actions__link--reviews">39</a>
-                            <a href="#"
-                               class="actions__link actions__link--comments">4</a>
-                            <a href="#"
-                               class="actions__link actions__link--subscribers">27</a>
-                        </div>
-                    </div>
-                </div>
+                <event v-for="(it, i) in events"
+                       :event="it"
+                       v-if="Math.abs(i % 2) == 1"
+                       :key="i" />
             </div>
             <div class="side-banner">
                 <img src="https://sporteluxe.com/wp-content/uploads/2015/02/NTC-tour-registrations-banner-300x600.jpg"
@@ -174,25 +27,104 @@
                      height="572">
             </div>
         </div>
+        <div class="events__list"
+             v-else>
+            <event v-for="(it, i) in events"
+                   :event="it"
+                   :key="i" />
+        </div>
     </section>
 </template>
 <script>
+import Event from './events/Event'
 export default {
+    components: {
+        Event
+    },
     data() {
         return {
-
+            events: [{
+                preview: 'http://files.geometria.ru/pics/original/037/209/37209892.jpg',
+                dates: '15 июня – 31 октября',
+                place: 'Дом танца Каннон Данс',
+                name: 'XX Международный фестиваль современного танца OPEN LOOK',
+                reviews: 39,
+                comments: 4,
+                subscribers: 27,
+                isSquare: false,
+                icons: {
+                    book: false,
+                    drama: true,
+                    forms: false,
+                    note: true
+                }
+            }, {
+                preview: 'https://files2.geometria.ru/pics/original/068/613/68613807.jpg',
+                dates: '15 июня – 31 октября',
+                place: 'Дом танца Каннон Данс',
+                name: 'XX Международный фестиваль современного танца OPEN LOOK',
+                reviews: 39,
+                comments: 4,
+                subscribers: 27,
+                isSquare: true,
+                icons: {
+                    book: true,
+                    drama: false,
+                    forms: false,
+                    note: false
+                }
+            }, {
+                preview: 'https://files2.geometria.ru/pics/original/063/923/63923770.jpg',
+                dates: '15 июня – 31 октября',
+                place: 'Дом танца Каннон Данс',
+                name: 'XX Международный фестиваль современного танца OPEN LOOK',
+                reviews: 39,
+                comments: 4,
+                subscribers: 27,
+                isSquare: false,
+                icons: {
+                    book: true,
+                    drama: false,
+                    forms: false,
+                    note: false
+                }
+            }, {
+                preview: 'https://files2.geometria.ru/pics/original/070/079/70079806.jpg',
+                dates: '15 июня – 31 октября',
+                place: 'Дом танца Каннон Данс',
+                name: 'XX Международный фестиваль современного танца OPEN LOOK',
+                reviews: 39,
+                comments: 4,
+                subscribers: 27,
+                isSquare: false,
+                icons: {
+                    book: true,
+                    drama: false,
+                    forms: false,
+                    note: false
+                }
+            }, {
+                preview: 'https://files.geometria.ru/pics/original/067/647/67647183.jpg',
+                dates: '15 июня – 31 октября',
+                place: 'Дом танца Каннон Данс',
+                name: 'XX Международный фестиваль современного танца OPEN LOOK',
+                reviews: 39,
+                comments: 4,
+                subscribers: 27,
+                isSquare: false,
+                icons: {
+                    book: true,
+                    drama: false,
+                    forms: false,
+                    note: false
+                }
+            }]
         }
     }
 }
 </script>
 <style lang="scss"
        scoped>
-.events-icons {
-    display: flex;
-    margin-left: auto;
-    margin-top: 8px;
-}
-
 .events {
     &__list {
         display: flex;
@@ -204,65 +136,6 @@ export default {
         display: flex;
         flex-direction: column;
         margin-right: 32px;
-    }
-
-    &__item {
-        vertical-align: top;
-        display: inline-block;
-        width: 445px;
-        margin-bottom: 32px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        &:hover img {
-            transform: scale(1);
-        }
-    }
-
-    &__image-link {
-        display: block;
-        width: 445px;
-        height: 250px;
-        overflow: hidden;
-
-        &--square {
-            height: 445px;
-        }
-
-        & img {
-            transition: 1s;
-            transform: scale(1.1);
-        }
-    }
-
-    &__info {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        width: 413px;
-        margin-left: 8px;
-        margin-top: -24px;
-        margin-bottom: 8px;
-        padding: 16px;
-        padding-top: 8px;
-        border: 2px solid #000000;
-        border-radius: 2px;
-        background-color: #FFFFFF;
-    }
-
-    &__date {
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    &__bottom {
-        padding-left: 8px;
-    }
-
-    h4 {
-        margin-bottom: 12px;
     }
 }
 </style>
