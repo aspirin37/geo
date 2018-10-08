@@ -116,11 +116,13 @@ li {
     background-repeat: no-repeat;
 
     &--prev {
-        margin-right: -2px;
+        // margin-right: -2px;
         background-image: url('./assets/icons/chevron-left.svg')
     }
 
     &--next {
+        position: relative;
+        left: -2px;
         margin-right: 16px;
         background-image: url('./assets/icons/chevron-right.svg')
     }

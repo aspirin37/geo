@@ -134,6 +134,8 @@ export default {
 <style lang="scss"
        scoped>
 .news {
+    margin-bottom: 48px;
+
     &__list {
         margin-left: 16px;
     }
@@ -161,6 +163,10 @@ export default {
 
         &:first-child {
             margin-top: 16px;
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
         }
 
         &:hover img {
