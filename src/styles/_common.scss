@@ -101,6 +101,7 @@ li {
     display: block;
     height: 40px;
     min-width: 48px;
+    margin: 0;
     padding: 9px 16px;
     -webkit-appearance: none;
     border: 2px solid black;
@@ -116,13 +117,13 @@ li {
     background-repeat: no-repeat;
 
     &--prev {
-        // margin-right: -2px;
+        margin-right: -2px;
         background-image: url('./assets/icons/chevron-left.svg')
     }
 
     &--next {
-        position: relative;
-        left: -2px;
+        // position: relative;
+        // left: -2px;
         margin-right: 16px;
         background-image: url('./assets/icons/chevron-right.svg')
     }
