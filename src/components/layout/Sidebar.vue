@@ -40,28 +40,28 @@ export default {
         background-repeat: no-repeat;
 
         &--logo {
-            background-image: url('../assets/logo.svg');
+            background-image: url('../../assets/logo.svg');
         }
 
         &--profile {
             background-size: contain;
-            background-image: url('../assets/profile.png');
+            background-image: url('../../assets/profile.png');
         }
 
         &--add {
-            background-image: url('../assets/icons/add-outline.svg');
+            background-image: url('../../assets/icons/add-outline.svg');
         }
 
         &--notif {
-            background-image: url('../assets/icons/notifications-outline.svg');
+            background-image: url('../../assets/icons/notifications-outline.svg');
         }
 
         &--search {
-            background-image: url('../assets/icons/search.svg');
+            background-image: url('../../assets/icons/search.svg');
         }
 
         &--help {
-            background-image: url('../assets/icons/help.svg');
+            background-image: url('../../assets/icons/help.svg');
         }
     }
 }

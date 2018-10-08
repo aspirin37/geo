@@ -146,6 +146,7 @@ li {
 
 .side-banner {
     display: none;
+    cursor: pointer;
 
     @media (min-width: 1440px) {
         display: block;
@@ -297,6 +298,40 @@ li {
         &.active::after,
         &:hover::after {
             width: 100%;
+        }
+    }
+}
+
+.social-nav {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        width: 20px;
+        height: 20px;
+        margin-right: 16px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--vk {
+            background-image: url('./assets/icons/vk.svg');
+        }
+
+        &--fb {
+            background-image: url('./assets/icons/fb.svg');
+        }
+
+        &--inst {
+            background-image: url('./assets/icons/insta.svg');
+            background-size: 18px 18px;
+        }
+
+        &--ytb {
+            background-image: url('./assets/icons/youtube.svg');
         }
     }
 }

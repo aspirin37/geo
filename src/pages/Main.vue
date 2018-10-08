@@ -11,13 +11,14 @@
         <div class="page-border">
             <div class="page-container">
                 <news></news>
-                <banner></banner>
+                <banner :src="'https://s.go31.ru/section/newsInText/upload/images/news/intext/000/040/533/to-1_5b72aa1f88e4f.jpg'"></banner>
                 <people v-scroll-reveal.reset></people>
             </div>
         </div>
         <div class="page-container">
             <masterpieces v-scroll-reveal.reset></masterpieces>
             <places v-scroll-reveal.reset></places>
+            <banner :src="'https://www.trashedgraphics.com/wp-content/uploads/2014/02/banner_02.jpg'"></banner>
         </div>
     </div>
 </template>

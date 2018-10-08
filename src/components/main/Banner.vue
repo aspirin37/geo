@@ -1,10 +1,11 @@
 <template>
     <section class="section banner">
-        <img src="https://s.go31.ru/section/newsInText/upload/images/news/intext/000/040/533/to-1_5b72aa1f88e4f.jpg">
+        <img :src="src">
     </section>
 </template>
 <script>
 export default {
+    props: ['src'],
     data() {
         return {
 
@@ -15,6 +16,7 @@ export default {
 <style lang="scss"
        scoped>
 .banner {
+    cursor: pointer;
     margin-bottom: 48px;
 
     & img {

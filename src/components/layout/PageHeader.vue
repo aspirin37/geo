@@ -95,20 +95,20 @@ export default {
         }
 
         &--vk {
-            background-image: url('../assets/icons/vk.svg');
+            background-image: url('../../assets/icons/vk.svg');
         }
 
         &--fb {
-            background-image: url('../assets/icons/fb.svg');
+            background-image: url('../../assets/icons/fb.svg');
         }
 
         &--inst {
-            background-image: url('../assets/icons/insta.svg');
+            background-image: url('../../assets/icons/insta.svg');
             background-size: 18px 18px;
         }
 
         &--ytb {
-            background-image: url('../assets/icons/youtube.svg');
+            background-image: url('../../assets/icons/youtube.svg');
         }
     }
 }

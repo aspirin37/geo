@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>8064B79D-DBBA-4E1E-97CF-E2164792164E</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M11.6536628,17.9331925 L8.32872779,17.9331925 L8.32872779,10.2170026 L6.66666667,10.2170026 L6.66666667,7.55689207 L8.32872779,7.55689207 L8.32872779,5.9606632 C8.32872779,3.79144993 9.2674469,2.5 11.9316212,2.5 L14.1504118,2.5 L14.1504118,5.16011053 L12.7646836,5.16011053 C11.725997,5.16011053 11.6577265,5.5323472 11.6577265,6.22643043 L11.6536628,7.55689207 L14.1666667,7.55689207 L13.8724534,10.2170026 L11.6536628,10.2170026 L11.6536628,17.9331925 L11.6536628,17.9331925 Z" id="path-1"></path>
+    </defs>
+    <g id="01-home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.01.-Главная" transform="translate(-1286.000000, -7703.000000)">
+            <g id="tying/footer-desktop" transform="translate(63.000000, 7653.000000)">
+                <g id="Group-9">
+                    <g id="logo">
+                        <g id="Group-4" transform="translate(1181.000000, 48.000000)">
+                            <g id="icons/24-ss_vk-b-copy" transform="translate(36.000000, 0.000000)">
+                                <rect id="Background" x="0" y="0" width="20" height="20"></rect>
+                                <rect id="bound" x="0" y="0" width="20" height="20"></rect>
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="Shape" fill="#141414" xlink:href="#path-1"></use>
+                                <g id="colors/black" mask="url(#mask-2)">
+                                    <rect id="Background" x="0" y="0" width="20" height="20"></rect>
+                                    <rect id="Black-Color-Copy-9" fill="#ffffff" x="0" y="0" width="20" height="20"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
