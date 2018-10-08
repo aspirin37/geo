@@ -118,8 +118,14 @@ export default {
 </script>
 <style lang="scss"
        scoped>
+@import '@/styles/_variables.scss';
+
 .reports {
     margin-bottom: 48px;
+
+    @media (max-width: $desktop-width) {
+        margin-top: 24px;
+    }
 
     &__list {
         display: flex;
