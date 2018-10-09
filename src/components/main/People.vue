@@ -1,5 +1,5 @@
 <template>
-    <section class="section people">
+    <section class="section section--static people">
         <div class="section__header">
             <h1 class="section__title">Люди</h1>
             <div class="filter">

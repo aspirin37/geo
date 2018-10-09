@@ -1,5 +1,5 @@
 <template>
-    <section class="section news">
+    <section class="section section--static news">
         <div class="section__header">
             <h1 class="section__title">Новости</h1>
             <div class="section__controls">

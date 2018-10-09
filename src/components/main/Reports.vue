@@ -3,83 +3,43 @@
         <div class="section__header">
             <h1 class="section__title">Фотоотчеты</h1>
             <div class="section__controls">
-                <button class="control-btn control-btn--prev"></button>
-                <button class="control-btn control-btn--next"></button>
+                <button class="control-btn control-btn--prev reports-next"></button>
+                <button class="control-btn control-btn--next reports-prev"></button>
                 <a href="#"
                    class="control-btn control-btn--all">Все фотоотчеты</a>
             </div>
         </div>
-        <ul class="reports__list">
-            <li class="reports__item">
-                <a href="#"
-                   class="reports__image-link">
-                    <img src="https://files.geometria.ru/pics/post_avatar/069/740/69740549.jpg">
-                    <div class="reports__date">9 сентября</div>
-                </a>
-                <a href="#"
-                   class="italic-sm">Клуб Central Station</a>
-                <h4><a href="#">LOSHADKA PRTY 9 YEARS CELEBRATION</a></h4>
-                <a href="#"
-                   class="reports__author-link">
-                    <div class="reports__author-avatar">
-                        <img src="https://files.geometria.ru/pics/thumbnail/066/108/66108176.jpg"
-                             width="40"
-                             height="40">
-                    </div>
-                    <div class="d-flex flex-column">
-                        <span class="reports__author-title">Автор</span>
-                        <span class="reports__author-name">Tashe Che</span>
-                    </div>
-                </a>
-            </li>
-            <li class="reports__item">
-                <a href="#"
-                   class="reports__image-link">
-                    <img src="https://files2.geometria.ru/pics/post_avatar/069/649/69649687.jpg"
-                         height="191"
-                         width="286">
-                    <div class="reports__date">31 августа</div>
-                </a>
-                <a href="#"
-                   class="italic-sm">Арт-пространство FREEDOM</a>
-                <h4><a href="#">Grant's. Encore + Feduk</a></h4>
-                <a href="#"
-                   class="reports__author-link">
-                    <div class="reports__author-avatar">
-                        <img src="https://files.geometria.ru/pics/thumbnail/069/209/69209335.jpg"
-                             width="40"
-                             height="40">
-                    </div>
-                    <div class="d-flex flex-column">
-                        <span class="reports__author-title">Автор</span>
-                        <span class="reports__author-name">Dmitriy Mnogolet</span>
-                    </div>
-                </a>
-            </li>
-            <li class="reports__item">
-                <a href="#"
-                   class="reports__image-link">
-                    <img src="https://files.geometria.ru/pics/post_avatar/069/687/69687457.jpg"
-                         height="191"
-                         width="286">
-                    <div class="reports__date">31 августа</div>
-                </a>
-                <a href="#"
-                   class="italic-sm">Atelier Club</a>
-                <h4><a href="#">Loutka Forever With Love / Atelier club (Prague)</a></h4>
-                <a href="#"
-                   class="reports__author-link">
-                    <div class="reports__author-avatar">
-                        <img src="https://files.geometria.ru/pics/thumbnail/066/468/66468742.jpg"
-                             width="40"
-                             height="40">
-                    </div>
-                    <div class="d-flex flex-column">
-                        <span class="reports__author-title">Автор</span>
-                        <span class="reports__author-name">Ксения Сытина</span>
-                    </div>
-                </a>
-            </li>
+        <div class="slider-wrapper">
+            <swiper class="slider"
+                    :options="swiperOption">
+                <swiper-slide v-for="(it, i) in reports"
+                              :key="i">
+                    <li class="reports__item">
+                        <a href="#"
+                           class="reports__image-link">
+                            <img :src="it.event.image">
+                            <div class="reports__date">{{ it.event.date }}</div>
+                        </a>
+                        <a href="#"
+                           class="italic-sm">{{ it.event.place }}</a>
+                        <h4><a href="#">{{ it.event.name }}</a></h4>
+                        <a href="#"
+                           class="reports__author-link">
+                            <div class="reports__author-avatar">
+                                <img :src="it.author.avatar"
+                                     width="40"
+                                     height="40">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <span class="reports__author-title">Автор</span>
+                                <span class="reports__author-name">{{ it.author.name }}</span>
+                            </div>
+                        </a>
+                    </li>
+                </swiper-slide>
+            </swiper>
+        </div>
+        <!-- <ul class="reports__list">
             <li class="reports__item">
                 <a href="#"
                    class="reports__image-link">
@@ -104,14 +64,70 @@
                     </div>
                 </a>
             </li>
-        </ul>
+        </ul> -->
     </section>
 </template>
 <script>
 export default {
     data() {
         return {
+            reports: [{
+                event: {
+                    image: `https://files.geometria.ru/pics/post_avatar/069/740/69740549.jpg`,
+                    date: `9 сентября`,
+                    place: `Клуб Central Station`,
+                    name: `LOSHADKA PRTY 9 YEARS CELEBRATION`
+                },
+                author: {
+                    avatar: `https://files.geometria.ru/pics/thumbnail/066/108/66108176.jpg`,
+                    name: `Tashe Che`,
+                }
 
+            }, {
+                event: {
+                    image: `https://files2.geometria.ru/pics/post_avatar/069/649/69649687.jpg`,
+                    date: `31 августа`,
+                    place: `Арт-пространство FREEDOM`,
+                    name: `Grant's. Encore + Feduk`
+                },
+                author: {
+                    avatar: `https://files.geometria.ru/pics/thumbnail/069/209/69209335.jpg`,
+                    name: `Dmitriy Mnogolet`,
+                }
+
+            }, {
+                event: {
+                    image: `https://files.geometria.ru/pics/post_avatar/069/687/69687457.jpg`,
+                    date: `31 августа`,
+                    place: `Atelier Club`,
+                    name: `Loutka Forever With Love / Atelier club (Prague)`
+                },
+                author: {
+                    avatar: `https://files.geometria.ru/pics/thumbnail/066/468/66468742.jpg`,
+                    name: `Ксения Сытина`,
+                }
+
+            }, {
+                event: {
+                    image: `https://files2.geometria.ru/pics/post_avatar/069/677/69677751.jpg`,
+                    date: `31 августа`,
+                    place: `Pravda Bar`,
+                    name: `#СТУДДВИЖ!`
+                },
+                author: {
+                    avatar: `https://files.geometria.ru/pics/thumbnail/064/273/64273667.jpg`,
+                    name: `Саша Гео`,
+                }
+
+            }],
+            swiperOption: {
+                slidesPerView: 4,
+                loop: true,
+                navigation: {
+                    nextEl: '.reports-prev',
+                    prevEl: '.reports-next',
+                },
+            },
         }
     }
 }
@@ -119,6 +135,14 @@ export default {
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
+
+.slider-container {
+    overflow: hidden;
+}
+
+.slider {
+    width: 1240px;
+}
 
 .reports {
     margin-bottom: 48px;
@@ -133,6 +157,7 @@ export default {
     }
 
     &__item {
+        width: 286px;
         display: flex;
         flex-direction: column;
         margin-right: 32px;

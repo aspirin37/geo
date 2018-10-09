@@ -1,5 +1,5 @@
 <template>
-    <section class="section events">
+    <section class="section section--static events">
         <div class="section__header">
             <h1 class="section__title">Анонсы событий</h1>
             <div class="section__controls">

@@ -1,5 +1,5 @@
 <template>
-    <section class="section places">
+    <section class="section section--static places">
         <div class="section__header">
             <h1 class="section__title">Заведения</h1>
             <div class="filter">

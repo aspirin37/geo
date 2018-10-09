@@ -5,8 +5,11 @@ import App from './App'
 import router from './router'
 import VueScrollReveal from 'vue-scroll-reveal';
 import VueMq from 'vue-mq'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 
 Vue.use(VueScrollReveal)
+Vue.use(VueAwesomeSwiper)
 Vue.use(VueMq, {
     breakpoints: {
         sm: 1125,
