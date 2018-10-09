@@ -139,7 +139,9 @@ export default {
         margin-left: 16px;
 
         @media (max-width: $desktop-width) {
-            padding-right: 20px;
+            display: flex;
+            margin-left: 0;
+            margin-top: 100px;
         }
     }
 
@@ -150,6 +152,16 @@ export default {
         width: 392px;
         height: 221px;
         overflow: hidden;
+
+        @media (max-width: $desktop-width) {
+            position: relative;
+            left: 0;
+            top: 0;
+            margin-bottom: 16px;
+            margin-top: -100px;
+            width: 234px;
+            height: 132px;
+        }
     }
 
     &__link {
@@ -164,8 +176,20 @@ export default {
         border: 2px solid #000000;
         border-radius: 2px;
 
+        @media (max-width: $desktop-width) {
+            width: 268px;
+            margin-right: 24px;
+            margin-bottom: 0;
+            min-height: 221px;
+            padding: 16px;
+        }
+
         &:first-child {
             margin-top: 16px;
+
+            @media (max-width: $desktop-width) {
+                margin-top: 0;
+            }
         }
 
         &:last-child {
@@ -185,11 +209,18 @@ export default {
 
             @media (max-width: $desktop-width) {
                 transform: scale(1);
+                width: 234px;
+                height: 132px;
             }
         }
 
         h3 {
             margin-bottom: 12px;
+
+            @media (max-width: $desktop-width) {
+                font-size: 18px;
+                line-height: 24px;
+            }
         }
 
         p {
@@ -197,7 +228,14 @@ export default {
             margin-bottom: 16px;
             font-size: 16px;
             line-height: 24px;
+
+            @media (max-width: $desktop-width) {
+                font-size: 14px;
+                line-height: 22px;
+            }
         }
+
+
     }
 }
 
