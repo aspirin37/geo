@@ -303,6 +303,10 @@ li {
         transition: all 0.1s;
         outline: none;
 
+        @media (max-width: $desktop-width) {
+            margin-right: 18px;
+        }
+
         &::after {
             content: '';
             position: absolute;
