@@ -1,7 +1,10 @@
 <template>
     <div class="side-bar">
         <div class="top">
-            <button class="side-bar__link side-bar__link--burger"></button>
+            <button class="side-bar__link side-bar__link--burger hamburger-menu__outer"
+                    v-on:click.prevent="isMenuShown = !isMenuShown">
+                <span :class="['d-inline-block hamburger-menu', {'animate': isMenuShown}]"></span>
+            </button>
             <a href="#"
                class="side-bar__link side-bar__link--logo"></a>
         </div>
@@ -23,7 +26,7 @@
 export default {
     data() {
         return {
-
+            isMenuShown: false,
         }
     }
 }
@@ -108,5 +111,62 @@ export default {
         width: 100%;
         min-height: auto;
     }
+}
+
+$bar-width: 30px;
+$bar-height: 4px;
+$bar-spacing: 8px;
+
+.hamburger-menu,
+.hamburger-menu:after,
+.hamburger-menu:before {
+    width: $bar-width;
+    height: $bar-height;
+    border-radius: $bar-height;
+}
+
+.hamburger-menu {
+    position: relative;
+    background: white;
+
+    &.animate {
+        background: transparent;
+    }
+}
+
+.hamburger-menu:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: $bar-spacing;
+    background: white;
+    transition: bottom 0.2s 0.2s, transform 0.2s;
+}
+
+.hamburger-menu:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: $bar-spacing;
+    background: white;
+    transition: top 0.2s 0.2s, transform 0.2s;
+}
+
+.hamburger-menu.animate .hamburger-menu__outer {
+    background-color: transparent;
+}
+
+.hamburger-menu.animate:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 0.2s, transform 0.2s 0.2s;
+    ;
+}
+
+.hamburger-menu.animate:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 0.2s, transform 0.2s 0.2s;
+    ;
 }
 </style>
