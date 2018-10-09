@@ -127,9 +127,6 @@ export default {
                     nextEl: '.reports-prev',
                     prevEl: '.reports-next',
                 },
-                autoplay: {
-                    delay: 15000,
-                },
                 spaceBetween: 32
             },
         }
