@@ -9,9 +9,8 @@
                    class="control-btn control-btn--all">Все шедевры</a>
             </div>
         </div>
-        <div class="masterpieces__preview"
-             style="background-image: url('http://www.skvulpfestival.dk/wp-content/uploads/2018/04/concert-crowd-862211.jpg')">
-        </div>
+        <img class="masterpieces__preview"
+             src="http://www.skvulpfestival.dk/wp-content/uploads/2018/04/concert-crowd-862211.jpg">
         <div class="masterpieces__list">
             <div class="masterpieces__item active">
                 <img src="http://www.skvulpfestival.dk/wp-content/uploads/2018/04/concert-crowd-862211.jpg">
@@ -46,21 +45,46 @@ export default {
 </script>
 <style lang="scss"
        scoped>
+@import '@/styles/_variables.scss';
+
 .masterpieces {
     margin-bottom: 40px;
 
+    @media (max-width: $desktop-width) {
+        overflow: initial;
+    }
+
     &__preview {
+        // width: 100%;
+        // height: 674px;
+        // margin-bottom: 8px;
+        // background-color: black;
+        // background-position: 50% 50%;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+
+        // @media (max-width: $desktop-width) {
+        //     width: 100%;
+        //     height: auto;
+        //     margin-left: -20px;
+        // }
+
         width: 100%;
-        height: 674px;
-        margin-bottom: 8px;
-        background-color: black;
-        background-position: 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        height: auto;
+        max-height: 674px;
+
+        @media (max-width: $desktop-width) {
+            width: calc(100% + 20px);
+            margin-left: -20px;
+        }
     }
 
     &__list {
         display: flex;
+
+        @media (max-width: $desktop-width) {
+            display: none;
+        }
     }
 
     &__item {
@@ -75,11 +99,11 @@ export default {
         &:hover {
             opacity: 0.25;
         }
-    }
 
-    & img {
-        width: 180px;
-        height: 120px;
+        & img {
+            width: 180px;
+            height: 120px;
+        }
     }
 }
 </style>

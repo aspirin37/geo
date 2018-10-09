@@ -21,11 +21,11 @@
                     <div class="news__img-wrapper">
                         <img src="https://files2.geometria.ru/pics/original/069/864/69864351.jpg">
                     </div>
-                    <div>
+                    <div class="d-flex flex-column flex-grow-1">
                         <h3>Евгений Фёдоров</h3>
                         <p>Лидер коллективов Zorge, TequilaJazzz и Optimystica Orchestra, достойно прошедший через
                             советскую, постсоветскую и российскую музыкальные школы</p>
-                        <div class="d-flex align-items-baseline">
+                        <div class="news__info">
                             <div class="label label--black">Интервью</div>
                             <div class="actions ml-auto">
                                 <a href="#"
@@ -41,10 +41,10 @@
                     <div class="news__img-wrapper">
                         <img src="https://files2.geometria.ru/pics/original/067/424/67424580.jpg">
                     </div>
-                    <div>
+                    <div class="d-flex flex-column flex-grow-1">
                         <h3>Gastreet International Restaurant Show 2018</h3>
                         <p>Главное событие ресторанной отрасли, для всех тех, кто связан с ресторанной сферой</p>
-                        <div class="d-flex align-items-baseline">
+                        <div class="news__info">
                             <div class="label label--black">Статьи</div>
                             <div class="actions ml-auto">
                                 <a href="#"
@@ -60,11 +60,11 @@
                     <div class="news__img-wrapper">
                         <img src="https://files.geometria.ru/pics/original/068/132/68132918.jpg">
                     </div>
-                    <div>
+                    <div class="d-flex flex-column flex-grow-1">
                         <h3>Morcheeba</h3>
                         <p>Британские пионеры трип-хопа вернулись с новым альбомом Blaze Away: релиз намечен на 1
                             июня</p>
-                        <div class="d-flex align-items-baseline">
+                        <div class="news__info">
                             <div class="label label--black">Интервью</div>
                             <div class="actions ml-auto">
                                 <a href="#"
@@ -80,11 +80,11 @@
                     <div class="news__img-wrapper">
                         <img src="https://files.geometria.ru/pics/original/067/344/67344710.jpg">
                     </div>
-                    <div>
+                    <div class="d-flex flex-column flex-grow-1">
                         <h3>Профессия: Мастер индийского массажа</h3>
                         <p>«Все профессии нужны, все профессии важны!». Говорим с мастером индийского массажа из
                             салона Royal Thai</p>
-                        <div class="d-flex align-items-baseline">
+                        <div class="news__info">
                             <div class="label label--black">Интервью</div>
                             <div class="actions ml-auto">
                                 <a href="#"
@@ -100,11 +100,11 @@
                     <div class="news__img-wrapper">
                         <img src="https://files2.geometria.ru/pics/original/069/317/69317698.jpg">
                     </div>
-                    <div>
+                    <div class="d-flex flex-column flex-grow-1">
                         <h3>Bobina</h3>
                         <p>Август примечателен не только масштабным развертыванием «предвыборной» гонки рейтинга Dj
                             Mag, но и самыми разными ивентами</p>
-                        <div class="d-flex align-items-baseline">
+                        <div class="news__info">
                             <div class="label label--black">Интервью</div>
                             <div class="actions ml-auto">
                                 <a href="#"
@@ -234,8 +234,15 @@ export default {
                 line-height: 22px;
             }
         }
+    }
 
+    &__info {
+        display: flex;
+        align-items: baseline;
 
+        @media (max-width: $desktop-width) {
+            margin-top: auto;
+        }
     }
 }
 

@@ -69,7 +69,13 @@ export default {
 </script>
 <style lang="scss"
        scoped>
+@import '@/styles/_variables.scss';
+
 .people {
+    @media (max-width: $desktop-width) {
+        margin-bottom: 48px;
+    }
+
     &__list {
         display: flex;
     }
