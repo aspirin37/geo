@@ -166,7 +166,8 @@ export default {
 
     &__link {
         position: relative;
-        display: block;
+        display: flex;
+        flex-direction: column;
         width: 100%;
         min-height: 221px;
         padding: 20px;

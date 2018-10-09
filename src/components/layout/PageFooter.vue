@@ -21,7 +21,7 @@
                 <a href="#">Медиа-школа</a>
                 <a href="#">Профи</a>
             </nav>
-            <nav class="social-nav ml-auto">
+            <nav class="social-nav">
                 <a href="#"
                    class="social-nav__link social-nav__link--vk"></a>
                 <a href="#"
@@ -55,6 +55,8 @@ export default {
 @import '@/styles/_variables.scss';
 
 .page-footer {
+    display: flex;
+    flex-direction: column;
     padding: 40px 68px;
     background-color: rgba(0, 0, 0, 0.8);
     background-image: url('../../assets/footer-logo.svg');
@@ -62,7 +64,7 @@ export default {
     background-repeat: no-repeat;
 
     @media (max-width: $desktop-width) {
-        display: none;
+        background-position: 50% 50%;
     }
 
     &__top {
@@ -70,6 +72,10 @@ export default {
         flex-direction: row;
         align-items: start;
         margin-bottom: 50px;
+
+        @media (max-width: $desktop-width) {
+            margin-bottom: 32px;
+        }
     }
 
     &__bottom {
@@ -77,11 +83,21 @@ export default {
         flex-direction: row;
         align-items: center;
 
+        @media (max-width: $desktop-width) {
+            flex-direction: column;
+        }
+
         & a {
             margin-right: 24px;
             color: rgba(255, 255, 255, 0.5);
             font-size: 12px;
             line-height: 16px;
+
+            @media (max-width: $desktop-width) {
+                margin-right: 0;
+                margin-bottom: 8px;
+                text-align: center;
+            }
         }
 
         .icon-18 {
@@ -93,12 +109,21 @@ export default {
             background-repeat: no-repeat;
             background-size: cover;
             background-image: url('../../assets/icons/18.png');
+
+            @media (max-width: $desktop-width) {
+                margin-right: auto;
+                margin-top: 24px;
+            }
         }
     }
 }
 
 .footer-nav {
     margin-right: 48px;
+
+    @media (max-width: $desktop-width) {
+        display: none;
+    }
 
     & a {
         display: block;
@@ -114,24 +139,39 @@ export default {
     color: white;
     font-size: 16px;
     line-height: 20px;
+
+    @media (max-width: $desktop-width) {
+        order: -1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+    }
 }
 
-.social-nav__link {
-    &--vk {
-        background-image: url('../../assets/icons/vk-white.svg');
+.social-nav {
+    margin-left: auto;
+
+    @media (max-width: $desktop-width) {
+        margin-right: auto;
     }
 
-    &--fb {
-        background-image: url('../../assets/icons/fb-white.svg');
-    }
+    &__link {
+        &--vk {
+            background-image: url('../../assets/icons/vk-white.svg');
+        }
 
-    &--inst {
-        background-image: url('../../assets/icons/insta-white.svg');
-        background-size: 18px 18px;
-    }
+        &--fb {
+            background-image: url('../../assets/icons/fb-white.svg');
+        }
 
-    &--ytb {
-        background-image: url('../../assets/icons/youtube-white.svg');
+        &--inst {
+            background-image: url('../../assets/icons/insta-white.svg');
+            background-size: 18px 18px;
+        }
+
+        &--ytb {
+            background-image: url('../../assets/icons/youtube-white.svg');
+        }
     }
 }
 </style>
