@@ -127,6 +127,10 @@ export default {
                     nextEl: '.reports-prev',
                     prevEl: '.reports-next',
                 },
+                autoplay: {
+                    delay: 15000,
+                },
+                spaceBetween: 32
             },
         }
     }
@@ -160,7 +164,6 @@ export default {
         width: 286px;
         display: flex;
         flex-direction: column;
-        margin-right: 32px;
 
         &:last-child {
             margin-right: 0;
