@@ -12,6 +12,7 @@ Vue.use(VueScrollReveal)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueMq, {
     breakpoints: {
+        xs: 360,
         sm: 1125,
         lg: Infinity,
     }

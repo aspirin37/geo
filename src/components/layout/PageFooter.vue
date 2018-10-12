@@ -139,6 +139,7 @@ export default {
     color: white;
     font-size: 16px;
     line-height: 20px;
+    text-align: center;
 
     @media (max-width: $desktop-width) {
         order: -1;

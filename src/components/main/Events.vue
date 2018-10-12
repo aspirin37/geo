@@ -1,7 +1,7 @@
 <template>
     <section class="section section--static events">
         <div class="section__header">
-            <h1 class="section__title">Анонсы событий</h1>
+            <h1 class="section__title">Анонсы<span v-if="$mq < 'xs'"> событий</span></h1>
             <div class="section__controls">
                 <button class="control-btn control-btn--prev"></button>
                 <button class="control-btn control-btn--next"></button>

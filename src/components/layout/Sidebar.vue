@@ -61,6 +61,11 @@ export default {
         width: 64px;
         background-position: 50% 50%;
         background-repeat: no-repeat;
+        transition: background-color 0.5s;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
 
         &--burger {
             display: none;

@@ -83,6 +83,7 @@ export default {
     &__item {
         width: 180px;
         margin-right: 32px;
+
     }
 
     & img {
