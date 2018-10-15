@@ -74,7 +74,7 @@
                     <img src="https://files2.geometria.ru/pics/post_avatar/066/335/66335465.jpg">
                 </div>
                 <div class="places__logo">
-                    <img src="https://files.geometria.ru/pics/dynamic350/060/548/60548090.jpg">
+                    <img src="https://files2.geometria.ru/pics/dynamic250/060/548/60548090.jpg">
                 </div>
                 <h4>Дворец «Олимпия»</h4>
                 <div class="places__description">Мечтаете окунуться в атмосферу аристократического шика, сдержанной романтичности и пышных
@@ -136,6 +136,7 @@ export default {
     }
 
     &__logo {
+        min-height: 148px;
         padding-bottom: 24px;
         border-bottom: 2px solid black;
         margin-bottom: 12px;

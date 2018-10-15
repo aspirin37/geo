@@ -1,15 +1,16 @@
 <template>
-    <section class="section section--static news">
+    <section class="section news">
         <div class="section__header">
             <h1 class="section__title">Новости</h1>
             <div class="section__controls">
-                <button class="control-btn control-btn--prev"></button>
-                <button class="control-btn control-btn--next"></button>
+                <button class="control-btn control-btn--prev news-prev"></button>
+                <button class="control-btn control-btn--next news-next"></button>
                 <a href="#"
                    class="control-btn control-btn--all">Все новости</a>
             </div>
         </div>
-        <div class="d-flex">
+        <div class="d-flex"
+             v-if="$mq == 'lg'">
             <div class="side-banner">
                 <img src="https://forum.bits.media/uploads/downloaded/banner300_600_eaf51d4eff6665633f59b838ae70e7de.png"
                      width="286"
@@ -17,95 +18,17 @@
             </div>
             <div class="news__list">
                 <a href="#"
-                   class="news__link">
+                   class="news__link"
+                   v-for="(it, i) in news"
+                   :key="i">
                     <div class="news__img-wrapper">
-                        <img src="https://files2.geometria.ru/pics/original/069/864/69864351.jpg">
+                        <img :src="it.preview">
                     </div>
                     <div class="d-flex flex-column flex-grow-1">
-                        <h3>Евгений Фёдоров</h3>
-                        <p>Лидер коллективов Zorge, TequilaJazzz и Optimystica Orchestra, достойно прошедший через
-                            советскую, постсоветскую и российскую музыкальные школы</p>
+                        <h3>{{ it.name }}</h3>
+                        <p>{{ it.description }}</p>
                         <div class="news__info">
-                            <div class="label label--black">Интервью</div>
-                            <div class="actions ml-auto">
-                                <a href="#"
-                                   class="actions__link actions__link--reviews">39</a>
-                                <a href="#"
-                                   class="actions__link actions__link--comments">4</a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#"
-                   class="news__link">
-                    <div class="news__img-wrapper">
-                        <img src="https://files2.geometria.ru/pics/original/067/424/67424580.jpg">
-                    </div>
-                    <div class="d-flex flex-column flex-grow-1">
-                        <h3>Gastreet International Restaurant Show 2018</h3>
-                        <p>Главное событие ресторанной отрасли, для всех тех, кто связан с ресторанной сферой</p>
-                        <div class="news__info">
-                            <div class="label label--black">Статьи</div>
-                            <div class="actions ml-auto">
-                                <a href="#"
-                                   class="actions__link actions__link--reviews">39</a>
-                                <a href="#"
-                                   class="actions__link actions__link--comments">4</a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#"
-                   class="news__link">
-                    <div class="news__img-wrapper">
-                        <img src="https://files.geometria.ru/pics/original/068/132/68132918.jpg">
-                    </div>
-                    <div class="d-flex flex-column flex-grow-1">
-                        <h3>Morcheeba</h3>
-                        <p>Британские пионеры трип-хопа вернулись с новым альбомом Blaze Away: релиз намечен на 1
-                            июня</p>
-                        <div class="news__info">
-                            <div class="label label--black">Интервью</div>
-                            <div class="actions ml-auto">
-                                <a href="#"
-                                   class="actions__link actions__link--reviews">39</a>
-                                <a href="#"
-                                   class="actions__link actions__link--comments">4</a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#"
-                   class="news__link">
-                    <div class="news__img-wrapper">
-                        <img src="https://files.geometria.ru/pics/original/067/344/67344710.jpg">
-                    </div>
-                    <div class="d-flex flex-column flex-grow-1">
-                        <h3>Профессия: Мастер индийского массажа</h3>
-                        <p>«Все профессии нужны, все профессии важны!». Говорим с мастером индийского массажа из
-                            салона Royal Thai</p>
-                        <div class="news__info">
-                            <div class="label label--black">Интервью</div>
-                            <div class="actions ml-auto">
-                                <a href="#"
-                                   class="actions__link actions__link--reviews">39</a>
-                                <a href="#"
-                                   class="actions__link actions__link--comments">4</a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#"
-                   class="news__link">
-                    <div class="news__img-wrapper">
-                        <img src="https://files2.geometria.ru/pics/original/069/317/69317698.jpg">
-                    </div>
-                    <div class="d-flex flex-column flex-grow-1">
-                        <h3>Bobina</h3>
-                        <p>Август примечателен не только масштабным развертыванием «предвыборной» гонки рейтинга Dj
-                            Mag, но и самыми разными ивентами</p>
-                        <div class="news__info">
-                            <div class="label label--black">Интервью</div>
+                            <div class="label label--black">{{ it.type }}</div>
                             <div class="actions ml-auto">
                                 <a href="#"
                                    class="actions__link actions__link--reviews">39</a>
@@ -117,13 +40,74 @@
                 </a>
             </div>
         </div>
+        <swiper class="slider"
+                :options="swiperOption"
+                v-else>
+            <swiper-slide v-for="(it, i) in news"
+                          :key="i">
+                <a href="#"
+                   class="news__link">
+                    <div class="news__img-wrapper">
+                        <img :src="it.preview">
+                    </div>
+                    <div class="d-flex flex-column flex-grow-1">
+                        <h3>{{ it.name }}</h3>
+                        <p>{{ it.description }}</p>
+                        <div class="news__info">
+                            <div class="label label--black">{{ it.type }}</div>
+                            <div class="actions ml-auto">
+                                <a href="#"
+                                   class="actions__link actions__link--reviews">39</a>
+                                <a href="#"
+                                   class="actions__link actions__link--comments">4</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </swiper-slide>
+        </swiper>
     </section>
 </template>
 <script>
 export default {
     data() {
         return {
-
+            news: [{
+                preview: 'https://files2.geometria.ru/pics/original/069/864/69864351.jpg',
+                name: 'Евгений Фёдоров',
+                description: 'Лидер коллективов Zorge, TequilaJazzz и Optimystica Orchestra, достойно прошедший через советскую, постсоветскую и российскую музыкальные школы',
+                type: 'Интервью',
+            }, {
+                preview: 'https://files2.geometria.ru/pics/original/067/424/67424580.jpg',
+                name: 'Gastreet International Restaurant Show 2018',
+                description: 'Главное событие ресторанной отрасли, для всех тех, кто связан с ресторанной сферой',
+                type: 'Интервью',
+            }, {
+                preview: 'https://files.geometria.ru/pics/original/068/132/68132918.jpg',
+                name: 'Morcheeba',
+                description: 'Британские пионеры трип-хопа вернулись с новым альбомом Blaze Away: релиз намечен на 1 июня',
+                type: 'Статьи',
+            }, {
+                preview: 'https://files.geometria.ru/pics/original/067/344/67344710.jpg',
+                name: 'Профессия: Мастер индийского массажа',
+                description: '«Все профессии нужны, все профессии важны!». Говорим с мастером индийского массажа из салона Royal Thai',
+                type: 'Интервью',
+            }, {
+                preview: 'https://files2.geometria.ru/pics/original/069/317/69317698.jpg',
+                name: 'Bobina',
+                description: 'Август примечателен не только масштабным развертыванием «предвыборной» гонки рейтинга Dj Mag, но и самыми разными ивентами',
+                type: 'Интервью',
+            }],
+            swiperOption: {
+                slidesPerView: 4,
+                loop: true,
+                navigation: {
+                    nextEl: '.news-prev',
+                    prevEl: '.news-next',
+                    disabledClass: 'control-btn--disabled'
+                },
+                spaceBetween: 24,
+            },
         }
     }
 }
@@ -131,6 +115,15 @@ export default {
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
+
+.slider {
+    width: 1120px;
+}
+
+.swiper-slide {
+    display: flex;
+    height: auto;
+}
 
 .news {
     margin-bottom: 48px;
@@ -181,6 +174,7 @@ export default {
             width: 268px;
             margin-right: 24px;
             margin-bottom: 0;
+            margin-top: 82px;
             min-height: 221px;
             padding: 16px;
         }
@@ -189,7 +183,7 @@ export default {
             margin-top: 16px;
 
             @media (max-width: $desktop-width) {
-                margin-top: 0;
+                margin-top: 82px;
             }
         }
 
