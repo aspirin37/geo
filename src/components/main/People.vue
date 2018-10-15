@@ -146,6 +146,11 @@ export default {
         font-size: 14px;
         line-height: 20px;
         color: rgba(0, 0, 0, 0.6);
+
+        @media (max-width: $desktop-width) {
+            font-size: 12px;
+            line-height: 16px;
+        }
     }
 }
 
