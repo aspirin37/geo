@@ -21,9 +21,9 @@
                 <a href="#"
                    class="people__item">
                     <img :src="it.avatar">
-                    <div class="people__nickname">{{ it.nickname }}</div>
-                    <div class="people__name">{{ it.name }}</div>
-                    <div class="people__description">{{ it.description }}</div>
+                    <h3 class="people__nickname">{{ it.nickname }}</h3>
+                    <p class="people__name">{{ it.name }}</p>
+                    <p class="people__description">{{ it.description }}</p>
                 </a>
             </swiper-slide>
         </swiper>
@@ -96,6 +96,7 @@ export default {
     }
 
     &__item {
+        display: block;
         width: 180px;
         margin-right: 32px;
 
@@ -117,6 +118,8 @@ export default {
     }
 
     &__nickname {
+        padding: 0;
+        margin: 0;
         margin-bottom: 4px;
         font-size: 16px;
         line-height: 24px;
@@ -124,8 +127,10 @@ export default {
     }
 
     &__name {
+        padding: 0;
+        margin: 0;
         padding-bottom: 15px;
-        margin-block-end: 9px;
+        margin-bottom: 9px;
         border-bottom: 2px solid black;
         font-size: 14px;
         line-height: 18px;
@@ -133,6 +138,8 @@ export default {
     }
 
     &__description {
+        padding: 0;
+        margin: 0;
         font-size: 14px;
         line-height: 20px;
         color: rgba(0, 0, 0, 0.6);
