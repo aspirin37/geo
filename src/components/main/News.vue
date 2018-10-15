@@ -102,8 +102,8 @@ export default {
                 slidesPerView: 4,
                 loop: true,
                 navigation: {
-                    nextEl: '.news-prev',
-                    prevEl: '.news-next',
+                    prevEl: '.news-prev',
+                    nextEl: '.news-next',
                     disabledClass: 'control-btn--disabled'
                 },
                 spaceBetween: 24,
