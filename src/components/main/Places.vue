@@ -26,7 +26,7 @@
                         <img :src="it.logo">
                     </div>
                     <h4>{{ it.name }}</h4>
-                    <div class="places__description">{{ it.description }}</div>
+                    <p class="places__description">{{ it.description }}</p>
                     <div class="actions">
                         <a href="#"
                            class="actions__link actions__link--reviews">39</a>
@@ -145,6 +145,8 @@ export default {
     }
 
     &__description {
+        margin: 0;
+        padding: 0;
         margin-bottom: 16px;
         opacity: 0.6;
         font-size: 14px;
