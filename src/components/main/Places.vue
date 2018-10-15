@@ -7,98 +7,83 @@
                 <button class="filter__button">Новые</button>
             </div>
             <div class="section__controls">
-                <button class="control-btn control-btn--prev"></button>
-                <button class="control-btn control-btn--next"></button>
+                <button class="control-btn control-btn--prev places-prev"></button>
+                <button class="control-btn control-btn--next places-next"></button>
                 <a href="#"
                    class="control-btn control-btn--all">Все заведения</a>
             </div>
         </div>
-        <div class="places__list">
-            <a href="#"
-               class="places__item">
-                <div class="places__image">
-                    <img src="https://files.geometria.ru/pics/post_avatar/066/791/66791163.jpg">
-                </div>
-                <div class="places__logo">
-                    <img src="https://files2.geometria.ru/pics/dynamic350/041/369/41369158.jpg">
-                </div>
-                <h4>Космонавт</h4>
-                <div class="places__description">Современный двухуровневый рок-клуб с танцполом на 1500 человек, VIP-зоной и рестораном на
-                    втором этаже</div>
-                <div class="actions">
-                    <a href="#"
-                       class="actions__link actions__link--reviews">39</a>
-                    <a href="#"
-                       class="actions__link actions__link--comments">4</a>
-                </div>
-            </a>
-            <a href="#"
-               class="places__item">
-                <div class="places__image">
-                    <img src="https://files2.geometria.ru/pics/post_avatar/050/046/50046303.jpg">
-                </div>
-                <div class="places__logo">
-                    <img src="https://files.geometria.ru/pics/dynamic350/041/367/41367977.jpg">
-                </div>
-                <h4>ГлавCLUB</h4>
-                <div class="places__description">Одна из лучших в России, современная и превосходно оснащенная концертная площадка,
-                    заслуженно любимая публикой за невероятные концерты</div>
-                <div class="actions">
-                    <a href="#"
-                       class="actions__link actions__link--reviews">39</a>
-                    <a href="#"
-                       class="actions__link actions__link--comments">4</a>
-                </div>
-            </a>
-            <a href="#"
-               class="places__item">
-                <div class="places__image">
-                    <img src="https://files2.geometria.ru/pics/post_avatar/068/780/68780047.jpg">
-                </div>
-                <div class="places__logo">
-                    <img src="https://files2.geometria.ru/pics/dynamic350/041/369/41369693.jpg">
-                </div>
-                <h4>Lomonosov</h4>
-                <div class="places__description">Уже успевший стать легендарным, бар клубного формата в самом центре Петербурга! Один из
-                    флагманов ночной жизни города</div>
-                <div class="actions">
-                    <a href="#"
-                       class="actions__link actions__link--reviews">39</a>
-                    <a href="#"
-                       class="actions__link actions__link--comments">4</a>
-                </div>
-            </a>
-            <a href="#"
-               class="places__item">
-                <div class="places__image">
-                    <img src="https://files2.geometria.ru/pics/post_avatar/066/335/66335465.jpg">
-                </div>
-                <div class="places__logo">
-                    <img src="https://files2.geometria.ru/pics/dynamic250/060/548/60548090.jpg">
-                </div>
-                <h4>Дворец «Олимпия»</h4>
-                <div class="places__description">Мечтаете окунуться в атмосферу аристократического шика, сдержанной романтичности и пышных
-                    балов «золотого века»?</div>
-                <div class="actions">
-                    <a href="#"
-                       class="actions__link actions__link--reviews">39</a>
-                    <a href="#"
-                       class="actions__link actions__link--comments">4</a>
-                </div>
-            </a>
-        </div>
+        <swiper class="slider"
+                :options="swiperOption">
+            <swiper-slide v-for="(it, i) in places"
+                          :key="i">
+                <a href="#"
+                   class="places__item">
+                    <div class="places__image">
+                        <img :src="it.preview">
+                    </div>
+                    <div class="places__logo">
+                        <img :src="it.logo">
+                    </div>
+                    <h4>{{ it.name }}</h4>
+                    <div class="places__description">{{ it.description }}</div>
+                    <div class="actions">
+                        <a href="#"
+                           class="actions__link actions__link--reviews">39</a>
+                        <a href="#"
+                           class="actions__link actions__link--comments">4</a>
+                    </div>
+                </a>
+            </swiper-slide>
+        </swiper>
     </section>
 </template>
 <script>
 export default {
     data() {
-        return {};
+        return {
+            places: [{
+                preview: 'https://files.geometria.ru/pics/post_avatar/066/791/66791163.jpg',
+                logo: 'https://files2.geometria.ru/pics/dynamic350/041/369/41369158.jpg',
+                name: 'Космонавт',
+                description: 'Современный двухуровневый рок-клуб с танцполом на 1500 человек, VIP-зоной и рестораном на втором этаже'
+            }, {
+                preview: 'https://files2.geometria.ru/pics/post_avatar/050/046/50046303.jpg',
+                logo: 'https://files.geometria.ru/pics/dynamic350/041/367/41367977.jpg',
+                name: 'ГлавCLUB',
+                description: 'Одна из лучших в России, современная и превосходно оснащенная концертная площадка, заслуженно любимая публикой за невероятные концерты'
+            }, {
+                preview: 'https://files2.geometria.ru/pics/post_avatar/068/780/68780047.jpg',
+                logo: 'https://files2.geometria.ru/pics/dynamic350/041/369/41369693.jpg',
+                name: 'Lomonosov',
+                description: 'Уже успевший стать легендарным, бар клубного формата в самом центре Петербурга! Один из флагманов ночной жизни города'
+            }, {
+                preview: 'https://files2.geometria.ru/pics/post_avatar/066/335/66335465.jpg',
+                logo: 'https://files2.geometria.ru/pics/dynamic250/060/548/60548090.jpg',
+                name: 'Дворец «Олимпия»',
+                description: 'Мечтаете окунуться в атмосферу аристократического шика, сдержанной романтичности и пышных балов «золотого века»?'
+            }],
+            swiperOption: {
+                slidesPerView: 4,
+                loop: true,
+                navigation: {
+                    prevEl: '.places-prev',
+                    nextEl: '.places-next',
+                    disabledClass: 'control-btn--disabled'
+                },
+                spaceBetween: 32,
+            }
+        };
     }
 };
 </script>
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
+
+.slider {
+    width: 1240px;
+}
 
 .places {
     margin-bottom: 48px;
@@ -113,6 +98,10 @@ export default {
 
         &:hover .places__image img {
             transform: scale(1);
+        }
+
+        @media (max-width: $desktop-width) {
+            margin-right: 0;
         }
     }
 
