@@ -121,11 +121,6 @@ export default {
         font-size: 16px;
         line-height: 24px;
         font-weight: 500;
-
-        @media (max-width: $desktop-width) {
-            font-size: 14px;
-            line-height: 18px;
-        }
     }
 
     &__name {
@@ -135,22 +130,12 @@ export default {
         font-size: 14px;
         line-height: 18px;
         color: rgba(0, 0, 0, 0.6);
-
-        @media (max-width: $desktop-width) {
-            font-size: 12px;
-            line-height: 14px;
-        }
     }
 
     &__description {
         font-size: 14px;
         line-height: 20px;
         color: rgba(0, 0, 0, 0.6);
-
-        @media (max-width: $desktop-width) {
-            font-size: 12px;
-            line-height: 16px;
-        }
     }
 }
 
