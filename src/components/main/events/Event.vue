@@ -54,7 +54,6 @@ export default {
 
     @media (max-width: $desktop-width) {
         width: 300px;
-        margin-right: 24px;
         margin-bottom: 0;
     }
 
@@ -81,6 +80,7 @@ export default {
         width: 445px;
         height: 250px;
         overflow: hidden;
+        font-size: 0;
 
         @media (max-width: $desktop-width) {
             width: 300px;

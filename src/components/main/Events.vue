@@ -3,8 +3,8 @@
         <div class="section__header">
             <h1 class="section__title">Анонсы<span v-if="$mq < 'xs'"> событий</span></h1>
             <div class="section__controls">
-                <button class="control-btn control-btn--prev"></button>
-                <button class="control-btn control-btn--next"></button>
+                <button class="control-btn control-btn--prev events-prev"></button>
+                <button class="control-btn control-btn--next events-next"></button>
                 <a href="#"
                    class="control-btn control-btn--all">Все анонсы</a>
             </div>
@@ -29,12 +29,14 @@
                      height="572">
             </div>
         </div>
-        <div class="events__list"
-             v-else>
-            <event v-for="(it, i) in events"
-                   :event="it"
-                   :key="i" />
-        </div>
+        <swiper class="slider"
+                :options="swiperOption"
+                v-else>
+            <swiper-slide v-for="(it, i) in events"
+                          :key="i">
+                <event :event="it" />
+            </swiper-slide>
+        </swiper>
     </section>
 </template>
 <script>
@@ -120,7 +122,17 @@ export default {
                     forms: false,
                     note: false
                 }
-            }]
+            }],
+            swiperOption: {
+                slidesPerView: 3,
+                loop: true,
+                navigation: {
+                    nextEl: '.events-next',
+                    prevEl: '.events-prev',
+                    disabledClass: 'eyes__control-btn--disabled'
+                },
+                spaceBetween: 24
+            },
         }
     }
 }
@@ -128,6 +140,10 @@ export default {
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
+
+.slider {
+    width: 992px;
+}
 
 .events {
     @media (max-width: $desktop-width) {

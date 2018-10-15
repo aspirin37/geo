@@ -90,6 +90,11 @@ export default {
         width: 180px;
         height: 180px;
         margin-bottom: 8px;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 
     &__nickname {

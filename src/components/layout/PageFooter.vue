@@ -92,6 +92,12 @@ export default {
             color: rgba(255, 255, 255, 0.5);
             font-size: 12px;
             line-height: 16px;
+            transition: 0.3s;
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.8);
+                text-decoration: underline;
+            }
 
             @media (max-width: $desktop-width) {
                 margin-right: 0;
@@ -131,6 +137,16 @@ export default {
         color: white;
         font-size: 16px;
         line-height: 24px;
+        transition: 0.3s;
+
+        &:hover:not(.active) {
+            opacity: 0.6;
+            text-decoration: underline;
+        }
+
+        .active {
+            opacity: 0.6;
+        }
     }
 }
 
@@ -139,13 +155,13 @@ export default {
     color: white;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
 
     @media (max-width: $desktop-width) {
         order: -1;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 24px;
+        text-align: center;
     }
 }
 

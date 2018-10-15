@@ -24,6 +24,7 @@ button {
     cursor: pointer;
     -webkit-appearance: none;
     background-color: transparent;
+    outline: none;
     border: none;
     padding: 0;
 }
@@ -99,6 +100,11 @@ li {
 
 .section__controls {
     display: flex;
+    align-self: center;
+
+    @media (max-width: $desktop-width) {
+        align-self: auto;
+    }
 }
 
 .control-btn {
@@ -162,6 +168,15 @@ li {
             padding-right: 37px;
             background-position: right 7px center;
             font-size: 14px;
+        }
+    }
+
+    &--disabled {
+        cursor: default;
+
+        &:after,
+        &:hover::after {
+            background-color: rgba(255, 255, 255, 0.7);
         }
     }
 }
@@ -376,6 +391,11 @@ li {
         margin-right: 16px;
         background-position: 50% 50%;
         background-repeat: no-repeat;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 0.5;
+        }
 
         &:last-child {
             margin-right: 0;

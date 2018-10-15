@@ -9,62 +9,36 @@
                    class="control-btn control-btn--all">Все фотоотчеты</a>
             </div>
         </div>
-        <div class="slider-wrapper">
-            <swiper class="slider"
-                    :options="swiperOption">
-                <swiper-slide v-for="(it, i) in reports"
-                              :key="i">
-                    <li class="reports__item">
-                        <a href="#"
-                           class="reports__image-link">
+        <swiper class="slider"
+                :options="swiperOption">
+            <swiper-slide v-for="(it, i) in reports"
+                          :key="i">
+                <li class="reports__item">
+                    <a href="#"
+                       class="reports__image-link">
+                        <div class="reports__image-wrapper">
                             <img :src="it.event.image">
-                            <div class="reports__date">{{ it.event.date }}</div>
-                        </a>
-                        <a href="#"
-                           class="italic-sm">{{ it.event.place }}</a>
-                        <h4><a href="#">{{ it.event.name }}</a></h4>
-                        <a href="#"
-                           class="reports__author-link">
-                            <div class="reports__author-avatar">
-                                <img :src="it.author.avatar"
-                                     width="40"
-                                     height="40">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <span class="reports__author-title">Автор</span>
-                                <span class="reports__author-name">{{ it.author.name }}</span>
-                            </div>
-                        </a>
-                    </li>
-                </swiper-slide>
-            </swiper>
-        </div>
-        <!-- <ul class="reports__list">
-            <li class="reports__item">
-                <a href="#"
-                   class="reports__image-link">
-                    <img src="https://files2.geometria.ru/pics/post_avatar/069/677/69677751.jpg"
-                         height="191"
-                         width="286">
-                    <div class="reports__date">31 августа</div>
-                </a>
-                <a href="#"
-                   class="italic-sm">Pravda Bar</a>
-                <h4><a href="#">#СТУДДВИЖ!</a></h4>
-                <a href="#"
-                   class="reports__author-link">
-                    <div class="reports__author-avatar">
-                        <img src="https://files.geometria.ru/pics/thumbnail/064/273/64273667.jpg"
-                             width="40"
-                             height="40">
-                    </div>
-                    <div class="d-flex flex-column">
-                        <span class="reports__author-title">Автор</span>
-                        <span class="reports__author-name">Саша Гео</span>
-                    </div>
-                </a>
-            </li>
-        </ul> -->
+                        </div>
+                        <div class="reports__date">{{ it.event.date }}</div>
+                    </a>
+                    <a href="#"
+                       class="italic-sm">{{ it.event.place }}</a>
+                    <h4><a href="#">{{ it.event.name }}</a></h4>
+                    <a href="#"
+                       class="reports__author-link">
+                        <div class="reports__author-avatar">
+                            <img :src="it.author.avatar"
+                                 width="40"
+                                 height="40">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <span class="reports__author-title">Автор</span>
+                            <span class="reports__author-name">{{ it.author.name }}</span>
+                        </div>
+                    </a>
+                </li>
+            </swiper-slide>
+        </swiper>
     </section>
 </template>
 <script>
@@ -119,6 +93,28 @@ export default {
                     name: `Саша Гео`,
                 }
 
+            }, {
+                event: {
+                    image: `http://files.geometria.ru/pics/original/037/209/37209892.jpg`,
+                    date: `9 сентября`,
+                    place: `Клуб Central Station`,
+                    name: `LOSHADKA PRTY 9 YEARS CELEBRATION`
+                },
+                author: {
+                    avatar: `https://files.geometria.ru/pics/thumbnail/066/108/66108176.jpg`,
+                    name: `Tashe Che`,
+                }
+            }, {
+                event: {
+                    image: `https://files2.geometria.ru/pics/original/069/317/69317698.jpg`,
+                    date: `9 сентября`,
+                    place: `Клуб Central Station`,
+                    name: `LOSHADKA PRTY 9 YEARS CELEBRATION`
+                },
+                author: {
+                    avatar: `https://files.geometria.ru/pics/thumbnail/066/108/66108176.jpg`,
+                    name: `Tashe Che`,
+                }
             }],
             swiperOption: {
                 slidesPerView: 4,
@@ -126,8 +122,9 @@ export default {
                 navigation: {
                     nextEl: '.reports-prev',
                     prevEl: '.reports-next',
+                    disabledClass: 'control-btn--disabled'
                 },
-                spaceBetween: 32
+                spaceBetween: 32,
             },
         }
     }
@@ -136,10 +133,6 @@ export default {
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
-
-.slider-container {
-    overflow: hidden;
-}
 
 .slider {
     width: 1240px;
@@ -175,6 +168,10 @@ export default {
         &:hover img {
             transform: scale(1);
         }
+    }
+
+    &__image-wrapper {
+        font-size: 0;
     }
 
     &__image-link {

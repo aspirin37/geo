@@ -2,90 +2,64 @@
     <section class="section eyes">
         <div class="eyes__header">
             <h4>Глаза геометрии</h4>
-            <button class="eyes__control-btn eyes__control-btn--prev"></button>
-            <button class="eyes__control-btn eyes__control-btn--next"></button>
+            <button class="eyes__control-btn eyes__control-btn--prev eyes-prev"></button>
+            <button class="eyes__control-btn eyes__control-btn--next eyes-next"></button>
         </div>
-        <ul class="eyes__list">
-            <li class="eyes__item">
-                <a href="#"
-                   class="eyes__link">
-                    <img src="https://files.geometria.ru/pics/original/038/530/38530343.jpg"
-                         width="140"
-                         height="140">
-                    <div class="eyes__name">Michael Kuznetsov</div>
-                    <div class="eyes__stats">29 фотоотчетов</div>
-                    <div class="eyes__stats">42 репортажа</div>
-                    <div class="eyes__stats">Рейтинг 2548</div>
-                </a>
-            </li>
-            <li class="eyes__item">
-                <a href="#"
-                   class="eyes__link">
-                    <img src="https://files2.geometria.ru/pics/original/037/270/37270907.jpg"
-                         width="140"
-                         height="140">
-                    <div class="eyes__name">Андрей Ховрычев</div>
-                    <div class="eyes__stats">29 фотоотчетов</div>
-                    <div class="eyes__stats">42 репортажа</div>
-                    <div class="eyes__stats">Рейтинг 2548</div>
-                </a>
-            </li>
-            <li class="eyes__item">
-                <a href="#"
-                   class="eyes__link">
-                    <img src="https://files.geometria.ru/pics/original/18523020.jpg"
-                         width="140"
-                         height="140">
-                    <div class="eyes__name">Алена Яшина</div>
-                    <div class="eyes__stats">29 фотоотчетов</div>
-                    <div class="eyes__stats">42 репортажа</div>
-                    <div class="eyes__stats">Рейтинг 2548</div>
-                </a>
-            </li>
-            <li class="eyes__item">
-                <a href="#"
-                   class="eyes__link">
-                    <img src="https://files.geometria.ru/pics/original/16784163.jpg"
-                         width="140"
-                         height="140">
-                    <div class="eyes__name">Dmitriy Mnogolet</div>
-                    <div class="eyes__stats">29 фотоотчетов</div>
-                    <div class="eyes__stats">42 репортажа</div>
-                    <div class="eyes__stats">Рейтинг 2548</div>
-                </a>
-            </li>
-            <li class="eyes__item">
-                <a href="#"
-                   class="eyes__link">
-                    <img src="https://files.geometria.ru/pics/original/25707164.jpg"
-                         width="140"
-                         height="140">
-                    <div class="eyes__name">Anastasia Versa</div>
-                    <div class="eyes__stats">29 фотоотчетов</div>
-                    <div class="eyes__stats">42 репортажа</div>
-                    <div class="eyes__stats">Рейтинг 2548</div>
-                </a>
-            </li>
-            <li class="eyes__item">
-                <a href="#"
-                   class="eyes__link">
-                    <img src="https://files2.geometria.ru/pics/original/054/886/54886501.jpg"
-                         width="140"
-                         height="140">
-                    <div class="eyes__name">Tashe Che</div>
-                    <div class="eyes__stats">29 фотоотчетов</div>
-                    <div class="eyes__stats"></div>
-                    <div class="eyes__stats">Рейтинг 2548</div>
-                </a>
-            </li>
-        </ul>
+        <swiper class="slider"
+                :options="swiperOption">
+            <swiper-slide v-for="(it, i) in eyes"
+                          :key="i">
+                <li class="eyes__item">
+                    <a href="#"
+                       class="eyes__link">
+                        <div class="eyes__img-wrapper">
+                            <img :src="it.preview"
+                                 width="140"
+                                 height="140">
+                        </div>
+                        <div class="eyes__name">{{ it.name }}</div>
+                        <div class="eyes__stats">29 фотоотчетов</div>
+                        <div class="eyes__stats">42 репортажа</div>
+                        <div class="eyes__stats">Рейтинг 2548</div>
+                    </a>
+                </li>
+            </swiper-slide>
+        </swiper>
     </section>
 </template>
 <script>
 export default {
     data() {
         return {
-
+            eyes: [{
+                preview: 'https://files2.geometria.ru/pics/original/037/270/37270907.jpg',
+                name: 'Андрей Ховрычев',
+            }, {
+                preview: 'https://files.geometria.ru/pics/original/18523020.jpg',
+                name: 'Алена Яшина',
+            }, {
+                preview: 'https://files.geometria.ru/pics/original/16784163.jpg',
+                name: 'Dmitriy Mnogolet',
+            }, {
+                preview: 'https://files.geometria.ru/pics/original/038/530/38530343.jpg',
+                name: 'Michael Kuznetsov',
+            }, {
+                preview: 'https://files.geometria.ru/pics/original/25707164.jpg',
+                name: 'Anastasia Versa',
+            }, {
+                preview: 'https://files2.geometria.ru/pics/original/054/886/54886501.jpg',
+                name: 'Tashe Che',
+            }],
+            swiperOption: {
+                slidesPerView: 6,
+                loop: true,
+                navigation: {
+                    nextEl: '.eyes-next',
+                    prevEl: '.eyes-prev',
+                    disabledClass: 'eyes__control-btn--disabled'
+                },
+                spaceBetween: 72
+            },
         }
     }
 }
@@ -93,6 +67,14 @@ export default {
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
+
+.slider {
+    width: 1200px;
+}
+
+// .swiper-slide {
+//     width: 140px !important;
+// }
 
 .eyes {
     padding: 24px;
@@ -129,6 +111,16 @@ export default {
         background-position: 50% 50%;
         background-repeat: no-repeat;
         opacity: 0.6;
+        transition: 0.2s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &--disabled {
+            opacity: 0.4;
+            cursor: default;
+        }
 
         &--prev {
             margin-right: 16px;
@@ -140,13 +132,9 @@ export default {
         }
     }
 
-    &__list {
-        display: flex;
-    }
-
     &__item {
         width: 140px;
-        margin-right: 72px;
+        // margin-right: 72px;
         flex-shrink: 0;
 
         &:last-child {
@@ -160,7 +148,10 @@ export default {
         color: white;
     }
 
-    & img {
+    &__img-wrapper {
+        position: relative;
+        font-size: 0;
+        z-index: 0;
         margin-bottom: 8px;
     }
 
@@ -170,6 +161,10 @@ export default {
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__stats {

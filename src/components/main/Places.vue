@@ -98,6 +98,8 @@ export default {
 </script>
 <style lang="scss"
        scoped>
+@import '@/styles/_variables.scss';
+
 .places {
     margin-bottom: 48px;
 
@@ -126,6 +128,10 @@ export default {
             height: 191px;
             transform: scale(1.1);
             transition: 1s;
+
+            @media (max-width: $desktop-width) {
+                transform: scale(1);
+            }
         }
     }
 

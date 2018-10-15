@@ -70,7 +70,7 @@ export default {
             content: '';
             position: absolute;
             z-index: -1;
-            bottom: 0;
+            bottom: 1px;
             left: 6px;
             display: block;
             width: 0%;

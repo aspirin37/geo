@@ -65,6 +65,11 @@ export default {
 
         &:hover {
             background-color: rgba(255, 255, 255, 0.2);
+
+            @media (max-width: $desktop-width) {
+                background-color: black;
+            }
+
         }
 
         &--burger {
