@@ -82,12 +82,13 @@ export default {
     computed: {
         swiperOptionTop() {
             return {
+                effect: this.$mq !== 'lg' ? 'fade' : '',
                 navigation: {
                     nextEl: '.master-next',
                     prevEl: '.master-prev'
                 },
-                loop: true,
-                loopedSlides: this.masterpieces.length,
+                loop: this.$mq === 'lg',
+                loopedSlides: this.$mq === 'lg' ? this.masterpieces.length : false,
             }
         },
         swiperOptionThumbs() {
