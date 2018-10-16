@@ -85,7 +85,8 @@ export default {
                 effect: this.$mq !== 'lg' ? 'fade' : '',
                 navigation: {
                     nextEl: '.master-next',
-                    prevEl: '.master-prev'
+                    prevEl: '.master-prev',
+                    disabledClass: 'control-btn--disabled'
                 },
                 loop: this.$mq === 'lg',
                 loopedSlides: this.$mq === 'lg' ? this.masterpieces.length : false,
