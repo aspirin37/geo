@@ -3,8 +3,10 @@
         <div class="section__header">
             <h1 class="section__title">Шедевры</h1>
             <div class="section__controls">
-                <button class="control-btn control-btn--prev"></button>
-                <button class="control-btn control-btn--next"></button>
+                <button class="control-btn control-btn--prev"
+                        @click="showPrev"></button>
+                <button class="control-btn control-btn--next"
+                        @click="showNext"></button>
                 <a href="#"
                    class="control-btn control-btn--all">Все шедевры</a>
             </div>
@@ -25,24 +27,6 @@
                  :key="i">
                 <img :src="it.preview">
             </div>
-            <!-- <div class="masterpieces__item">
-                <img src="https://files2.geometria.ru/pics/post_avatar/069/979/69979984.jpg">
-            </div>
-            <div class="masterpieces__item">
-                <img src="https://files.geometria.ru/pics/post_avatar/070/086/70086454.jpg">
-            </div>
-            <div class="masterpieces__item">
-                <img src="https://files2.geometria.ru/pics/post_avatar/070/073/70073486.jpg">
-            </div>
-            <div class="masterpieces__item">
-                <img src="https://files.geometria.ru/pics/post_avatar/069/883/69883989.jpg">
-            </div>
-            <div class="masterpieces__item">
-                <img src="https://files.geometria.ru/pics/post_avatar/069/884/69884030.jpg">
-            </div>
-            <div class="masterpieces__item">
-                <img src="https://files.geometria.ru/pics/post_avatar/069/684/69684948.jpg">
-            </div> -->
         </div>
     </section>
 </template>
@@ -60,13 +44,21 @@ export default {
             }, {
                 preview: 'https://files2.geometria.ru/pics/original/068/963/68963782.jpg'
             }, {
-                preview: 'https://files.geometria.ru/pics/original/050/296/50296518.jpg'
+                preview: 'https://files2.geometria.ru/pics/original/054/177/54177643.jpg'
             }, {
                 preview: 'https://files.geometria.ru/pics/original/065/571/65571501.jpg'
             }, {
                 preview: 'https://files.geometria.ru/pics/original/056/454/56454044.jpg'
             }]
         };
+    },
+    methods: {
+        showNext() {
+            this.activeImage < this.masterpieces.length - 1 ? this.activeImage++ : this.activeImage = 0;
+        },
+        showPrev() {
+            this.activeImage > 0 ? this.activeImage-- : this.activeImage = this.masterpieces.length - 1;
+        }
     }
 };
 </script>
