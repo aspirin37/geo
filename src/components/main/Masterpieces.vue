@@ -24,6 +24,12 @@
                     </div>
                 </div>
             </swiper-slide>
+            <div class="slider-prev master-prev"
+                 slot="button-prev"
+                 v-if="$mq !== 'lg'"></div>
+            <div class="slider-next master-next"
+                 slot="button-next"
+                 v-if="$mq !== 'lg'"></div>
         </swiper>
         <swiper :options="swiperOptionThumbs"
                 class="gallery-thumbs"
@@ -37,8 +43,6 @@
             </swiper-slide>
         </swiper>
     </section>
-    <!-- :class="{'active' : i === activeImage }"
-                 @click="activeImage = i" -->
 </template>
 <script>
 export default {
@@ -60,23 +64,6 @@ export default {
             }, {
                 preview: 'https://files.geometria.ru/pics/original/056/454/56454044.jpg'
             }],
-            // swiperOptionTop: {
-            //     navigation: {
-            //         nextEl: '.master-next',
-            //         prevEl: '.master-prev'
-            //     },
-            //     loop: true,
-            //     loopedSlides: this.masterpieces.length,
-            // },
-            // swiperOptionThumbs: {
-            //     centeredSlides: true,
-            //     slidesPerView: 'auto',
-            //     touchRatio: 0.2,
-            //     slideToClickedSlide: true,
-            //     loop: true,
-            //     loopedSlides: this.masterpieces.length,
-            //     slidesPerView: 6,
-            // }
         };
     },
     computed: {
@@ -98,7 +85,7 @@ export default {
                 slidesPerView: 'auto',
                 touchRatio: 0.2,
                 slideToClickedSlide: true,
-                loop: true,
+                loop: this.$mq === 'lg',
                 loopedSlides: this.masterpieces.length,
                 slidesPerView: 6,
             }
