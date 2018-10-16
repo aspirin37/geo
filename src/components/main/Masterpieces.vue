@@ -24,12 +24,6 @@
                     </div>
                 </div>
             </swiper-slide>
-            <div class="slider-prev master-prev"
-                 slot="button-prev"
-                 v-if="$mq !== 'lg'"></div>
-            <div class="slider-next master-next"
-                 slot="button-next"
-                 v-if="$mq !== 'lg'"></div>
         </swiper>
         <swiper :options="swiperOptionThumbs"
                 class="gallery-thumbs"
@@ -69,14 +63,16 @@ export default {
     computed: {
         swiperOptionTop() {
             return {
-                effect: this.$mq !== 'lg' ? 'fade' : '',
+                // effect: this.$mq !== 'lg' ? 'fade' : '',
                 navigation: {
                     nextEl: '.master-next',
                     prevEl: '.master-prev',
                     disabledClass: 'control-btn--disabled'
                 },
-                loop: this.$mq === 'lg',
-                loopedSlides: this.$mq === 'lg' ? this.masterpieces.length : false,
+                // loop: this.$mq === 'lg',
+                // loopedSlides: this.$mq === 'lg' ? this.masterpieces.length : false,
+                loop: true,
+                loopedSlides: this.masterpieces.length
             }
         },
         swiperOptionThumbs() {
@@ -86,6 +82,7 @@ export default {
                 touchRatio: 0.2,
                 slideToClickedSlide: true,
                 loop: this.$mq === 'lg',
+                loop: true,
                 loopedSlides: this.masterpieces.length,
                 slidesPerView: 6,
             }
