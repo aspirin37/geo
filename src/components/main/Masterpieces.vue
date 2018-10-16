@@ -3,32 +3,42 @@
         <div class="section__header">
             <h1 class="section__title">Шедевры</h1>
             <div class="section__controls">
-                <button class="control-btn control-btn--prev"
-                        @click="showPrev"></button>
-                <button class="control-btn control-btn--next"
-                        @click="showNext"></button>
+                <button class="control-btn control-btn--prev master-prev"></button>
+                <button class="control-btn control-btn--next master-next"></button>
                 <a href="#"
                    class="control-btn control-btn--all">Все шедевры</a>
             </div>
         </div>
-        <div class="masterpieces__wrapper">
-            <div class="masterpieces__background"
-                 :style="`background-image: url(${masterpieces[activeImage].preview})`"></div>
-            <div class="masterpieces__image-wrapper">
-                <img class="masterpieces__preview"
-                     :src="masterpieces[activeImage].preview">
-            </div>
-        </div>
-        <div class="masterpieces__list">
-            <div class="masterpieces__item"
-                 :class="{'active' : i === activeImage }"
-                 @click="activeImage = i"
-                 v-for="(it, i) in masterpieces"
-                 :key="i">
-                <img :src="it.preview">
-            </div>
-        </div>
+        <swiper :options="swiperOptionTop"
+                class="gallery-top"
+                ref="swiperTop">
+            <swiper-slide :style="`z-index: ${i}`"
+                          v-for="(it, i) in masterpieces"
+                          :key="i">
+                <div class="masterpieces__wrapper">
+                    <div class="masterpieces__background"
+                         :style="`background-image: url(${it.preview})`"></div>
+                    <div class="masterpieces__image-wrapper">
+                        <img class="masterpieces__preview"
+                             :src="it.preview">
+                    </div>
+                </div>
+            </swiper-slide>
+        </swiper>
+        <swiper :options="swiperOptionThumbs"
+                class="gallery-thumbs"
+                ref="swiperThumbs"
+                v-show="$mq === 'lg'">
+            <swiper-slide v-for="(it, i) in masterpieces"
+                          :key="i">
+                <div class="masterpieces__item">
+                    <img :src="it.preview">
+                </div>
+            </swiper-slide>
+        </swiper>
     </section>
+    <!-- :class="{'active' : i === activeImage }"
+                 @click="activeImage = i" -->
 </template>
 <script>
 export default {
@@ -38,33 +48,85 @@ export default {
             masterpieces: [{
                 preview: 'http://www.skvulpfestival.dk/wp-content/uploads/2018/04/concert-crowd-862211.jpg'
             }, {
-                preview: 'https://files.geometria.ru/pics/original/070/255/70255842.jpg'
+                preview: 'https://files2.geometria.ru/pics/original/056/096/56096967.jpg'
             }, {
-                preview: 'https://files.geometria.ru/pics/original/070/086/70086208.jpg'
+                preview: 'https://files2.geometria.ru/pics/original/062/454/62454605.jpg'
             }, {
                 preview: 'https://files2.geometria.ru/pics/original/068/963/68963782.jpg'
             }, {
-                preview: 'https://files2.geometria.ru/pics/original/054/177/54177643.jpg'
+                preview: 'https://files2.geometria.ru/pics/original/056/454/56454080.jpg'
             }, {
                 preview: 'https://files.geometria.ru/pics/original/065/571/65571501.jpg'
             }, {
                 preview: 'https://files.geometria.ru/pics/original/056/454/56454044.jpg'
-            }]
+            }],
+            // swiperOptionTop: {
+            //     navigation: {
+            //         nextEl: '.master-next',
+            //         prevEl: '.master-prev'
+            //     },
+            //     loop: true,
+            //     loopedSlides: this.masterpieces.length,
+            // },
+            // swiperOptionThumbs: {
+            //     centeredSlides: true,
+            //     slidesPerView: 'auto',
+            //     touchRatio: 0.2,
+            //     slideToClickedSlide: true,
+            //     loop: true,
+            //     loopedSlides: this.masterpieces.length,
+            //     slidesPerView: 6,
+            // }
         };
     },
-    methods: {
-        showNext() {
-            this.activeImage < this.masterpieces.length - 1 ? this.activeImage++ : this.activeImage = 0;
+    computed: {
+        swiperOptionTop() {
+            return {
+                navigation: {
+                    nextEl: '.master-next',
+                    prevEl: '.master-prev'
+                },
+                loop: true,
+                loopedSlides: this.masterpieces.length,
+            }
         },
-        showPrev() {
-            this.activeImage > 0 ? this.activeImage-- : this.activeImage = this.masterpieces.length - 1;
+        swiperOptionThumbs() {
+            return {
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                touchRatio: 0.2,
+                slideToClickedSlide: true,
+                loop: true,
+                loopedSlides: this.masterpieces.length,
+                slidesPerView: 6,
+            }
         }
-    }
+    },
+    mounted() {
+        this.$nextTick(() => {
+            const swiperTop = this.$refs.swiperTop.swiper
+            const swiperThumbs = this.$refs.swiperThumbs.swiper
+            swiperTop.controller.control = swiperThumbs
+            swiperThumbs.controller.control = swiperTop
+        })
+    },
 };
 </script>
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
+
+.gallery-top {
+    @media (max-width: $desktop-width) {
+        margin-left: -20px;
+        width: calc(100% + 20px);
+        height: 224px;
+    }
+}
+
+.gallery-thumbs {
+    width: 1240px;
+}
 
 .masterpieces {
     margin-bottom: 40px;
@@ -92,18 +154,19 @@ export default {
         }
 
         @media (max-width: $desktop-width) {
-            margin-left: -20px;
-            width: calc(100% + 20px);
+            // margin-left: -20px;
+            // width: calc(100% + 20px);
+            width: 100%;
             height: 224px;
         }
     }
 
     &__background {
         position: absolute;
-        top: -16px;
-        left: -16px;
-        width: calc(100% + 32px);
-        height: calc(100% + 32px);
+        top: -32px;
+        left: -32px;
+        width: calc(100% + 64px);
+        height: calc(100% + 64px);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
