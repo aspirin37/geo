@@ -63,16 +63,14 @@ export default {
     computed: {
         swiperOptionTop() {
             return {
-                // effect: this.$mq !== 'lg' ? 'fade' : '',
+                effect: this.$mq !== 'lg' ? 'fade' : '',
                 navigation: {
                     nextEl: '.master-next',
                     prevEl: '.master-prev',
                     disabledClass: 'control-btn--disabled'
                 },
-                // loop: this.$mq === 'lg',
-                // loopedSlides: this.$mq === 'lg' ? this.masterpieces.length : false,
-                loop: true,
-                loopedSlides: this.masterpieces.length
+                loop: this.$mq === 'lg',
+                loopedSlides: this.$mq === 'lg' ? this.masterpieces.length : false,
             }
         },
         swiperOptionThumbs() {
@@ -82,7 +80,6 @@ export default {
                 touchRatio: 0.2,
                 slideToClickedSlide: true,
                 loop: this.$mq === 'lg',
-                loop: true,
                 loopedSlides: this.masterpieces.length,
                 slidesPerView: 6,
             }
