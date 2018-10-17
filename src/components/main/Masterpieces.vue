@@ -64,14 +64,17 @@ export default {
     computed: {
         swiperOptionTop() {
             return {
-                effect: this.$mq !== 'lg' ? 'fade' : '',
+                // effect: this.$mq !== 'lg' ? 'fade' : '',
                 navigation: {
                     nextEl: '.master-next',
                     prevEl: '.master-prev',
                     disabledClass: 'control-btn--disabled'
                 },
-                loop: this.$mq === 'lg',
-                loopedSlides: this.$mq === 'lg' ? this.masterpieces.length : false,
+                // loop: this.$mq === 'lg',
+                // loopedSlides: this.$mq === 'lg' ? this.masterpieces.length : false,
+                loopedSlides: this.masterpieces.length,
+                loop: true,
+                speed: 1000,
             }
         },
         swiperOptionThumbs() {
@@ -80,10 +83,12 @@ export default {
                 slidesPerView: 'auto',
                 touchRatio: 0.2,
                 slideToClickedSlide: true,
-                loop: this.$mq === 'lg',
+                // loop: this.$mq === 'lg',
+                loop: true,
                 loopedSlides: this.masterpieces.length,
                 slidesPerView: 6,
                 spaceBetween: 8,
+                speed: 1000,
             }
         }
     },
@@ -139,8 +144,6 @@ export default {
         }
 
         @media (max-width: $desktop-width) {
-            // margin-left: -20px;
-            // width: calc(100% + 20px);
             width: 100%;
             height: 224px;
         }
@@ -156,7 +159,6 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
         filter: blur(16px);
-        // background-image: url(https://files.geometria.ru/pics/original/070/255/70255842.jpg);
     }
 
     &__image-wrapper {
@@ -190,35 +192,6 @@ export default {
         max-width: 100%;
         vertical-align: middle;
         text-align: center;
-
-        // margin-bottom: 8px;
-        // background-image: url(https://files.geometria.ru/pics/original/070/255/70255842.jpg);
-        // background-size: contain;
-        // background-repeat: no-repeat;
-        // background-position: 50% 50%;
-
-        // width: 100%;
-        // height: 674px;
-        // margin-bottom: 8px;
-        // background-color: black;
-        // background-position: 50% 50%;
-        // background-size: cover;
-        // background-repeat: no-repeat;
-
-        @media (max-width: $desktop-width) {
-            // width: 100%;
-            // height: auto;
-            // max-height: 224px;
-            // margin-left: -20px;
-        }
-
-        // width: 100%;
-        // height: auto;
-        // max-height: 674px;
-
-        // @media (max-width: $desktop-width) {
-        //     width: calc(100% + 20px);
-        // }
     }
 
     &__list {

@@ -23,7 +23,7 @@
     </div>
 </template>
 <script>
-import Slider from '@/components/main/Slider'
+import Slider from '@/components/main/TopSlider'
 import Reports from '@/components/main/Reports'
 import Eyes from '@/components/main/Eyes'
 import Events from '@/components/main/Events'
