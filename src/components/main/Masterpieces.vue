@@ -31,7 +31,8 @@
                 v-show="$mq === 'lg'">
             <swiper-slide v-for="(it, i) in masterpieces"
                           :key="i">
-                <div class="masterpieces__item">
+                <div class="masterpieces__item"
+                     tabindex="0">
                     <img :src="it.preview">
                 </div>
             </swiper-slide>
@@ -82,6 +83,7 @@ export default {
                 loop: this.$mq === 'lg',
                 loopedSlides: this.masterpieces.length,
                 slidesPerView: 6,
+                spaceBetween: 8,
             }
         }
     },
@@ -229,15 +231,14 @@ export default {
 
     &__item {
         cursor: pointer;
-        margin-right: 8px;
         transition: 0.3s;
 
-        &.active {
-            opacity: 0.25;
+        &:hover {
+            opacity: 0.4;
         }
 
-        &:hover {
-            opacity: 0.25;
+        &:focus {
+            opacity: 0.4;
         }
 
         & img {
