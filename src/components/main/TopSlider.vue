@@ -68,7 +68,7 @@ export default {
                 const bar = new ProgressBar.Circle('.top-slider-bullet-active', {
                     strokeWidth: 7,
                     easing: 'linear',
-                    duration: 10500,
+                    duration: init ? 10000 : 11000,
                     color: 'white',
                     trailColor: 'transparent',
                     trailWidth: 0,
