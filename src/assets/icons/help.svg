@@ -16,7 +16,7 @@
                 <g id="colors/pure-black" mask="url(#mask-2)">
                     <g transform="translate(-1.000000, -1.000000)">
                         <rect id="Background" fill="none" x="0" y="0" width="24" height="24"></rect>
-                        <rect id="Black-Color-Copy-9" fill="#ffffff" fill-rule="evenodd" x="0" y="0" width="24" height="24"></rect>
+                        <rect id="Black-Color-Copy-9" fill="#000000" fill-rule="evenodd" x="0" y="0" width="24" height="24"></rect>
                     </g>
                 </g>
             </g>

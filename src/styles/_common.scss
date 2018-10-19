@@ -433,3 +433,12 @@ li {
         }
     }
 }
+
+.help-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url('./assets/icons/help.svg');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

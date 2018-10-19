@@ -29,6 +29,10 @@
             <a href="#"
                class="social-nav__link social-nav__link--ytb"></a>
         </nav>
+        <div class="help">
+            <i class="help-icon"></i>
+            <span>Помощь</span>
+        </div>
     </header>
 </template>
 <script>
@@ -48,6 +52,32 @@ export default {
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
+
+.social-nav {
+    @media (max-width: $desktop-width) {
+        margin-top: auto;
+        margin-bottom: 40px;
+    }
+}
+
+.help {
+    display: none;
+    font-size: 18px;
+    line-height: 24px;
+    opacity: 0.5;
+    text-align: center;
+    font-weight: bold;
+
+    @media (max-width: $desktop-width) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    span {
+        margin-top: 8px;
+    }
+}
 
 .page-header {
     display: flex;
