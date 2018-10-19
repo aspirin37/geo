@@ -31,7 +31,7 @@ export default {
 @import './styles/app.scss';
 
 .menu-shown {
-    height: 100vh;
+    height: 50vh;
     overflow: hidden;
 }
 </style>
