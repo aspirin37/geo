@@ -1,5 +1,5 @@
 <template>
-    <header class="page-footer">
+    <footer class="page-footer">
         <div class="page-footer__top">
             <nav class="footer-nav">
                 <a href="#">События</a>
@@ -39,7 +39,7 @@
             <a href="#">Пользовательское соглашение</a>
             <span class="icon-18"></span>
         </div>
-    </header>
+    </footer>
 </template>
 <script>
 export default {

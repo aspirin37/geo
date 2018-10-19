@@ -1,7 +1,5 @@
 <template>
     <section class="main-slider">
-        <!-- <div id="container"></div> -->
-        <!-- <img src="../../assets/geo-bg.jpg"> -->
         <swiper class="slider"
                 :options="swiperOption">
             <swiper-slide v-for="(it, i) in banners"
@@ -40,7 +38,8 @@ export default {
                 pagination: {
                     el: '.swiper-pagination',
                     bulletClass: 'top-slider-bullet',
-                    bulletActiveClass: 'top-slider-bullet-active'
+                    bulletActiveClass: 'top-slider-bullet-active',
+                    clickable: true
                 },
                 autoplay: {
                     delay: 10000,
@@ -129,11 +128,19 @@ export default {
 }
 </style>
 <style lang="scss">
+@import '@/styles/_variables.scss';
+
 .top-slider-bullet {
     display: inline-block;
     position: relative;
     width: 20px;
     height: 20px;
+    outline: none;
+
+    @media (max-width: $desktop-width) {
+        width: 16px;
+        height: 16px;
+    }
 
     &::after {
         content: '';
@@ -147,24 +154,16 @@ export default {
         border-radius: 100%;
         background: #000;
         opacity: 0.2;
+
+        @media (max-width: $desktop-width) {
+            width: 6px;
+            height: 6px;
+        }
     }
 
     &-active::after {
         opacity: 1;
         background-color: white;
     }
-
-    // width: 8px;
-    // height: 8px;
-    // margin: 0 8px;
-    // display: inline-block;
-    // border-radius: 100%;
-    // background: #000;
-    // opacity: 0.2;
-
-    // &-active {
-    //     opacity: 1;
-    //     background-color: white;
-    // }
 }
 </style>

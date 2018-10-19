@@ -1,8 +1,9 @@
 <template>
-    <div class="side-bar">
+    <div class="side-bar"
+         :class="{'position-fixed': isMenuShown}">
         <div class="top">
             <button class="side-bar__link side-bar__link--burger hamburger-menu__outer"
-                    v-on:click.prevent="isMenuShown = !isMenuShown">
+                    v-on:click.prevent="toggleMenu">
                 <span :class="['d-inline-block hamburger-menu', {'animate': isMenuShown}]"></span>
             </button>
             <a href="#"
@@ -26,7 +27,18 @@
 export default {
     data() {
         return {
-            isMenuShown: false,
+
+        }
+    },
+    computed: {
+        isMenuShown() {
+            return this.$store.state.isMobileMenuShown
+        }
+    },
+    methods: {
+        toggleMenu() {
+            // this.isMenuShown = !this.isMenuShown
+            this.$store.commit('TOGGLE_MENU')
         }
     }
 }
@@ -41,6 +53,14 @@ export default {
     width: 64px;
     min-height: 100vh;
     background-color: black;
+
+    @media (max-width: $desktop-width) {
+        position: relative;
+        z-index: 1000;
+        display: flex;
+        width: 100%;
+        min-height: auto;
+    }
 
     .top {
         @media (max-width: $desktop-width) {
@@ -113,13 +133,6 @@ export default {
                 display: none;
             }
         }
-    }
-
-    @media (max-width: $desktop-width) {
-        position: relative;
-        display: flex;
-        width: 100%;
-        min-height: auto;
     }
 }
 

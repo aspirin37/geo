@@ -7,6 +7,7 @@ import VueScrollReveal from 'vue-scroll-reveal';
 import VueMq from 'vue-mq'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+import store from './store'
 
 Vue.use(VueScrollReveal)
 Vue.use(VueAwesomeSwiper)
@@ -24,6 +25,7 @@ Vue.config.productionTip = false
 new Vue({
     el: '#app',
     router,
+    store,
     components: { App },
     template: '<App/>'
 })

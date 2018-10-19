@@ -1,11 +1,12 @@
 <template>
-    <div id="app">
+    <div id="app"
+         :class="{'menu-shown': isMenuShown}">
         <sidebar />
-        <main class="app-container">
+        <div class="app-container">
             <page-header />
             <router-view></router-view>
             <page-footer></page-footer>
-        </main>
+        </div>
     </div>
 </template>
 <script>
@@ -18,10 +19,19 @@ export default {
         Sidebar,
         PageHeader,
         PageFooter
-    }
+    },
+    computed: {
+        isMenuShown() {
+            return this.$store.state.isMobileMenuShown
+        }
+    },
 }
 </script>
 <style lang="scss">
 @import './styles/app.scss';
-//
+
+.menu-shown {
+    height: 100vh;
+    overflow: hidden;
+}
 </style>

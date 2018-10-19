@@ -1,8 +1,11 @@
 <template>
-    <header class="page-header">
+    <header class="page-header"
+            v-if="isMenuShown || this.$mq === 'lg'">
         <nav class="main-nav">
-            <button class="main-nav__btn">Санкт-Петербург</button>
-            <button class="main-nav__btn">РУС</button>
+            <div class="d-flex">
+                <button class="main-nav__btn">Санкт-Петербург</button>
+                <button class="main-nav__btn">РУС</button>
+            </div>
             <a href="#"
                class="main-nav__link">События</a>
             <a href="#"
@@ -34,7 +37,12 @@ export default {
         return {
 
         }
-    }
+    },
+    computed: {
+        isMenuShown() {
+            return this.$store.state.isMobileMenuShown
+        }
+    },
 }
 </script>
 <style lang="scss"
@@ -50,12 +58,25 @@ export default {
     border-bottom: 2px solid black;
 
     @media (max-width: $desktop-width) {
-        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 64px);
+        padding: 20px;
+        background-color: white;
+        border: none;
     }
 }
 
 .main-nav {
     display: flex;
+
+    @media (max-width: $desktop-width) {
+        flex-direction: column;
+    }
 
     &__link {
         position: relative;
@@ -65,6 +86,13 @@ export default {
         line-height: 24px;
         font-weight: bold;
         text-decoration: none;
+
+        @media (max-width: $desktop-width) {
+            width: calc(100% + 20px);
+            height: 48px;
+            padding-top: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+        }
 
         &::after {
             content: '';
@@ -80,6 +108,25 @@ export default {
             transition: all 0.3s;
         }
 
+        &::before {
+            @media (max-width: $desktop-width) {
+                content: '';
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-image: url('../../assets/icons/chevron-right.svg');
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: contain;
+                opacity: 0.2;
+
+            }
+        }
+
         &.active,
         &:hover {
             opacity: 1;
@@ -88,6 +135,10 @@ export default {
         &.active::after,
         &:hover::after {
             width: 100%;
+
+            @media (max-width: $desktop-width) {
+                width: 0;
+            }
         }
     }
 
@@ -100,6 +151,10 @@ export default {
         background-color: rgba(0, 0, 0, 0.8);
         color: white;
 
+        @media (max-width: $desktop-width) {
+            margin-bottom: 8px;
+        }
+
         &:first-of-type {
             margin-right: 1px;
         }
@@ -108,6 +163,5 @@ export default {
             margin-right: 32px;
         }
     }
-
 }
 </style>

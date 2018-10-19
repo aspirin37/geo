@@ -395,6 +395,10 @@ li {
     display: flex;
     align-items: center;
 
+    @media (max-width: $desktop-width) {
+        margin: 0 auto;
+    }
+
     &__link {
         width: 20px;
         height: 20px;

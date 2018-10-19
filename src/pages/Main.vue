@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <main>
         <slider></slider>
         <div class="page-border">
             <div class="page-container">
@@ -20,7 +20,7 @@
             <places></places>
             <banner :src="'https://www.trashedgraphics.com/wp-content/uploads/2014/02/banner_02.jpg'"></banner>
         </div>
-    </div>
+    </main>
 </template>
 <script>
 import Slider from '@/components/main/TopSlider'
