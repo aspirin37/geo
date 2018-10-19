@@ -58,7 +58,7 @@ export default {
     border-bottom: 2px solid black;
 
     @media (max-width: $desktop-width) {
-        position: fixed;
+        position: absolute;
         top: 64px;
         left: 0;
         z-index: 100;
