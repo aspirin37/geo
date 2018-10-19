@@ -103,6 +103,10 @@ export default {
     &:hover {
         opacity: 1;
     }
+
+    @media (max-width: $desktop-width) {
+        height: 22px;
+    }
 }
 
 .main-slider {
