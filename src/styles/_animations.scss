@@ -1,0 +1,14 @@
+.menu-enter-active {
+    transition: all 0.3s ease-out;
+    transition-delay: 0.3s;
+}
+
+.menu-leave-active {
+    transition: all 0.3s ease-in;
+}
+
+.menu-enter,
+.menu-leave-active {
+    opacity: 0.5;
+    transform: translateX(-100%);
+}
