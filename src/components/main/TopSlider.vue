@@ -74,7 +74,6 @@ export default {
                     trailWidth: 0,
                     svgStyle: null,
                 });
-                const container = bar._container
 
                 bar.animate(1.0);
             }
