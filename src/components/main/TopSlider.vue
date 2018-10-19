@@ -52,7 +52,8 @@ export default {
                         this.drawCircle(false)
                     },
                 },
-            }
+            },
+            circleTimer: null,
         }
     },
     mounted() {
@@ -60,6 +61,7 @@ export default {
     },
     methods: {
         drawCircle(init) {
+            clearTimeout(this.circleTimer)
             let bullets = document.querySelectorAll('.top-slider-bullet')
             bullets.forEach(it => {
                 if (it.firstChild) it.removeChild(it.firstChild)
@@ -76,6 +78,12 @@ export default {
                 });
 
                 bar.animate(1.0);
+                this.circleTimer = setTimeout(() => {
+                    bullets.forEach(it => {
+                        if (it.firstChild) it.removeChild(it.firstChild)
+                    })
+                }, init ? 10000 : 11000)
+
             }
         }
     }
