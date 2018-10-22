@@ -1,5 +1,6 @@
 <template>
-    <div class="side-bar">
+    <div class="side-bar"
+         :class="{'position-fixed': isMenuShown}">
         <div class="top">
             <button class="side-bar__link side-bar__link--burger hamburger-menu__outer"
                     v-on:click.prevent="toggleMenu">
