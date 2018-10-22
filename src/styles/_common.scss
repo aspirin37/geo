@@ -147,8 +147,9 @@ li {
     display: none;
     cursor: pointer;
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1424px) {
         display: block;
+        margin-left: auto;
     }
 }
 

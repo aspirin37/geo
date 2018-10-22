@@ -153,13 +153,12 @@ export default {
     &__list {
         display: flex;
         flex-direction: row;
-        width: 922px;
     }
 
     &__column {
         display: flex;
         flex-direction: column;
-        margin-right: 32px;
+        margin-right: 24px;
     }
 }
 
