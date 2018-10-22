@@ -4,11 +4,11 @@
 }
 
 .menu-leave-active {
-    transition: all 0s ease-in;
+    transition: all 0.3s ease-out;
 }
 
 .menu-enter,
 .menu-leave-active {
-    opacity: 0.5;
+    opacity: 0;
     transform: translateX(-100%);
 }

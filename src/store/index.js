@@ -13,6 +13,7 @@ const actions = {}
 const mutations = {
     TOGGLE_MENU(state) {
         state.isMobileMenuShown = !state.isMobileMenuShown
+        document.body.classList.toggle('menu-open')
     },
 }
 

@@ -1,6 +1,5 @@
 <template>
-    <div id="app"
-         :class="{'menu-shown': isMenuShown}">
+    <div id="app">
         <sidebar />
         <div class="app-container">
             <page-header />
@@ -29,13 +28,4 @@ export default {
 </script>
 <style lang="scss">
 @import './styles/app.scss';
-
-.menu-shown {
-    height: 50vh;
-    overflow: hidden;
-}
-
-.app-conteiner--menu-shown {
-    padding-top: 64px;
-}
 </style>

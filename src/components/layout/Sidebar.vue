@@ -1,6 +1,5 @@
 <template>
-    <div class="side-bar"
-         :class="{'position-absolute': isMenuShown}">
+    <div class="side-bar">
         <div class="top">
             <button class="side-bar__link side-bar__link--burger hamburger-menu__outer"
                     v-on:click.prevent="toggleMenu">
@@ -37,7 +36,6 @@ export default {
     },
     methods: {
         toggleMenu() {
-            // this.isMenuShown = !this.isMenuShown
             this.$store.commit('TOGGLE_MENU')
         }
     }

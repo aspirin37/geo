@@ -42,7 +42,7 @@ export default {
                     clickable: true
                 },
                 autoplay: {
-                    delay: 10000,
+                    delay: 8000,
                     disableOnInteraction: false
                 },
                 speed: 1000,
@@ -69,7 +69,7 @@ export default {
                 const bar = new ProgressBar.Circle('.top-slider-bullet-active', {
                     strokeWidth: 7,
                     easing: 'linear',
-                    duration: init ? 10000 : 11000,
+                    duration: init ? 8000 : 9000,
                     color: 'white',
                     trailColor: 'transparent',
                     trailWidth: 0,
@@ -81,7 +81,7 @@ export default {
                     bullets.forEach(it => {
                         if (it.firstChild) it.removeChild(it.firstChild)
                     })
-                }, init ? 10000 : 11000)
+                }, init ? 8000 : 9000)
 
             }
         }
