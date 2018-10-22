@@ -17,11 +17,11 @@
                           :key="i">
                 <div class="masterpieces__wrapper">
                     <img class="masterpieces__background"
+                         :class="{'safari-image-fix': isSafari}"
                          :src="it.preview">
-                    <!-- <div class="masterpieces__background"
-                         :style="`background-image: url(${it.preview})`"></div> -->
                     <div class="masterpieces__image-wrapper">
                         <img class="masterpieces__preview"
+                             :class="{'safari-image-fix': isSafari}"
                              :src="it.preview">
                     </div>
                 </div>
@@ -64,6 +64,9 @@ export default {
         };
     },
     computed: {
+        isSafari() {
+            return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        },
         swiperOptionTop() {
             return {
                 effect: this.$mq !== 'lg' ? 'fade' : '',
@@ -104,6 +107,10 @@ export default {
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
+
+.safari-image-fix {
+    -webkit-transform: translate3d(0, 0, 0);
+}
 
 .gallery-top {
     @media (max-width: $desktop-width) {
@@ -158,7 +165,6 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
         filter: blur(16px);
-        -webkit-transform: translate3d(0, 0, 0);
     }
 
     &__image-wrapper {
@@ -192,7 +198,6 @@ export default {
         max-width: 100%;
         vertical-align: middle;
         text-align: center;
-        -webkit-transform: translate3d(0, 0, 0);
     }
 
     &__list {
