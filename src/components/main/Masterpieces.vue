@@ -18,6 +18,8 @@
                 <div class="masterpieces__wrapper">
                     <div class="masterpieces__background"
                          :style="`background-image: url(${it.preview})`"></div>
+                    <!-- <div class="masterpieces__background"
+                         :style="`background-image: url(${it.preview})`"></div> -->
                     <div class="masterpieces__image-wrapper">
                         <img class="masterpieces__preview"
                              :src="it.preview">
