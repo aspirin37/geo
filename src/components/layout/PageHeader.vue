@@ -57,7 +57,7 @@ export default {
 
 .social-nav {
     @media (max-width: $desktop-width) {
-        margin-top: auto;
+        margin-top: 40px;
         margin-bottom: 40px;
     }
 }
@@ -95,7 +95,7 @@ export default {
         z-index: 100;
         display: flex;
         flex-direction: column;
-        height: calc(100% - 64px);
+        min-height: calc(100% - 64px);
         padding: 20px;
         background-color: white;
         border: none;

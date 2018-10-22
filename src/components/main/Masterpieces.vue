@@ -16,8 +16,8 @@
                           v-for="(it, i) in masterpieces"
                           :key="i">
                 <div class="masterpieces__wrapper">
-                    <div class="masterpieces__background"
-                         :style="`background-image: url(${it.preview})`"></div>
+                    <img class="masterpieces__background"
+                         :src="it.preview">
                     <!-- <div class="masterpieces__background"
                          :style="`background-image: url(${it.preview})`"></div> -->
                     <div class="masterpieces__image-wrapper">
@@ -158,6 +158,7 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
         filter: blur(16px);
+        -webkit-transform: translate3d(0, 0, 0);
     }
 
     &__image-wrapper {
@@ -191,6 +192,7 @@ export default {
         max-width: 100%;
         vertical-align: middle;
         text-align: center;
+        -webkit-transform: translate3d(0, 0, 0);
     }
 
     &__list {
