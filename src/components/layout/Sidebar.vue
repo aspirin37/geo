@@ -127,7 +127,7 @@ export default {
         }
 
         &--help {
-            background-image: url('../../assets/icons/help.svg');
+            background-image: url('../../assets/icons/help-white.svg');
 
             @media (max-width: $desktop-width) {
                 display: none;
