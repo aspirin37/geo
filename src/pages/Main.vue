@@ -19,6 +19,11 @@
             <masterpieces></masterpieces>
             <places></places>
             <banner :src="'https://www.trashedgraphics.com/wp-content/uploads/2014/02/banner_02.jpg'"></banner>
+            <div class="btn-up-container"
+                 v-if="$mq !== 'lg'">
+                <button class="btn btn--up"
+                        @click="scrollToTop">Наверх</button>
+            </div>
         </div>
     </main>
 </template>
@@ -46,6 +51,11 @@ export default {
     },
     data() {
         return {}
+    },
+    methods: {
+        scrollToTop() {
+            window.scrollTo(0, 0);
+        }
     }
 }
 </script>

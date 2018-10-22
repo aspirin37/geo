@@ -1,41 +1,41 @@
 <template>
-    <transition name="menu">
-        <header class="page-header"
-                v-if="isMenuShown || this.$mq === 'lg'">
-            <nav class="main-nav">
-                <div class="d-flex">
-                    <button class="main-nav__btn">Санкт-Петербург</button>
-                    <button class="main-nav__btn">РУС</button>
-                </div>
-                <a href="#"
-                   class="main-nav__link">События</a>
-                <a href="#"
-                   class="main-nav__link">Новости</a>
-                <a href="#"
-                   class="main-nav__link">Люди</a>
-                <a href="#"
-                   class="main-nav__link">Заведения</a>
-                <a href="#"
-                   class="main-nav__link">Шедевры</a>
-                <a href="#"
-                   class="main-nav__link">Еще</a>
-            </nav>
-            <nav class="social-nav">
-                <a href="#"
-                   class="social-nav__link social-nav__link--vk"></a>
-                <a href="#"
-                   class="social-nav__link social-nav__link--fb"></a>
-                <a href="#"
-                   class="social-nav__link social-nav__link--inst"></a>
-                <a href="#"
-                   class="social-nav__link social-nav__link--ytb"></a>
-            </nav>
-            <div class="help">
-                <i class="help-icon"></i>
-                <span>Помощь</span>
+    <!-- <transition name="menu"> -->
+    <header class="page-header"
+            v-if="isMenuShown || this.$mq === 'lg'">
+        <nav class="main-nav">
+            <div class="d-flex">
+                <button class="main-nav__btn">Санкт-Петербург</button>
+                <button class="main-nav__btn">РУС</button>
             </div>
-        </header>
-    </transition>
+            <a href="#"
+               class="main-nav__link">События</a>
+            <a href="#"
+               class="main-nav__link">Новости</a>
+            <a href="#"
+               class="main-nav__link">Люди</a>
+            <a href="#"
+               class="main-nav__link">Заведения</a>
+            <a href="#"
+               class="main-nav__link">Шедевры</a>
+            <a href="#"
+               class="main-nav__link">Еще</a>
+        </nav>
+        <nav class="social-nav">
+            <a href="#"
+               class="social-nav__link social-nav__link--vk"></a>
+            <a href="#"
+               class="social-nav__link social-nav__link--fb"></a>
+            <a href="#"
+               class="social-nav__link social-nav__link--inst"></a>
+            <a href="#"
+               class="social-nav__link social-nav__link--ytb"></a>
+        </nav>
+        <div class="help">
+            <i class="help-icon"></i>
+            <span>Помощь</span>
+        </div>
+    </header>
+    <!-- </transition> -->
 </template>
 <script>
 export default {

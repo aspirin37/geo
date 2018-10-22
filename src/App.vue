@@ -2,8 +2,7 @@
     <div id="app"
          :class="{'menu-shown': isMenuShown}">
         <sidebar />
-        <div class="app-container"
-             :class="{'app-conteiner--menu-shown': isMenuShown}">
+        <div class="app-container">
             <page-header />
             <router-view></router-view>
             <page-footer></page-footer>
@@ -32,7 +31,7 @@ export default {
 @import './styles/app.scss';
 
 .menu-shown {
-    height: 100vh;
+    height: 50vh;
     overflow: hidden;
 }
 
