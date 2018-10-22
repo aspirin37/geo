@@ -89,7 +89,7 @@ export default {
                     name: `#СТУДДВИЖ!`
                 },
                 author: {
-                    avatar: `https://files.geometria.ru/pics/thumbnail/064/273/64273667.jpg`,
+                    avatar: `https://files.geometria.ru/pics/thumbnail/069/209/69209335.jpg`,
                     name: `Саша Гео`,
                 }
 

@@ -1,0 +1,83 @@
+@mixin icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.events-icon {
+    @include icon;
+    margin-right: 24px;
+
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--drama {
+        background-image: url('./assets/icons/drama.png');
+    }
+
+    &--note {
+        background-image: url('./assets/icons/note.png');
+    }
+
+    &--forms {
+        background-image: url('./assets/icons/forms.png');
+    }
+
+    &--book {
+        background-image: url('./assets/icons/book.png');
+    }
+
+    &--glasses {
+        background-image: url('./assets/icons/glasses.png');
+    }
+
+    &--car {
+        background-image: url('./assets/icons/car.png');
+    }
+
+    &--tv {
+        background-image: url('./assets/icons/tv.png');
+    }
+
+    &--pic {
+        background-image: url('./assets/icons/pic.png');
+    }
+
+    &--sun {
+        background-image: url('./assets/icons/sun.png');
+    }
+
+    &--weights {
+        background-image: url('./assets/icons/weights.png');
+    }
+
+    &--cocktail {
+        background-image: url('./assets/icons/cocktail.png');
+    }
+
+    &--bag {
+        background-image: url('./assets/icons/bag.png');
+    }
+
+    &--soup {
+        background-image: url('./assets/icons/soup.png');
+    }
+}
+
+.help-icon {
+    @include icon;
+    background-image: url('./assets/icons/help.svg');
+}
+
+.up-icon {
+    @include icon;
+    display: inline-block;
+    margin-right: 12px;
+    background-image: url('./assets/icons/chevron-left.svg');
+    transform: rotate(90deg);
+}
