@@ -1,5 +1,5 @@
 <template>
-    <transition name="menu">
+    <transition :name="this.$mq == 'lg' ? 'menu' : ''">
         <div class="user-menu"
              v-show="isUserMenuShown || this.$mq != 'lg'">
         </div>
@@ -53,6 +53,7 @@ export default {
     @media (max-width: $desktop-width) {
         position: static;
         width: auto;
+        box-shadow: none;
     }
 }
 </style>
