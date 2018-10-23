@@ -14,7 +14,10 @@ const actions = {}
 const mutations = {
     TOGGLE_MOBILE_MENU(state) {
         state.isMobileMenuShown = !state.isMobileMenuShown
-        document.body.classList.toggle('menu-open')
+        // после появления меню, урезаем высоту основного контента, чтобы скроллилась только менюшка
+        setTimeout(() => {
+            document.body.classList.toggle('menu-open')
+        }, state.isMobileMenuShown ? 300 : 0)
     },
     TOGGLE_USER_MENU(state) {
         state.isUserMenuShown = !state.isUserMenuShown
