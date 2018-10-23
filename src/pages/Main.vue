@@ -22,7 +22,7 @@
             <div class="btn-up-container"
                  v-if="$mq !== 'lg'">
                 <button class="btn btn--up"
-                        @click="scrollToTop"><i class="up-icon"></i> Наверх</button>
+                        @click="scrollToTop"><i class="up-icon"></i>Наверх</button>
             </div>
         </div>
     </main>
@@ -54,7 +54,10 @@ export default {
     },
     methods: {
         scrollToTop() {
-            window.scrollTo(0, 0);
+            window.scroll({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     }
 }

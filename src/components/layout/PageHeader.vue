@@ -1,7 +1,7 @@
 <template>
     <transition name="menu">
         <header class="page-header"
-                v-if="isMenuShown || this.$mq === 'lg'">
+                v-if="isMobileMenuShown || this.$mq === 'lg'">
             <nav class="main-nav">
                 <div class="d-flex">
                     <button class="main-nav__btn">Санкт-Петербург</button>
@@ -20,6 +20,7 @@
                 <a href="#"
                    class="main-nav__link">Еще</a>
             </nav>
+            <user-menu></user-menu>
             <nav class="social-nav">
                 <a href="#"
                    class="social-nav__link social-nav__link--vk"></a>
@@ -38,16 +39,23 @@
     </transition>
 </template>
 <script>
+import userMenu from '@/components/user/UserMenu'
 export default {
+    components: {
+        userMenu
+    },
     data() {
         return {
 
         }
     },
     computed: {
-        isMenuShown() {
+        isMobileMenuShown() {
             return this.$store.state.isMobileMenuShown
-        }
+        },
+        isUserMenuShown() {
+            return this.$store.state.isUserMenuShown
+        },
     },
 }
 </script>

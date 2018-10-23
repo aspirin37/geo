@@ -1,29 +1,40 @@
 <template>
-    <div class="side-bar">
-        <div class="top">
-            <button class="side-bar__link side-bar__link--burger hamburger-menu__outer"
-                    v-on:click.prevent="toggleMenu">
-                <span :class="['d-inline-block hamburger-menu', {'animate': isMenuShown}]"></span>
-            </button>
-            <a href="#"
-               class="side-bar__link side-bar__link--logo"></a>
+    <div class="side-bar__wrapper">
+        <div class="side-bar">
+            <div class="top">
+                <button class="side-bar__link side-bar__link--burger hamburger-menu__outer"
+                        v-on:click.prevent="toggleMobileMenu">
+                    <span :class="['d-inline-block hamburger-menu', {'animate': isMenuShown}]"></span>
+                </button>
+                <a href="#"
+                   class="side-bar__link side-bar__link--logo"></a>
+            </div>
+            <nav>
+                <button class="side-bar__link side-bar__link--profile"
+                        @click="toggleUserMenu"></button>
+                <a href="#"
+                   class="side-bar__link side-bar__link--icon side-bar__link--add"></a>
+                <a href="#"
+                   class="side-bar__link side-bar__link--icon side-bar__link--notif"></a>
+                <a href="#"
+                   class="side-bar__link side-bar__link--icon side-bar__link--search"></a>
+                <a href="#"
+                   class="side-bar__link side-bar__link--icon side-bar__link--help"></a>
+                <transition name="fade"
+                            mode="in-out">
+                    <button class="side-bar__link side-bar__link--icon side-bar__link--up"
+                            @click="scrollToTop"></button>
+                </transition>
+            </nav>
         </div>
-        <nav class="">
-            <a href="#"
-               class="side-bar__link side-bar__link--profile"></a>
-            <a href="#"
-               class="side-bar__link side-bar__link--icon side-bar__link--add "></a>
-            <a href="#"
-               class="side-bar__link side-bar__link--icon side-bar__link--notif"></a>
-            <a href="#"
-               class="side-bar__link side-bar__link--icon side-bar__link--search"></a>
-            <a href="#"
-               class="side-bar__link side-bar__link--icon side-bar__link--help"></a>
-        </nav>
     </div>
 </template>
 <script>
+import userMenu from '@/components/user/UserMenu'
 export default {
+    components: {
+        userMenu
+    },
     data() {
         return {
 
@@ -35,9 +46,18 @@ export default {
         }
     },
     methods: {
-        toggleMenu() {
-            this.$store.commit('TOGGLE_MENU')
-        }
+        toggleMobileMenu() {
+            this.$store.commit('TOGGLE_MOBILE_MENU')
+        },
+        toggleUserMenu() {
+            this.$store.commit('TOGGLE_USER_MENU')
+        },
+        scrollToTop() {
+            window.scroll({
+                top: 0,
+                behavior: 'smooth'
+            });
+        },
     }
 }
 </script>
@@ -46,18 +66,31 @@ export default {
 @import '@/styles/_variables.scss';
 
 .side-bar {
-    position: fixed;
+    display: flex;
+    flex-direction: column;
+    // position: fixed;
+
     left: 0;
     width: 64px;
     min-height: 100vh;
     background-color: black;
 
     @media (max-width: $desktop-width) {
-        position: relative;
+        flex-direction: row;
+        // position: relative;
         z-index: 1000;
         display: flex;
         width: 100%;
         min-height: auto;
+    }
+
+    &__wrapper {
+        position: fixed;
+        z-index: 200;
+
+        @media (max-width: $desktop-width) {
+            position: relative;
+        }
     }
 
     .top {
@@ -67,7 +100,13 @@ export default {
     }
 
     nav {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
         @media (max-width: $desktop-width) {
+            flex-direction: row;
+            flex-grow: 0;
             display: flex;
             margin-left: auto;
         }
@@ -87,12 +126,10 @@ export default {
             @media (max-width: $desktop-width) {
                 background-color: black;
             }
-
         }
 
         &--burger {
             display: none;
-            // background-image: url('../../assets/logo.svg');
 
             @media (max-width: $desktop-width) {
                 display: block;
@@ -131,63 +168,16 @@ export default {
                 display: none;
             }
         }
+
+        &--up {
+            margin-top: auto;
+            background-image: url('../../assets/icons/arrow-top-circle-white.svg');
+            background-color: rgba(255, 255, 255, 0.1);
+
+            @media (max-width: $desktop-width) {
+                display: none;
+            }
+        }
     }
-}
-
-$bar-width: 30px;
-$bar-height: 4px;
-$bar-spacing: 8px;
-
-.hamburger-menu,
-.hamburger-menu:after,
-.hamburger-menu:before {
-    width: $bar-width;
-    height: $bar-height;
-    border-radius: $bar-height;
-}
-
-.hamburger-menu {
-    position: relative;
-    background: white;
-
-    &.animate {
-        background: transparent;
-    }
-}
-
-.hamburger-menu:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: $bar-spacing;
-    background: white;
-    transition: bottom 0.2s 0.2s, transform 0.2s;
-}
-
-.hamburger-menu:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: $bar-spacing;
-    background: white;
-    transition: top 0.2s 0.2s, transform 0.2s;
-}
-
-.hamburger-menu.animate .hamburger-menu__outer {
-    background-color: transparent;
-}
-
-.hamburger-menu.animate:after {
-    top: 0;
-    transform: rotate(45deg);
-    transition: top 0.2s, transform 0.2s 0.2s;
-    ;
-}
-
-.hamburger-menu.animate:before {
-    bottom: 0;
-    transform: rotate(-45deg);
-    transition: bottom 0.2s, transform 0.2s 0.2s;
-    ;
 }
 </style>

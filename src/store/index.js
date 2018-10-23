@@ -6,14 +6,21 @@ Vue.use(Vuex)
 
 const state = {
     isMobileMenuShown: false,
+    isUserMenuShown: false,
 }
 
 const actions = {}
 
 const mutations = {
-    TOGGLE_MENU(state) {
+    TOGGLE_MOBILE_MENU(state) {
         state.isMobileMenuShown = !state.isMobileMenuShown
         document.body.classList.toggle('menu-open')
+    },
+    TOGGLE_USER_MENU(state) {
+        state.isUserMenuShown = !state.isUserMenuShown
+    },
+    CLOSE_USER_MENU(state) {
+        state.isUserMenuShown = false
     },
 }
 
