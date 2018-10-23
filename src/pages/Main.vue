@@ -65,10 +65,4 @@ export default {
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
-
-main {
-    @media (max-width: $desktop-width) {
-        padding-top: 64px;
-    }
-}
 </style>
