@@ -86,11 +86,11 @@ export default {
 
     &__wrapper {
         position: fixed;
-        width: 100%;
         z-index: 200;
 
         @media (max-width: $desktop-width) {
             position: relative;
+            width: 100%;
         }
     }
 

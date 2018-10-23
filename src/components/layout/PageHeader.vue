@@ -20,7 +20,7 @@
                 <a href="#"
                    class="main-nav__link">Еще</a>
             </nav>
-            <user-menu></user-menu>
+            <user-menu v-show="isUserMenuShown || this.$mq != 'lg'"></user-menu>
             <nav class="social-nav">
                 <a href="#"
                    class="social-nav__link social-nav__link--vk"></a>

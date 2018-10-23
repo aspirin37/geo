@@ -1,7 +1,6 @@
 <template>
     <transition :name="this.$mq == 'lg' ? 'menu' : ''">
-        <div class="user-menu"
-             v-show="isUserMenuShown || this.$mq != 'lg'">
+        <div class="user-menu">
         </div>
     </transition>
 </template>
