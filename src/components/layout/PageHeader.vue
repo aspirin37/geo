@@ -112,13 +112,6 @@ export default {
     }
 
     &__wrapper {
-
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-        // width: 100%;
-        // height: 100%;
-        // overflow-y: auto;
         @media (max-width: $desktop-width) {
             position: absolute;
             top: 0;
@@ -127,6 +120,7 @@ export default {
             height: 100%;
             overflow-y: auto;
             padding: 20px;
+            -webkit-overflow-scrolling: touch;
         }
     }
 

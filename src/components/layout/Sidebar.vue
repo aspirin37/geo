@@ -89,7 +89,7 @@ export default {
         z-index: 200;
 
         @media (max-width: $desktop-width) {
-            position: relative;
+            // position: relative;
         }
     }
 
