@@ -2,38 +2,42 @@
     <transition name="menu">
         <header class="page-header"
                 v-if="isMobileMenuShown || this.$mq === 'lg'">
-            <nav class="main-nav">
-                <div class="d-flex">
-                    <button class="main-nav__btn">Санкт-Петербург</button>
-                    <button class="main-nav__btn">РУС</button>
+            <div class="page-header__wrapper">
+                <div class="page-header__inner-wrapper">
+                    <nav class="main-nav">
+                        <div class="d-flex">
+                            <button class="main-nav__btn">Санкт-Петербург</button>
+                            <button class="main-nav__btn">РУС</button>
+                        </div>
+                        <a href="#"
+                           class="main-nav__link">События</a>
+                        <a href="#"
+                           class="main-nav__link">Новости</a>
+                        <a href="#"
+                           class="main-nav__link">Люди</a>
+                        <a href="#"
+                           class="main-nav__link">Заведения</a>
+                        <a href="#"
+                           class="main-nav__link">Шедевры</a>
+                        <a href="#"
+                           class="main-nav__link">Еще</a>
+                    </nav>
+                    <user-menu></user-menu>
+                    <nav class="social-nav">
+                        <a href="#"
+                           class="social-nav__link social-nav__link--vk"></a>
+                        <a href="#"
+                           class="social-nav__link social-nav__link--fb"></a>
+                        <a href="#"
+                           class="social-nav__link social-nav__link--inst"></a>
+                        <a href="#"
+                           class="social-nav__link social-nav__link--ytb"></a>
+                    </nav>
+                    <div class="help">
+                        <i class="help-icon"></i>
+                        <span>Помощь</span>
+                    </div>
                 </div>
-                <a href="#"
-                   class="main-nav__link">События</a>
-                <a href="#"
-                   class="main-nav__link">Новости</a>
-                <a href="#"
-                   class="main-nav__link">Люди</a>
-                <a href="#"
-                   class="main-nav__link">Заведения</a>
-                <a href="#"
-                   class="main-nav__link">Шедевры</a>
-                <a href="#"
-                   class="main-nav__link">Еще</a>
-            </nav>
-            <user-menu></user-menu>
-            <nav class="social-nav">
-                <a href="#"
-                   class="social-nav__link social-nav__link--vk"></a>
-                <a href="#"
-                   class="social-nav__link social-nav__link--fb"></a>
-                <a href="#"
-                   class="social-nav__link social-nav__link--inst"></a>
-                <a href="#"
-                   class="social-nav__link social-nav__link--ytb"></a>
-            </nav>
-            <div class="help">
-                <i class="help-icon"></i>
-                <span>Помощь</span>
             </div>
         </header>
     </transition>
@@ -89,24 +93,50 @@ export default {
 }
 
 .page-header {
-    display: flex;
-    justify-content: space-between;
+
     width: 100%;
     padding: 20px;
     padding-bottom: 18px;
     border-bottom: 2px solid black;
 
     @media (max-width: $desktop-width) {
-        position: absolute;
+        position: fixed;
         top: 64px;
         left: 0;
         z-index: 100;
         display: flex;
         flex-direction: column;
         min-height: calc(100% - 64px);
-        padding: 20px;
         background-color: white;
         border: none;
+    }
+
+    &__wrapper {
+
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // width: 100%;
+        // height: 100%;
+        // overflow-y: auto;
+        @media (max-width: $desktop-width) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            padding: 20px;
+        }
+    }
+
+    &__inner-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $desktop-width) {
+            flex-direction: column;
+        }
     }
 }
 
