@@ -68,7 +68,8 @@ export default {
 .side-bar {
     display: flex;
     flex-direction: column;
-    // position: fixed;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 
     left: 0;
     width: 64px;
@@ -86,6 +87,7 @@ export default {
 
     &__wrapper {
         position: fixed;
+        width: 100%;
         z-index: 200;
 
         @media (max-width: $desktop-width) {
