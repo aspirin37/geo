@@ -50,7 +50,7 @@ export default {
         }
     },
     mounted() {
-        // window.addEventListener('resize', this.closeMobileMenu);
+        window.addEventListener('resize', this.onResizeHandler);
     },
     computed: {
         isMobileMenuShown() {
@@ -61,6 +61,9 @@ export default {
         },
     },
     methods: {
+        onResizeHandler() {
+            if (this.$mq === 'lg') this.closeMobileMenu()
+        },
         closeMobileMenu() {
             this.$store.commit('CLOSE_MOBILE_MENU')
         }
