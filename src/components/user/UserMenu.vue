@@ -2,7 +2,8 @@
     <transition :name="this.$mq == 'lg' ? 'menu' : ''">
         <div class="user-menu">
             <div class="user-menu__wrapper">
-                <i class="close-btn"></i>
+                <i class="close-btn"
+                   v-if="this.$mq === 'lg'"></i>
                 <user-filters></user-filters>
             </div>
         </div>
