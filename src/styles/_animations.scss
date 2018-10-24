@@ -1,7 +1,4 @@
-.menu-enter-active {
-    transition: all 0.3s ease-out;
-}
-
+.menu-enter-active,
 .menu-leave-active {
     transition: all 0.3s ease-out;
 }
@@ -9,5 +6,5 @@
 .menu-enter,
 .menu-leave-active {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0) !important;
 }

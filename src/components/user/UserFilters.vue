@@ -51,8 +51,11 @@ export default {
 .user-filters {
     display: flex;
     flex-direction: column;
+    width: 360px;
+    margin-left: auto;
 
     @media (max-width: $desktop-width) {
+        width: auto;
         margin-top: 32px;
     }
 
@@ -89,9 +92,14 @@ export default {
 
     &-show {
         display: block;
+        width: 170px;
         border-color: black;
         margin-top: 16px;
         text-align: center;
+
+        @media (max-width: $desktop-width) {
+            width: 100%;
+        }
     }
 
     &.checkbox {
