@@ -14,13 +14,13 @@
                    class="italic-sm">{{ event.place }}</a>
             </div>
             <div class="event__icons">
-                <i class="events-icon events-icon--book"
+                <i class="icon icon-book"
                    v-if="event.icons.book"></i>
-                <i class="events-icon events-icon--note"
+                <i class="icon icon-note"
                    v-if="event.icons.note"></i>
-                <i class="events-icon events-icon--drama"
+                <i class="icon icon-drama"
                    v-if="event.icons.drama"></i>
-                <i class="events-icon events-icon--forms"
+                <i class="icon icon-forms"
                    v-if="event.icons.forms"></i>
             </div>
         </div>
@@ -72,6 +72,10 @@ export default {
 
         @media (max-width: $desktop-width) {
             display: none;
+        }
+
+        .icon:not(:last-child) {
+            margin-right: 24px;
         }
     }
 

@@ -22,7 +22,7 @@
             <div class="btn-up-container"
                  v-if="$mq !== 'lg'">
                 <button class="btn btn--up"
-                        @click="scrollToTop"><i class="up-icon"></i>Наверх</button>
+                        @click="scrollToTop"><i class="icon icon-up"></i>Наверх</button>
             </div>
         </div>
     </main>

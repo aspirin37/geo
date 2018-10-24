@@ -18,6 +18,10 @@ const mutations = {
             document.body.classList.toggle('menu-open')
         }, state.isMobileMenuShown ? 300 : 0)
     },
+    CLOSE_MOBILE_MENU(state) {
+        state.isMobileMenuShown = false
+        document.body.classList.remove('menu-open')
+    },
     TOGGLE_USER_MENU(state) {
         state.isUserMenuShown = !state.isUserMenuShown
     },

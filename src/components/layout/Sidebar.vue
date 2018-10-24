@@ -68,16 +68,15 @@ export default {
 .side-bar {
     display: flex;
     flex-direction: column;
-    // position: fixed;
-
     left: 0;
     width: 64px;
     min-height: 100vh;
     background-color: black;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 
     @media (max-width: $desktop-width) {
         flex-direction: row;
-        // position: relative;
         z-index: 1000;
         display: flex;
         width: 100%;

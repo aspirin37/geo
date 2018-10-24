@@ -32,7 +32,7 @@
                    class="social-nav__link social-nav__link--ytb"></a>
             </nav>
             <div class="help">
-                <i class="help-icon"></i>
+                <i class="icon icon-help"></i>
                 <span>Помощь</span>
             </div>
         </header>
@@ -49,6 +49,9 @@ export default {
 
         }
     },
+    mounted() {
+        window.addEventListener('resize', this.closeMobileMenu);
+    },
     computed: {
         isMobileMenuShown() {
             return this.$store.state.isMobileMenuShown
@@ -57,6 +60,11 @@ export default {
             return this.$store.state.isUserMenuShown
         },
     },
+    methods: {
+        closeMobileMenu() {
+            this.$store.commit('CLOSE_MOBILE_MENU')
+        }
+    }
 }
 </script>
 <style lang="scss"
