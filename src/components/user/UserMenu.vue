@@ -2,6 +2,7 @@
     <transition :name="this.$mq == 'lg' ? 'menu' : ''">
         <div class="user-menu">
             <div class="user-menu__wrapper">
+                <i class="close-btn"></i>
                 <user-filters></user-filters>
             </div>
         </div>
@@ -35,8 +36,10 @@ export default {
         closeMenu(e) {
             let userMenu = document.querySelector('.user-menu');
             let control = document.querySelector('.side-bar__link--profile');
+            let closeBtn = userMenu.querySelector('.close-btn');
             if (this.isUserMenuShown && (
-                    e.type === 'click' && !userMenu.contains(e.target) && !control.contains(e.target) ||
+                    !userMenu.contains(e.target) && !control.contains(e.target) ||
+                    closeBtn.contains(e.target) ||
                     e.key === 'Escape'
                 )) {
                 this.$store.commit('CLOSE_USER_MENU')

@@ -32,7 +32,8 @@
             <button class="btn checkbox"><i class="icon icon-bag"></i></button>
             <button class="btn checkbox"><i class="icon icon-soup"></i></button>
         </div>
-        <button class="btn btn-show">Показать</button>
+        <button class="btn btn-show"
+                @click="closeMenu">Показать</button>
     </div>
 </template>
 <script>
@@ -42,6 +43,16 @@ export default {
 
         }
     },
+    methods: {
+        closeMenu() {
+            if (this.$mq === 'lg') {
+                this.$store.commit('CLOSE_USER_MENU')
+            } else {
+                window.scrollTo(0, 0);
+                this.$store.commit('CLOSE_MOBILE_MENU')
+            }
+        }
+    }
 }
 </script>
 <style lang="scss"

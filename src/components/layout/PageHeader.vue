@@ -62,7 +62,7 @@ export default {
     },
     methods: {
         onResizeHandler() {
-            if (this.$mq === 'lg') this.closeMobileMenu()
+            if (this.$mq === 'lg' && this.isMobileMenuShown) this.closeMobileMenu()
         },
         closeMobileMenu() {
             this.$store.commit('CLOSE_MOBILE_MENU')
