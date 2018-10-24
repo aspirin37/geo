@@ -50,7 +50,7 @@ export default {
         }
     },
     mounted() {
-        window.addEventListener('resize', this.closeMobileMenu);
+        // window.addEventListener('resize', this.closeMobileMenu);
     },
     computed: {
         isMobileMenuShown() {
