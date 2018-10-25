@@ -4,14 +4,13 @@
             <div class="top">
                 <button class="side-bar__link side-bar__link--burger hamburger-menu__outer"
                         v-on:click.prevent="toggleMobileMenu">
-                    <span :class="['d-inline-block hamburger-menu', {'animate': isMenuShown}]"></span>
+                    <span :class="['d-inline-block hamburger-menu', {'animate': isMobileMenuShown}]"></span>
                 </button>
                 <a href="#"
                    class="side-bar__link side-bar__link--logo"></a>
             </div>
             <nav>
-                <button class="side-bar__link side-bar__link--profile"
-                        @click="toggleUserMenu"></button>
+                <user-avatar :userMenuToggler="true"></user-avatar>
                 <a href="#"
                    class="side-bar__link side-bar__link--icon side-bar__link--add"></a>
                 <a href="#"
@@ -30,9 +29,13 @@
     </div>
 </template>
 <script>
+import { mapState } from 'vuex'
+
+import userAvatar from '@/components/UserAvatar'
 import userMenu from '@/components/user-menu/UserMenu'
 export default {
     components: {
+        userAvatar,
         userMenu
     },
     data() {
@@ -41,16 +44,13 @@ export default {
         }
     },
     computed: {
-        isMenuShown() {
-            return this.$store.state.isMobileMenuShown
-        }
+        ...mapState([
+            'isMobileMenuShown',
+        ])
     },
     methods: {
         toggleMobileMenu() {
             this.$store.commit('TOGGLE_MOBILE_MENU')
-        },
-        toggleUserMenu() {
-            this.$store.commit('TOGGLE_USER_MENU')
         },
         scrollToTop() {
             window.scroll({

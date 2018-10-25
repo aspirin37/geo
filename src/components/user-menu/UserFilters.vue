@@ -62,11 +62,10 @@ export default {
 .user-filters {
     display: flex;
     flex-direction: column;
-    // width: 360px;
     margin-left: auto;
 
     @media (max-width: $desktop-width) {
-        width: auto;
+        max-width: 100%;
         margin-top: 32px;
     }
 

@@ -116,6 +116,10 @@ export default {
     @media (max-width: $desktop-width) {
         margin-left: -20px;
         width: calc(100% + 20px);
+        height: 500px;
+    }
+
+    @media (max-width: $tablet-width-sm) {
         height: 224px;
     }
 }
@@ -151,6 +155,10 @@ export default {
 
         @media (max-width: $desktop-width) {
             width: 100%;
+            height: 500px;
+        }
+
+        @media (max-width: $tablet-width-sm) {
             height: 224px;
         }
     }

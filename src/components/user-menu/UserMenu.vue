@@ -11,6 +11,8 @@
     </transition>
 </template>
 <script>
+import { mapState } from 'vuex'
+
 import userFilters from './UserFilters'
 import auth from './auth/Auth'
 export default {
@@ -20,21 +22,32 @@ export default {
     },
     data() {
         return {
-
+            menuHandlers: false
         }
     },
     computed: {
-        isUserMenuShown() {
-            return this.$store.state.isUserMenuShown
-        },
+        ...mapState([
+            'isUserMenuShown',
+        ])
     },
     mounted() {
         if (this.$mq == 'lg') this.addCloseMenuHandlers()
+        window.addEventListener('resize', this.onResizeHandler);
     },
     methods: {
         addCloseMenuHandlers() {
             document.addEventListener('click', this.closeMenu);
             document.addEventListener('keydown', this.closeMenu);
+            this.menuHandlers = true
+        },
+        removeCloseMenuHandlers() {
+            document.removeEventListener('click', this.closeMenu);
+            document.removeEventListener('keydown', this.closeMenu);
+            this.menuHandlers = false
+        },
+        onResizeHandler() {
+            if (this.$mq !== 'lg') this.removeCloseMenuHandlers()
+            if (this.$mq === 'lg' && !this.menuHandlers) this.addCloseMenuHandlers()
         },
         closeMenu(e) {
             let userMenu = document.querySelector('.user-menu');

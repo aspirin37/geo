@@ -12,7 +12,7 @@
                         </div>
                         <div class="profile-row"
                              v-if="this.$mq !== 'lg'">
-                            <button class="side-bar__link side-bar__link--profile"></button>
+                            <user-avatar></user-avatar>
                             <button class="btn btn-enter"
                                     @click="showMobileAuth">Войти</button>
                         </div>
@@ -58,11 +58,15 @@
     </transition>
 </template>
 <script>
+import { mapState } from 'vuex'
+
 import userMenu from '@/components/user-menu/UserMenu'
 import auth from '@/components/user-menu/auth/Auth'
+import userAvatar from '@/components/UserAvatar'
 export default {
     components: {
         userMenu,
+        userAvatar,
         auth
     },
     data() {
@@ -74,15 +78,11 @@ export default {
         window.addEventListener('resize', this.onResizeHandler);
     },
     computed: {
-        isMobileMenuShown() {
-            return this.$store.state.isMobileMenuShown
-        },
-        isUserMenuShown() {
-            return this.$store.state.isUserMenuShown
-        },
-        isMobileAuthShown() {
-            return this.$store.state.isMobileAuthShown
-        }
+        ...mapState([
+            'isMobileMenuShown',
+            'isUserMenuShown',
+            'isMobileAuthShown'
+        ])
     },
     methods: {
         onResizeHandler() {
@@ -174,6 +174,11 @@ export default {
             flex-direction: column;
             position: absolute;
             width: calc(100% - 40px);
+            padding-bottom: 20px;
+            max-width: 580px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-bottom: 20px;
         }
     }
 }

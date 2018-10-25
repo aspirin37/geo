@@ -5,9 +5,11 @@
         <input type="email"
                placeholder="Эл. почта">
         <div class="pass-wrapper">
-            <input type="password"
+            <input :type="isPassMaskShown ? 'password' : 'text'"
                    placeholder="Пароль">
-            <i class="icon icon-eye"></i>
+            <i class="icon"
+               :class="isPassMaskShown ? 'icon-eye' : 'icon-eye-off'"
+               @click="isPassMaskShown = !isPassMaskShown"></i>
         </div>
         <button class="btn">Зарегистрироваться</button>
         <span>Регистрируясь, вы принимаете условия </span><a href="#">пользовательского соглашения</a>
@@ -17,7 +19,7 @@
 export default {
     data() {
         return {
-
+            isPassMaskShown: true,
         }
     },
 
