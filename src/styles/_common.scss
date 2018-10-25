@@ -186,14 +186,23 @@ li {
             transition: all 0.3s;
         }
 
-        &.active,
-        &:hover {
+        &.active {
             opacity: 1;
         }
 
-        &.active::after,
-        &:hover::after {
+        &.active::after {
             width: 100%;
+        }
+
+
+        @media (min-width: $desktop-width) {
+            &:hover {
+                opacity: 1;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
         }
     }
 }
