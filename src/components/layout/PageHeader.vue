@@ -39,7 +39,7 @@
     </transition>
 </template>
 <script>
-import userMenu from '@/components/user/UserMenu'
+import userMenu from '@/components/user-menu/UserMenu'
 export default {
     components: {
         userMenu

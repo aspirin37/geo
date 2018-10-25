@@ -62,7 +62,7 @@ export default {
 .user-filters {
     display: flex;
     flex-direction: column;
-    width: 360px;
+    // width: 360px;
     margin-left: auto;
 
     @media (max-width: $desktop-width) {
@@ -85,11 +85,6 @@ export default {
     }
 }
 
-.buttons-row {
-    display: flex;
-    margin-bottom: 12px;
-}
-
 .btn {
     display: flex;
     align-items: center;
@@ -98,15 +93,16 @@ export default {
     margin-right: 2px;
     margin-bottom: 2px;
     font-weight: normal;
-    line-height: 24px;
     border: 2px solid #E6E6E6;
 
     &-show {
         display: block;
         width: 170px;
+        height: 40px;
         border-color: black;
         margin-top: 16px;
         text-align: center;
+        font-weight: bold;
 
         @media (max-width: $desktop-width) {
             width: 100%;

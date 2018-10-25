@@ -1,3 +1,17 @@
+button {
+    cursor: pointer;
+    -webkit-appearance: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+}
+
+.buttons-row {
+    display: flex;
+    margin-bottom: 12px;
+}
+
 .btn {
     position: relative;
     outline: none;
@@ -8,7 +22,6 @@
     padding: 9px 16px;
     -webkit-appearance: none;
     border: 2px solid black;
-    opacity: 0.75;
     border-radius: 2px;
     color: black;
     text-decoration: none;
@@ -30,6 +43,26 @@
         padding-right: 20px;
         margin: 0 auto;
         margin-bottom: 24px;
+    }
+
+    &-social {
+        display: flex;
+        justify-content: center;
+        padding: 7px;
+        background-size: 24px 24px;
+    }
+
+    &-vk {
+        background-image: url('./assets/icons/vk.svg');
+    }
+
+    &-fb {
+        background-image: url('./assets/icons/fb.svg');
+    }
+
+    &-google {
+        background-image: url('./assets/icons/google.svg');
+        background-position: 50% 25%;
     }
 }
 

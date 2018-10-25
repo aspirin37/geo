@@ -4,6 +4,7 @@
             <div class="user-menu__wrapper">
                 <i class="close-btn"
                    v-if="this.$mq === 'lg'"></i>
+                <auth v-if="this.$mq === 'lg'"></auth>
                 <user-filters></user-filters>
             </div>
         </div>
@@ -11,9 +12,11 @@
 </template>
 <script>
 import userFilters from './UserFilters'
+import auth from '@/components/auth/Auth'
 export default {
     components: {
-        userFilters
+        userFilters,
+        auth
     },
     data() {
         return {
@@ -32,7 +35,6 @@ export default {
         addCloseMenuHandlers() {
             document.addEventListener('click', this.closeMenu);
             document.addEventListener('keydown', this.closeMenu);
-            // document.addEventListener('scroll', this.closeMenu);
         },
         closeMenu(e) {
             let userMenu = document.querySelector('.user-menu');
@@ -53,6 +55,7 @@ export default {
        scoped>
 @import '@/styles/_variables.scss';
 
+
 .user-menu {
     position: fixed;
     top: 64px;
@@ -67,13 +70,15 @@ export default {
     }
 
     &__wrapper {
+        display: flex;
         min-height: 398px;
-        width: 780px;
+        max-width: 780px;
         padding: 32px;
         background-color: #FFFFFF;
         box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.5);
 
         @media (max-width: $desktop-width) {
+            flex-direction: column;
             width: auto;
             height: auto;
             box-shadow: none;

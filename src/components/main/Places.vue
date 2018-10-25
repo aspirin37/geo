@@ -2,9 +2,9 @@
     <section class="section section--static places">
         <div class="section__header">
             <h1 class="section__title">Заведения</h1>
-            <div class="filter">
-                <button class="filter__button active">Популярные</button>
-                <button class="filter__button">Новые</button>
+            <div class="tabs">
+                <button class="tab active">Популярные</button>
+                <button class="tab">Новые</button>
             </div>
             <div class="section__controls">
                 <button class="control-btn control-btn--prev places-prev"></button>

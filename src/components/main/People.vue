@@ -2,10 +2,10 @@
     <section class="section section--static people">
         <div class="section__header">
             <h1 class="section__title">Люди</h1>
-            <div class="filter">
-                <button class="filter__button active">Популярные</button>
-                <button class="filter__button">Новые</button>
-                <button class="filter__button">Случайные</button>
+            <div class="tabs">
+                <button class="tab active">Популярные</button>
+                <button class="tab">Новые</button>
+                <button class="tab">Случайные</button>
             </div>
             <div class="section__controls">
                 <button class="control-btn control-btn--prev people-prev"></button>
