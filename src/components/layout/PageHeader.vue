@@ -1,52 +1,59 @@
 <template>
     <transition name="menu">
         <header class="page-header"
-                v-if="(isMobileMenuShown || this.$mq === 'lg') && !isMobileAuthShown">
-            <nav class="main-nav">
-                <div class="d-flex">
-                    <button class="main-nav__btn">Санкт-Петербург</button>
-                    <button class="main-nav__btn">РУС</button>
+                v-if="isMobileMenuShown || this.$mq === 'lg'">
+            <transition name="menu">
+                <div class="page-header__wrapper"
+                     v-if="!isMobileAuthShown">
+                    <nav class="main-nav">
+                        <div class="d-flex">
+                            <button class="main-nav__btn">Санкт-Петербург</button>
+                            <button class="main-nav__btn">РУС</button>
+                        </div>
+                        <div class="profile-row"
+                             v-if="this.$mq !== 'lg'">
+                            <button class="side-bar__link side-bar__link--profile"></button>
+                            <button class="btn btn-enter"
+                                    @click="showMobileAuth">Войти</button>
+                        </div>
+                        <a href="#"
+                           class="main-nav__link">События</a>
+                        <a href="#"
+                           class="main-nav__link">Новости</a>
+                        <a href="#"
+                           class="main-nav__link">Люди</a>
+                        <a href="#"
+                           class="main-nav__link">Заведения</a>
+                        <a href="#"
+                           class="main-nav__link">Шедевры</a>
+                        <a href="#"
+                           class="main-nav__link">Еще</a>
+                    </nav>
+                    <user-menu v-show="isUserMenuShown || this.$mq != 'lg'"></user-menu>
+                    <nav class="social-nav">
+                        <a href="#"
+                           class="social-nav__link social-nav__link--vk"></a>
+                        <a href="#"
+                           class="social-nav__link social-nav__link--fb"></a>
+                        <a href="#"
+                           class="social-nav__link social-nav__link--inst"></a>
+                        <a href="#"
+                           class="social-nav__link social-nav__link--ytb"></a>
+                    </nav>
+                    <div class="help">
+                        <i class="icon icon-help"></i>
+                        <span>Помощь</span>
+                    </div>
                 </div>
-                <div class="profile-row"
-                     v-if="this.$mq !== 'lg'">
-                    <button class="side-bar__link side-bar__link--profile"></button>
-                    <button class="btn btn-enter"
-                            @click="showMobileAuth">Войти</button>
+            </transition>
+            <transition name="slide-right">
+                <div class="page-header__wrapper d-flex flex-column  justify-content-start"
+                     v-if="isMobileAuthShown">
+                    <a class="back-btn"
+                       @click="closeMobileAuth">Назад</a>
+                    <auth></auth>
                 </div>
-                <a href="#"
-                   class="main-nav__link">События</a>
-                <a href="#"
-                   class="main-nav__link">Новости</a>
-                <a href="#"
-                   class="main-nav__link">Люди</a>
-                <a href="#"
-                   class="main-nav__link">Заведения</a>
-                <a href="#"
-                   class="main-nav__link">Шедевры</a>
-                <a href="#"
-                   class="main-nav__link">Еще</a>
-            </nav>
-            <user-menu v-show="isUserMenuShown || this.$mq != 'lg'"></user-menu>
-            <nav class="social-nav">
-                <a href="#"
-                   class="social-nav__link social-nav__link--vk"></a>
-                <a href="#"
-                   class="social-nav__link social-nav__link--fb"></a>
-                <a href="#"
-                   class="social-nav__link social-nav__link--inst"></a>
-                <a href="#"
-                   class="social-nav__link social-nav__link--ytb"></a>
-            </nav>
-            <div class="help">
-                <i class="icon icon-help"></i>
-                <span>Помощь</span>
-            </div>
-        </header>
-        <header class="page-header justify-content-start"
-                v-if="isMobileMenuShown  && isMobileAuthShown">
-            <a class="back-btn"
-               @click="closeMobileAuth">Назад</a>
-            <auth></auth>
+            </transition>
         </header>
     </transition>
 </template>
@@ -154,9 +161,20 @@ export default {
         display: flex;
         flex-direction: column;
         min-height: calc(100% - 64px);
-        padding: 20px;
         background-color: white;
         border: none;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @media (max-width: $desktop-width) {
+            flex-direction: column;
+            position: absolute;
+            width: calc(100% - 40px);
+        }
     }
 }
 
