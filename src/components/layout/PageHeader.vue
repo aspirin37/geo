@@ -1,11 +1,16 @@
 <template>
     <transition name="menu">
         <header class="page-header"
-                v-if="isMobileMenuShown || this.$mq === 'lg'">
+                v-if="(isMobileMenuShown || this.$mq === 'lg') && !isMobileAuth">
             <nav class="main-nav">
                 <div class="d-flex">
                     <button class="main-nav__btn">Санкт-Петербург</button>
                     <button class="main-nav__btn">РУС</button>
+                </div>
+                <div class="profile-row"
+                     v-if="this.$mq !== 'lg'">
+                    <button class="side-bar__link side-bar__link--profile"></button>
+                    <button class="btn btn-enter">Войти</button>
                 </div>
                 <a href="#"
                    class="main-nav__link">События</a>
@@ -36,13 +41,19 @@
                 <span>Помощь</span>
             </div>
         </header>
+        <header class="page-header"
+                v-if="isMobileMenuShown  && isMobileAuth">
+            <auth></auth>
+        </header>
     </transition>
 </template>
 <script>
 import userMenu from '@/components/user-menu/UserMenu'
+import auth from '@/components/auth/Auth'
 export default {
     components: {
-        userMenu
+        userMenu,
+        auth
     },
     data() {
         return {
@@ -59,6 +70,9 @@ export default {
         isUserMenuShown() {
             return this.$store.state.isUserMenuShown
         },
+        isMobileAuth() {
+            return false
+        }
     },
     methods: {
         onResizeHandler() {
@@ -66,6 +80,9 @@ export default {
         },
         closeMobileMenu() {
             this.$store.commit('CLOSE_MOBILE_MENU')
+        },
+        showMobileAuth() {
+            this.$store.commit('SHOW_MOBILE_AUTH')
         }
     }
 }
@@ -73,6 +90,22 @@ export default {
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
+
+.profile-row {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.side-bar__link {
+    display: block;
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+
+.btn-enter {
+    width: 100%;
+    height: 64px;
+}
 
 .social-nav {
     @media (max-width: $desktop-width) {
@@ -203,7 +236,9 @@ export default {
         color: white;
 
         @media (max-width: $desktop-width) {
-            margin-bottom: 8px;
+            margin-bottom: 24px;
+            padding: 9px 10px;
+            border-radius: 2px;
         }
 
         &:first-of-type {

@@ -13,3 +13,21 @@ input {
     font-size: 16px;
     line-height: 24px;
 }
+
+.pass-wrapper {
+    position: relative;
+    margin-bottom: 12px;
+
+    input {
+        margin-bottom: 0;
+    }
+
+    .icon-eye {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+        display: block;
+    }
+}

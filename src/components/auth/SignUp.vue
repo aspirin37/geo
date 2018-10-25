@@ -4,8 +4,11 @@
                placeholder="Имя и фамилия">
         <input type="email"
                placeholder="Эл. почта">
-        <input type="password"
-               placeholder="Пароль">
+        <div class="pass-wrapper">
+            <input type="password"
+                   placeholder="Пароль">
+            <i class="icon icon-eye"></i>
+        </div>
         <button class="btn">Зарегистрироваться</button>
         <span>Регистрируясь, вы принимаете условия </span><a href="#">пользовательского соглашения</a>
     </div>

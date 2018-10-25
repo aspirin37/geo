@@ -28,6 +28,12 @@ const mutations = {
     CLOSE_USER_MENU(state) {
         state.isUserMenuShown = false
     },
+    SHOW_MOBILE_AUTH(state) {
+        state.isMobileAuthShown = true
+    },
+    CLOSE_MOBILE_AUTH(state) {
+        state.isMobileAuthShown = false
+    },
 }
 
 const getters = {}
