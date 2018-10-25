@@ -222,3 +222,24 @@ $bar-spacing: 8px;
         opacity: 1;
     }
 }
+
+.back-btn {
+    display: block;
+    padding-left: 20px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-10px);
+        left: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url('./assets/icons/chevron-left.svg');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

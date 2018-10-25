@@ -19,8 +19,8 @@
     </div>
 </template>
 <script>
-import signIn from '@/components/auth/SignIn'
-import signUp from '@/components/auth/SignUp'
+import signIn from './SignIn'
+import signUp from './SignUp'
 export default {
     components: {
         signIn,
@@ -44,6 +44,12 @@ export default {
     flex-shrink: 0;
     width: 240px;
     margin-right: 48px;
+
+    @media (max-width: $desktop-width) {
+        align-self: center;
+        margin-right: 0;
+        margin-top: 32px;
+    }
 }
 
 .tabs {

@@ -12,7 +12,7 @@
 </template>
 <script>
 import userFilters from './UserFilters'
-import auth from '@/components/auth/Auth'
+import auth from './auth/Auth'
 export default {
     components: {
         userFilters,

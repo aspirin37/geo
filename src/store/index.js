@@ -6,6 +6,7 @@ Vue.use(Vuex)
 const state = {
     isMobileMenuShown: false,
     isUserMenuShown: false,
+    isMobileAuthShown: false,
 }
 
 const actions = {}
@@ -13,6 +14,7 @@ const actions = {}
 const mutations = {
     TOGGLE_MOBILE_MENU(state) {
         state.isMobileMenuShown = !state.isMobileMenuShown
+        state.isMobileAuthShown = false
         // после появления меню, урезаем высоту основного контента, чтобы скроллилась только менюшка
         setTimeout(() => {
             document.body.classList.toggle('menu-open')
@@ -20,6 +22,7 @@ const mutations = {
     },
     CLOSE_MOBILE_MENU(state) {
         state.isMobileMenuShown = false
+        state.isMobileAuthShown = false
         document.body.classList.remove('menu-open')
     },
     TOGGLE_USER_MENU(state) {

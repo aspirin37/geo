@@ -144,47 +144,6 @@ li {
     }
 }
 
-.actions {
-    display: flex;
-
-    &__link {
-        position: relative;
-        margin-right: 40px;
-        padding-left: 24px;
-        font-size: 14px;
-        line-height: 18px;
-        opacity: 0.5;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 16px;
-            height: 16px;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &--reviews::after {
-            background-image: url('./assets/icons/eye.svg');
-        }
-
-        &--comments::after {
-            background-image: url('./assets/icons/comment.svg');
-        }
-
-        &--subscribers::after {
-            background-image: url('./assets/icons/go.svg');
-        }
-    }
-}
-
 .tabs {
     display: flex;
     align-self: center;

@@ -1,7 +1,7 @@
 <template>
     <transition name="menu">
         <header class="page-header"
-                v-if="(isMobileMenuShown || this.$mq === 'lg') && !isMobileAuth">
+                v-if="(isMobileMenuShown || this.$mq === 'lg') && !isMobileAuthShown">
             <nav class="main-nav">
                 <div class="d-flex">
                     <button class="main-nav__btn">Санкт-Петербург</button>
@@ -10,7 +10,8 @@
                 <div class="profile-row"
                      v-if="this.$mq !== 'lg'">
                     <button class="side-bar__link side-bar__link--profile"></button>
-                    <button class="btn btn-enter">Войти</button>
+                    <button class="btn btn-enter"
+                            @click="showMobileAuth">Войти</button>
                 </div>
                 <a href="#"
                    class="main-nav__link">События</a>
@@ -41,15 +42,17 @@
                 <span>Помощь</span>
             </div>
         </header>
-        <header class="page-header"
-                v-if="isMobileMenuShown  && isMobileAuth">
+        <header class="page-header justify-content-start"
+                v-if="isMobileMenuShown  && isMobileAuthShown">
+            <a class="back-btn"
+               @click="closeMobileAuth">Назад</a>
             <auth></auth>
         </header>
     </transition>
 </template>
 <script>
 import userMenu from '@/components/user-menu/UserMenu'
-import auth from '@/components/auth/Auth'
+import auth from '@/components/user-menu/auth/Auth'
 export default {
     components: {
         userMenu,
@@ -70,8 +73,8 @@ export default {
         isUserMenuShown() {
             return this.$store.state.isUserMenuShown
         },
-        isMobileAuth() {
-            return false
+        isMobileAuthShown() {
+            return this.$store.state.isMobileAuthShown
         }
     },
     methods: {
@@ -83,6 +86,9 @@ export default {
         },
         showMobileAuth() {
             this.$store.commit('SHOW_MOBILE_AUTH')
+        },
+        closeMobileAuth() {
+            this.$store.commit('CLOSE_MOBILE_AUTH')
         }
     }
 }
