@@ -79,6 +79,12 @@ button {
     background-size: 4rem 4rem;
     animation: btn-loader 2s linear infinite;
     background-repeat: repeat;
+
+    &:hover {
+        @media (max-width: $desktop-width) {
+            background-color: transparent;
+        }
+    }
 }
 
 @keyframes btn-loader {
