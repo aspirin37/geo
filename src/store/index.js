@@ -7,6 +7,7 @@ const state = {
     isMobileMenuShown: false,
     isUserMenuShown: false,
     isMobileAuthShown: false,
+    userProfile: null,
 }
 
 const actions = {}
@@ -37,6 +38,12 @@ const mutations = {
     CLOSE_MOBILE_AUTH(state) {
         state.isMobileAuthShown = false
     },
+    SIGN_IN(state, profile) {
+        state.userProfile = profile
+    },
+    SIGN_OUT(state) {
+        state.userProfile = null
+    }
 }
 
 const getters = {}

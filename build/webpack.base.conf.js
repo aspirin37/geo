@@ -26,7 +26,6 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': resolve('src'),
-            'icons': 'vue-ionicons/dist'
         }
     },
     module: {

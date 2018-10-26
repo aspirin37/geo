@@ -3,16 +3,22 @@
             @click="toggleUserMenu">
         <img width="64"
              height="64"
-             src="../assets/profile.png">
+             :src="userProfile && userProfile.avatar ? userProfile.avatar : require('@/assets/profile.png')">
     </button>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
     props: ['userMenuToggler'],
     data() {
         return {
 
         }
+    },
+    computed: {
+        ...mapState([
+            'userProfile',
+        ])
     },
     methods: {
         toggleUserMenu() {

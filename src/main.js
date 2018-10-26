@@ -9,8 +9,6 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import store from './store'
 
-require('vue-ionicons/ionicons.css')
-
 Vue.use(VueScrollReveal)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueMq, {

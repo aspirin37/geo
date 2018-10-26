@@ -1,37 +1,48 @@
 <template>
     <div class="auth">
-        <div class="tabs">
-            <button class="tab"
-                    :class="{'active': isActiveTab === 1}"
-                    @click="isActiveTab = 1">Вход</button>
-            <button class="tab"
-                    :class="{'active': isActiveTab === 2}"
-                    @click="isActiveTab = 2">Регистрация</button>
-        </div>
-        <sign-in v-if="isActiveTab === 1"></sign-in>
-        <sign-up v-if="isActiveTab === 2"></sign-up>
-        <span>Войти с помощью</span>
-        <div class="buttons-row">
-            <button class="btn btn-social btn-vk"></button>
-            <button class="btn btn-social btn-fb"></button>
-            <button class="btn btn-social btn-google"></button>
-        </div>
+        <template v-if="!userProfile && this.$mq === 'lg' || this.$mq !== 'lg'">
+            <div class="tabs">
+                <button class="tab"
+                        :class="{'active': isActiveTab === 1}"
+                        @click="isActiveTab = 1">Вход</button>
+                <button class="tab"
+                        :class="{'active': isActiveTab === 2}"
+                        @click="isActiveTab = 2">Регистрация</button>
+            </div>
+            <sign-in v-if="isActiveTab === 1"></sign-in>
+            <sign-up v-if="isActiveTab === 2"></sign-up>
+            <span>Войти с помощью</span>
+            <div class="buttons-row">
+                <button class="btn btn-social btn-vk"></button>
+                <button class="btn btn-social btn-fb"></button>
+                <button class="btn btn-social btn-google"></button>
+            </div>
+        </template>
+        <profile-options v-else />
     </div>
 </template>
 <script>
+import { mapState } from 'vuex'
+
 import signIn from './SignIn'
 import signUp from './SignUp'
+import profileOptions from './ProfileOptions'
 export default {
     components: {
         signIn,
-        signUp
+        signUp,
+        profileOptions
     },
     data() {
         return {
             isActiveTab: 1,
         }
     },
-
+    computed: {
+        ...mapState([
+            'userProfile',
+        ])
+    },
 }
 </script>
 <style lang="scss"

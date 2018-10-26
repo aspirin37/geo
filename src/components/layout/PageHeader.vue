@@ -13,8 +13,10 @@
                         <div class="profile-row"
                              v-if="this.$mq !== 'lg'">
                             <user-avatar></user-avatar>
+                            <profile-options v-if="userProfile" />
                             <button class="btn btn-enter"
-                                    @click="showMobileAuth">Войти</button>
+                                    @click="showMobileAuth"
+                                    v-else>Войти</button>
                         </div>
                         <a href="#"
                            class="main-nav__link">События</a>
@@ -62,12 +64,14 @@ import { mapState } from 'vuex'
 
 import userMenu from '@/components/user-menu/UserMenu'
 import auth from '@/components/user-menu/auth/Auth'
+import profileOptions from '@/components/user-menu/auth/ProfileOptions'
 import userAvatar from '@/components/UserAvatar'
 export default {
     components: {
         userMenu,
         userAvatar,
-        auth
+        auth,
+        profileOptions
     },
     data() {
         return {
@@ -81,7 +85,8 @@ export default {
         ...mapState([
             'isMobileMenuShown',
             'isUserMenuShown',
-            'isMobileAuthShown'
+            'isMobileAuthShown',
+            'userProfile'
         ])
     },
     methods: {
@@ -96,7 +101,7 @@ export default {
         },
         closeMobileAuth() {
             this.$store.commit('CLOSE_MOBILE_AUTH')
-        }
+        },
     }
 }
 </script>
@@ -119,6 +124,7 @@ export default {
     width: 100%;
     height: 64px;
 }
+
 
 .social-nav {
     @media (max-width: $desktop-width) {
