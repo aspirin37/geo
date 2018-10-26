@@ -3,10 +3,10 @@
         <div class="section__header">
             <h1 class="section__title">Фотоотчеты</h1>
             <div class="section__controls">
-                <button class="control-btn control-btn--prev reports-next"></button>
-                <button class="control-btn control-btn--next reports-prev"></button>
+                <button class="btn btn-prev reports-next"></button>
+                <button class="btn btn-next reports-prev"></button>
                 <a href="#"
-                   class="control-btn control-btn--all">Все фотоотчеты</a>
+                   class="btn btn-all">Все фотоотчеты</a>
             </div>
         </div>
         <swiper class="slider"

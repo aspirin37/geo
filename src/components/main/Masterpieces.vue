@@ -3,10 +3,10 @@
         <div class="section__header">
             <h1 class="section__title">Шедевры</h1>
             <div class="section__controls">
-                <button class="control-btn control-btn--prev master-prev"></button>
-                <button class="control-btn control-btn--next master-next"></button>
+                <button class="btn btn-prev master-prev"></button>
+                <button class="btn btn-next master-next"></button>
                 <a href="#"
-                   class="control-btn control-btn--all">Все шедевры</a>
+                   class="btn btn-all">Все шедевры</a>
             </div>
         </div>
         <swiper :options="swiperOptionTop"
@@ -73,7 +73,7 @@ export default {
                 navigation: {
                     nextEl: '.master-next',
                     prevEl: '.master-prev',
-                    disabledClass: 'control-btn--disabled'
+                    disabledClass: 'btn--disabled'
                 },
                 loop: this.$mq === 'lg',
                 loopedSlides: this.$mq === 'lg' ? this.masterpieces.length : false,

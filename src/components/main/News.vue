@@ -3,10 +3,10 @@
         <div class="section__header">
             <h1 class="section__title">Новости</h1>
             <div class="section__controls">
-                <button class="control-btn control-btn--prev news-prev"></button>
-                <button class="control-btn control-btn--next news-next"></button>
+                <button class="btn btn-prev news-prev"></button>
+                <button class="btn btn-next news-next"></button>
                 <a href="#"
-                   class="control-btn control-btn--all">Все новости</a>
+                   class="btn btn-all">Все новости</a>
             </div>
         </div>
         <div class="d-flex"
@@ -104,7 +104,7 @@ export default {
                 navigation: {
                     prevEl: '.news-prev',
                     nextEl: '.news-next',
-                    disabledClass: 'control-btn--disabled'
+                    disabledClass: 'btn--disabled'
                 },
                 spaceBetween: 24,
             },
@@ -245,8 +245,8 @@ export default {
     margin-right: 45px;
 }
 
-.control-btn--prev,
-.control-btn--next {
+.btn--prev,
+.btn--next {
     display: none;
 
     @media (max-width: $desktop-width) {

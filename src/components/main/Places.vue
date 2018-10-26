@@ -7,10 +7,10 @@
                 <button class="tab">Новые</button>
             </div>
             <div class="section__controls">
-                <button class="control-btn control-btn--prev places-prev"></button>
-                <button class="control-btn control-btn--next places-next"></button>
+                <button class="btn btn-prev places-prev"></button>
+                <button class="btn btn-next places-next"></button>
                 <a href="#"
-                   class="control-btn control-btn--all">Все заведения</a>
+                   class="btn btn-all">Все заведения</a>
             </div>
         </div>
         <swiper class="slider"
@@ -69,7 +69,7 @@ export default {
                 navigation: {
                     prevEl: '.places-prev',
                     nextEl: '.places-next',
-                    disabledClass: 'control-btn--disabled'
+                    disabledClass: 'btn--disabled'
                 },
                 spaceBetween: 32,
             }

@@ -3,10 +3,10 @@
         <div class="section__header">
             <h1 class="section__title">Анонсы<span v-if="$mq < 'xs'"> событий</span></h1>
             <div class="section__controls">
-                <button class="control-btn control-btn--prev events-prev"></button>
-                <button class="control-btn control-btn--next events-next"></button>
+                <button class="btn btn-prev events-prev"></button>
+                <button class="btn btn-next events-next"></button>
                 <a href="#"
-                   class="control-btn control-btn--all">Все анонсы</a>
+                   class="btn btn-all">Все анонсы</a>
             </div>
         </div>
         <div class="events__list"
@@ -129,7 +129,7 @@ export default {
                 navigation: {
                     nextEl: '.events-next',
                     prevEl: '.events-prev',
-                    disabledClass: 'eyes__control-btn--disabled'
+                    disabledClass: 'eyes__btn--disabled'
                 },
                 spaceBetween: 24
             },
@@ -162,8 +162,8 @@ export default {
     }
 }
 
-.control-btn--prev,
-.control-btn--next {
+.btn--prev,
+.btn--next {
     display: none;
 
     @media (max-width: $desktop-width) {
