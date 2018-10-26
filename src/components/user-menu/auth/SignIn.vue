@@ -29,7 +29,7 @@ export default {
                 this.$store.commit('SIGN_IN', this.testProfile)
                 if (this.$mq !== 'lg') this.$store.commit('CLOSE_MOBILE_AUTH', this.testProfile)
                 this.signInLoading = false
-            }, 2000)
+            }, 1200)
         }
     }
 }
