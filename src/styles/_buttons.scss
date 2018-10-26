@@ -71,6 +71,26 @@ button {
     }
 }
 
+.btn-loader {
+    cursor: default;
+    background-color: rgb(235, 255, 255);
+    transition: width .6s ease;
+    background-image: linear-gradient(135deg, rgb(200, 255, 255) 25%, transparent 0, transparent 50%, rgb(200, 255, 255) 0, rgb(200, 255, 255) 75%, transparent 0, transparent);
+    background-size: 4rem 4rem;
+    animation: btn-loader 2s linear infinite;
+    background-repeat: repeat;
+}
+
+@keyframes btn-loader {
+    0% {
+        background-position: 4rem 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
 // todo: заменить control-btn на btn
 
 .control-btn {
