@@ -245,8 +245,8 @@ export default {
     margin-right: 45px;
 }
 
-.btn--prev,
-.btn--next {
+.btn-prev,
+.btn-next {
     display: none;
 
     @media (max-width: $desktop-width) {

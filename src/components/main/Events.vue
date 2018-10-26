@@ -162,8 +162,8 @@ export default {
     }
 }
 
-.btn--prev,
-.btn--next {
+.btn-prev,
+.btn-next {
     display: none;
 
     @media (max-width: $desktop-width) {
