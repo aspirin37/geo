@@ -19,6 +19,17 @@
     opacity: 0;
 }
 
+.slide-left-enter-active,
+.slide-left-leave-active {
+    transition: all 0.3s ease-out;
+}
+
+.slide-left-enter,
+.slide-left-leave-active {
+    opacity: 0;
+    transform: translate3d(-150%, 0, 0) !important;
+}
+
 .slide-right-enter-active,
 .slide-right-leave-active {
     transition: all 0.3s ease-out;

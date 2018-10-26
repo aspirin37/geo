@@ -2,7 +2,7 @@
     <transition name="menu">
         <header class="page-header"
                 v-if="isMobileMenuShown || this.$mq === 'lg'">
-            <transition name="menu">
+            <transition name="slide-left">
                 <div class="page-header__wrapper"
                      v-if="!isMobileAuthShown">
                     <nav class="main-nav">
