@@ -3,14 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import VueScrollReveal from 'vue-scroll-reveal';
 import VueMq from 'vue-mq'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import store from './store'
 
-Vue.use(VueScrollReveal)
+import { Modal } from 'bootstrap-vue/es/components';
+
 Vue.use(VueAwesomeSwiper)
+Vue.use(Modal);
 Vue.use(VueMq, {
     breakpoints: {
         xs: 360,

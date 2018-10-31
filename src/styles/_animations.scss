@@ -9,15 +9,15 @@
     transform: translate3d(-100%, 0, 0) !important;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-    transition: all 0.3s ease-out;
-}
+// .fade-enter-active,
+// .fade-leave-active {
+//     transition: all 0.3s ease-out;
+// }
 
-.fade-enter,
-.fade-leave-active {
-    opacity: 0;
-}
+// .fade-enter,
+// .fade-leave-active {
+//     opacity: 0;
+// }
 
 .slide-left-enter-active,
 .slide-left-leave-active {
@@ -39,4 +39,12 @@
 .slide-right-leave-active {
     opacity: 0;
     transform: translate3d(100%, 0, 0) !important;
+}
+
+.fade {
+    transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.show {
+    opacity: 0.75;
 }

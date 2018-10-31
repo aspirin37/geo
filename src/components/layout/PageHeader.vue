@@ -7,8 +7,10 @@
                      v-if="!isMobileAuthShown">
                     <nav class="main-nav">
                         <div class="d-flex">
-                            <button class="main-nav__btn">Санкт-Петербург</button>
-                            <button class="main-nav__btn">РУС</button>
+                            <button class="main-nav__btn"
+                                    v-b-modal.locationModal>Санкт-Петербург</button>
+                            <button class="main-nav__btn"
+                                    v-b-modal.localeModal>РУС</button>
                         </div>
                         <div class="profile-row"
                              v-if="this.$mq !== 'lg'">
