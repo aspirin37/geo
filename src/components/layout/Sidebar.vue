@@ -157,7 +157,7 @@ export default {
         }
 
         &--search {
-            background-image: url('../../assets/icons/search.svg');
+            background-image: url('../../assets/icons/search-white.svg');
         }
 
         &--help {

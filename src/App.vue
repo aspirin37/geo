@@ -197,6 +197,7 @@ export default {
 .custom-modal-header {
     position: relative;
     display: flex;
+    align-items: start;
     width: 100%;
     padding: 15px 5px;
     padding-bottom: 5px;
@@ -260,12 +261,28 @@ export default {
 .search-input {
     width: 200px;
     padding-left: 44px;
+    margin-bottom: 0;
 }
 
 .search-input-wrapper {
     position: relative;
     margin-right: 60px;
     margin-left: auto;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 18px;
+        height: 18px;
+        top: 50%;
+        transform: translateY(-9px);
+        left: 14px;
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 50% 50%;
+        background-image: url('./assets/icons/search.svg');
+    }
 }
 
 .cities {
