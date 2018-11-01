@@ -13,9 +13,10 @@
         <draggable class="dropzone-gallery"
                    :options="{animation: 300}"
                    v-model="files">
-            <img v-for="(it, i) in files"
-                 :key="i"
-                 :src="it.src">
+            <div v-for="(it, i) in files"
+                 :key="i">
+                <img :src="it.src">
+            </div>
         </draggable>
     </main>
 </template>
@@ -93,7 +94,7 @@ export default {
 }
 
 .dropzone-gallery img {
-    margin: 10px;
+    // margin: 10px;
     border-radius: 20px;
     overflow: hidden;
     width: 120px;
