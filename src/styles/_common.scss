@@ -43,6 +43,9 @@ a {
 
 .app-container {
     padding-left: 64px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
     @media (max-width: $desktop-width) {
         padding-left: 0;
@@ -63,6 +66,11 @@ a {
         padding-right: 0;
         min-width: auto;
     }
+}
+
+.menu-open .app-container {
+    height: 0;
+    overflow: hidden;
 }
 
 .page-border {

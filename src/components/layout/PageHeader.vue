@@ -181,12 +181,13 @@ export default {
         @media (max-width: $desktop-width) {
             flex-direction: column;
             position: absolute;
-            width: calc(100% - 40px);
-            padding-bottom: 20px;
+            width: 100%;
+            padding: 20px;
+            padding-top: 0;
             max-width: 580px;
             left: 50%;
             transform: translateX(-50%);
-            padding-bottom: 20px;
+            background-color: white;
         }
     }
 }

@@ -5,8 +5,8 @@
             <div class="section__controls">
                 <button class="btn btn-prev reports-next"></button>
                 <button class="btn btn-next reports-prev"></button>
-                <a href="#"
-                   class="btn btn-all">Все фотоотчеты</a>
+                <router-link to="/pics-upload"
+                             class="btn btn-all">Все фотоотчеты</router-link>
             </div>
         </div>
         <swiper class="slider"
