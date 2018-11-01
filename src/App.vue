@@ -5,73 +5,8 @@
             <page-header />
             <router-view></router-view>
             <page-footer></page-footer>
-            <b-modal id="localeModal"
-                     centered
-                     hide-footer
-                     size="sm"
-                     ref="localeModal">
-                <div slot="modal-header"
-                     class="custom-modal-header">
-                    <h3>Язык сайта</h3>
-                    <i class="close-btn"
-                       @click="hideLocaleModal"></i>
-                </div>
-                <ul class="select select--lang">
-                    <li class="select-item rus"
-                        :class="{'active': activeLang === 'rus'}"
-                        @click="activeLang = 'rus'">Русский</li>
-                    <li class="select-item en"
-                        :class="{'active': activeLang === 'en'}"
-                        @click="activeLang = 'en'">English</li>
-                    <li class="select-item de"
-                        :class="{'active': activeLang === 'de'}"
-                        @click="activeLang = 'de'">Deutsch</li>
-                    <li class="select-item ua"
-                        :class="{'active': activeLang === 'ua'}"
-                        @click="activeLang = 'ua'">Украiньска</li>
-                </ul>
-            </b-modal>
-            <b-modal id="locationModal"
-                     centered
-                     hide-footer
-                     ref="locationModal">
-                <div slot="modal-header"
-                     class="custom-modal-header">
-                    <div>
-                        <h3>Ваш город</h3>
-                        <span class="cities">21 страна, 228 городов</span>
-                    </div>
-                    <div class="search-input-wrapper">
-                        <input class="search-input"
-                               placeholder="Поиск города"
-                               v-model="searchCity">
-                    </div>
-                    <i class="close-btn"
-                       @click="hideLocationModal"></i>
-                </div>
-                <div class="d-flex flex-row">
-                    <vue-custom-scrollbar :settings="settings"
-                                          class="scroll-area left">
-                        <ul class="select">
-                            <li class="select-item"
-                                :class="{'active': activeCountry === it.code}"
-                                v-for="(it, i) in countries"
-                                :key="i"
-                                @click="activeCountry= it.code">{{ it.name }}</li>
-                        </ul>
-                    </vue-custom-scrollbar>
-                    <vue-custom-scrollbar :settings="settings"
-                                          class="scroll-area right">
-                        <ul class="select">
-                            <li class="select-item"
-                                :class="{'font-weight-bold': it === 'Санкт-Петербург' || it === 'Москва'}"
-                                v-for="(it, i) in searchCity ? filteredCities : cities"
-                                :key="i"
-                                @click="activeCity = it">{{ it }}</li>
-                        </ul>
-                    </vue-custom-scrollbar>
-                </div>
-            </b-modal>
+            <locale-modal></locale-modal>
+            <location-modal></location-modal>
         </div>
     </div>
 </template>
@@ -79,8 +14,10 @@
 import Sidebar from '@/components/layout/Sidebar';
 import PageHeader from '@/components/layout/PageHeader';
 import PageFooter from '@/components/layout/PageFooter';
+import LocaleModal from '@/components/layout/LocaleModal';
+import LocationModal from '@/components/layout/LocationModal';
 
-import vueCustomScrollbar from 'vue-custom-scrollbar'
+// import vueCustomScrollbar from 'vue-custom-scrollbar'
 
 export default {
     name: 'App',
@@ -88,7 +25,9 @@ export default {
         Sidebar,
         PageHeader,
         PageFooter,
-        vueCustomScrollbar
+        // vueCustomScrollbar,
+        LocaleModal,
+        LocationModal
     },
     data() {
         return {
