@@ -1,19 +1,28 @@
 <template>
-    <main class="page-container">
-        <!-- <dropzone ref="dropzone"
-                  id="dropzone"
-                  :options="dropzoneOptions"
-                  @vdropzone-file-added="addFile"></dropzone>
-        <div class="dropzone dropzone-gallery">
-        </div> -->
-        <drop class="dropzone"
-              @drop="handleDrop">
-            Drop something here
-        </drop>
+    <main class="page-container"
+          @drop.prevent>
+        <div @click="clickFileBtn">
+            <drop class="dropzone"
+                  :class="{ over }"
+                  @dragover="over = !isPreviewDragged"
+                  @dragleave="over = false"
+                  @drop="handleDrop">
+                <span class="dropzone-text">Выберите фотографии или перетащите их в выделенную область</span>
+                <input type="file"
+                       class="d-none"
+                       ref="file-btn"
+                       multiple
+                       accept="image/*"
+                       @change="handleFiles">
+            </drop>
+        </div>
         <draggable class="dropzone-gallery"
-                   :options="{animation: 300}"
+                   :options="draggableOptions"
                    v-model="files">
-            <div v-for="(it, i) in files"
+            <div class="dropzone-preview-wrapper"
+                 @dragstart="isPreviewDragged = true"
+                 @dragend="isPreviewDragged = false"
+                 v-for="(it, i) in files"
                  :key="i">
                 <img :src="it.src">
             </div>
@@ -31,8 +40,13 @@ export default {
     },
     data() {
         return {
+            isPreviewDragged: false,
+            over: false,
             files: [],
             filesLength: 0,
+            draggableOptions: {
+                animation: 300,
+            }
         }
     },
     methods: {
@@ -53,11 +67,47 @@ export default {
 
         },
         handleDrop(data, evt) {
-            event.preventDefault();
+            event.preventDefault()
             const files = event.dataTransfer.files;
+            for (let i = 0; i < files.length; i++) {
+                if (files.item(i).type.includes('image')) this.addFile(files.item(i))
+            }
+            this.over = false;
+        },
+        handleFiles(evt) {
+            const files = this.$refs['file-btn'].files;
+
             for (let i = 0; i < files.length; i++) {
                 this.addFile(files.item(i))
             }
+        },
+        clickFileBtn() {
+            this.$refs['file-btn'].click()
+        },
+        dragPreview(evt) {
+            this.isPreviewDragged = true
+            // var dragIcon = document.createElement("img");
+            // dragIcon.src = evt.srcElement.children[0].currentSrc
+            // dragIcon.style.width = "60px";
+            // dragIcon.style.height = "60px";
+            // var div = document.createElement('div');
+            // div.appendChild(dragIcon);
+            // div.style.position = "absolute";
+            // div.style.top = "0px";
+            // div.style.left = "-60px";
+            // document.querySelector('body').appendChild(div);
+            // evt.dataTransfer.setDragImage(div, -60, -60);
+            var img = new Image();
+            img.src = evt.srcElement.children[0].currentSrc;
+            evt.dataTransfer.setDragImage(img, 10, 10);
+
+        },
+        delay(ms) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve()
+                }, ms)
+            })
         }
     }
 }
@@ -65,32 +115,41 @@ export default {
 <style lang="scss"
        scoped>
 @import '@/styles/_variables.scss';
-
-.dropzone-gallery {
-    border: 0;
-    padding: 0;
-}
 </style>
 <style lang="scss">
 @import '@/styles/_variables.scss';
 
-// .dz-progress {
-//     opacity: 0 !important;
-// }
+.dropzone {
+    display: flex;
+    height: 200px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
 
-// .dropzone .dz-preview:hover .dz-details {
-//     opacity: 0 !important;
-// }
+.dropzone:hover {
+    background-color: #f6f6f6;
+}
 
-// .dropzone .dz-preview:hover .dz-image img {
-//     filter: none;
-//     transform: none;
-// }
+.over .dropzone-text {
+    opacity: 0.5;
+}
+
+.dropzone-text {
+    color: #777;
+    margin: 2em auto;
+    text-align: center;
+}
 
 .dropzone-gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.dropzone-preview-wrapper {
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .dropzone-gallery img {
@@ -102,5 +161,9 @@ export default {
     position: relative;
     display: block;
     z-index: 10;
+}
+
+.visibility-hidden {
+    visibility: hidden;
 }
 </style>
