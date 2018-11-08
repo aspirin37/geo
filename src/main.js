@@ -3,15 +3,20 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
+
 import VueMq from 'vue-mq'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
-import store from './store'
+
+import Dropzone from 'vue2-dropzone'
+import 'vue2-dropzone/dist/vue2Dropzone.min.css'
 
 import { Modal } from 'bootstrap-vue/es/components';
 
 Vue.use(VueAwesomeSwiper)
 Vue.use(Modal);
+Vue.use(Dropzone);
 Vue.use(VueMq, {
     breakpoints: {
         xs: 360,

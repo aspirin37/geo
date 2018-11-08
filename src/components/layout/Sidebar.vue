@@ -6,8 +6,8 @@
                         v-on:click.prevent="toggleMobileMenu">
                     <span :class="['d-inline-block hamburger-menu', {'animate': isMobileMenuShown}]"></span>
                 </button>
-                <a href="#"
-                   class="side-bar__link side-bar__link--logo"></a>
+                <router-link to="/"
+                             class="side-bar__link side-bar__link--logo"></router-link>
             </div>
             <nav>
                 <user-avatar :userMenuToggler="true"></user-avatar>
